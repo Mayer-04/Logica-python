@@ -77,11 +77,11 @@ print(e)  # Imprime [1, 2, 3]
 new_copy = numbers.copy()
 print(new_copy)  # Imprime [10, 2, 3, 4, 5, 6, 7, 8]
 
-# Añadir un elemento al final de una lista usando append()
+# Añadir un elemento al final de una lista
 empty_list.append("Hello")
 print(empty_list)  # Imprime ["Hello"]
 
-# Insertar un elemento en una posición específica de la lista usando insert()
+# Insertar un elemento en una posición específica de la lista
 numbers.insert(0, 0)
 print(numbers)  # Imprime [0, 10, 2, 3, 4, 5, 6, 7, 8]
 
@@ -89,7 +89,7 @@ print(numbers)  # Imprime [0, 10, 2, 3, 4, 5, 6, 7, 8]
 empty_list.extend("Mayer")
 print(empty_list)  # Imprime ["Hello", "M", "a", "y", "e", "r"]
 
-# Remover el primer elemento que coincide con el valor especificado usando remove()
+# Remover el primer elemento que coincide con el valor especificado
 print(numbers)  # Imprime [0, 10, 2, 3, 4, 5, 6, 7, 8]
 numbers.remove(10)
 print(numbers)  # Imprime [0, 2, 3, 4, 5, 6, 7, 8]
@@ -127,6 +127,16 @@ print(fruits)  # Imprime ['cherry', 'banana', 'apple']
 for fruit in fruits:
     print(fruit)
 
-# Uso de listas por comprensión para crear una nueva lista basada en una existente
-squares = [x**2 for x in range(10)]
-print(squares)  # Imprime [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Crear una lista por comprensión de números del 0 al 9
+numeros = [x for x in range(10)]
+print("Lista de números del 0 al 9:", numeros)
+
+
+# Crear una lista de listas - Matrices
+matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+print("Matriz 3x3:", matriz)
+
+# Acceder a elementos en una lista de listas
+elemento = matriz[1][2]
+print("Elemento en la posición [1][2]:", elemento)

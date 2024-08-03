@@ -31,14 +31,17 @@ print(numbers)  # Imprime (1, 2, 3, 4)
 print(numbers[0])  # Imprime el primer elemento: 1
 print(numbers[-1])  # Imprime el último elemento: 4
 
-# Desestructurar una tupla en variables individuales
+# Desestructurar una tupla en variables individuales - Desempaquetado de tuplas
 a, b, c, d = numbers
 print(a)  # Imprime 1
 print(b)  # Imprime 2
 print(c)  # Imprime 3
 print(d)  # Imprime 4
 
-# Métodos de tuplas
+# Desempaquetado avanzado con *
+tupla_grande = (1, 2, 3, 4, 5, 6)
+x, y, *resto = tupla_grande
+print("x:", x, "y:", y, "resto:", resto)
 
 # Contar las apariciones de un elemento en la tupla usando count()
 print(numbers.count(3))  # Imprime 1
@@ -53,7 +56,7 @@ print(len(numbers))  # Imprime 4
 new_tuple = numbers + (5, 6, 7)
 print(new_tuple)  # Imprime (1, 2, 3, 4, 5, 6, 7)
 
-# Repetir los elementos de una tupla utilizando el operador *
+# Repetir los elementos de una tupla utilizando el operador * - Repetición de tuplas
 new_copy = numbers * 3
 print(new_copy)  # Imprime (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
 
@@ -80,6 +83,6 @@ for number in numbers:
 locations = {
     (35.6895, 139.6917): "Tokyo",
     (40.7128, -74.0060): "New York",
-    (48.8566, 2.3522): "Paris"
+    (48.8566, 2.3522): "Paris",
 }
 print(locations)
