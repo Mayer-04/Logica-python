@@ -4,3 +4,10 @@ print(4)
 print(2.5)
 # complex
 print(1j)
+
+# Convertir un entero a un float con la función float()
+print(float(2))
+# Convertir un float a un entero con la función int()
+print(int(2.5))
+# Convertir un entero a un complex con la función complex()
+print(complex(1))

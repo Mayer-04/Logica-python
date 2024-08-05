@@ -1,7 +1,7 @@
 """
 * Listas en Python
 
-- Un conjunto ordenado de elementos.
+- Es una colección ordenada de elementos.
 - Se definen entre corchetes [].
 - Pueden contener elementos de cualquier tipo de datos.
 - Son mutables, es decir, se pueden modificar después de ser creadas.

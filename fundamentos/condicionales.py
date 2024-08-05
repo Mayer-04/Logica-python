@@ -86,3 +86,13 @@ match color:
 # Puedes usar el operador := para asignar y evaluar en una misma expresión.
 if (n := 10) > 5:
     print(f"El número {n} es mayor que 5.")
+
+
+"""
+* Profundizando el operador ternario:
+Si la calificación es 6 o más,a mensaje se le asignará 'Aprobado', de lo contrario 'Reprobado'.
+"""
+calificacion = 8
+condicion = calificacion >= 6
+mensaje = "Aprobado" if condicion else "Reprobado"
+print(mensaje)

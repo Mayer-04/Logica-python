@@ -1,7 +1,8 @@
 """
-sets: Conjuntos (sets)
+sets: Conjuntos
 
-- Los elementos no se pueden repetir.
+- Es una colección desordenada de elementos.
+- Los elementos no se pueden repetir, son únicos y mutables.
 - Se definen entre llaves {} o usando la función set().
 - Pueden contener elementos de cualquier tipo de datos.
 - No es una estructura ordenada.
@@ -69,9 +70,17 @@ set2 = {3, 4, 5}
 set3 = set1.union(set2)
 print(set3)  # Imprime {1, 2, 3, 4, 5}
 
+# Unión de dos sets con el operador |
+set_operator = set1 | set2
+print("set_operator:", set3)  # Imprime {1, 2, 3, 4, 5}
+
 # Intersección de sets
 set4 = set1.intersection(set2)
 print(set4)  # Imprime {3}
+
+# Intersección de dos sets con el operador &
+set_intersection = set1 & set2
+print("set_intersection:", set3)  # Imprime {3}
 
 # Diferencias de sets
 set5 = set1.difference(set2)
@@ -87,5 +96,6 @@ print(set7.issubset(set1))  # Imprime True (set7 es un subconjunto de set1)
 print(set1.issuperset(set7))  # Imprime True (set1 es un superconjunto de set7)
 
 # Los frozensets son conjuntos inmutables, una vez creados, no se pueden modificar.
+# Conjunto de elementos desordenados únicos e inmutables.
 conjunto_inmutable = frozenset([1, 2, 3, 4])
 print("Frozenset:", conjunto_inmutable)

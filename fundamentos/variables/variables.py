@@ -2,6 +2,9 @@
 Variables
 - En Python no es necesario utilizar palabras reservadas para declarar variables
 - La convencion es usar snake_case para las variables
+- Las variables hay que verlas como etiquetas
+- Los nombres de las variables deben ser descriptivos
+- Palabras reservadas: Palabras que no podemos usar para nombrar nuestras variables porque ya Python las utiliza.
 """
 
 a = 2
@@ -15,5 +18,24 @@ resultado = f"El resultado de {a} y {b} es: {a+b}"
 c, d, e = 1, 2, 3
 
 
-a = True
-print(a)
+# Usar una variable con alcance global
+new_variable = "Andres"
+
+
+def my_function():
+    global new_variable
+    new_variable = "Mayer"
+    print(new_variable)
+
+
+my_function()
+print(new_variable)
+
+"""
+Constantes
+- En Python no existen constantes.
+- Por convención las constantes se escriben en mayúsculas.
+- Solo se pueden usar para lectura y no escritura
+"""
+
+MY_NAME = "Mayer"

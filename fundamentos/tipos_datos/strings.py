@@ -1,11 +1,21 @@
 """
 * Cadenas de Texto o Strings
-Son secuencias de caracteres
+- Son secuencias de caracteres
+- Con triples comillas dobles o simples podemos crear una cadena con salto de línea
 """
 
 # Se pueden crear usando comillas dobles o simples
 print("Python")
 print("Python")
+
+# Cadena con salto de línea
+print(
+    """
+    Python
+    es un lenguaje 
+    de programación
+    """
+)
 
 # Concatenar strings
 print("Python " + "es un lenguaje de programación")

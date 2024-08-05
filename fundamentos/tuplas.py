@@ -1,7 +1,7 @@
 """
 * Tuplas en Python
 
-- Un conjunto ordenado de elementos.
+- Es una colección ordenada de elementos.
 - Se definen entre paréntesis ().
 - Pueden contener elementos de cualquier tipo de datos.
 - Son inmutables, es decir, no se pueden modificar después de ser creadas.
