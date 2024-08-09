@@ -1,53 +1,67 @@
 """
-Funciones en Python
+* Funciones en Python
 
-- Una función es un conjunto de instrucciones que realizan una tarea específica.
-- Se escribe con la palabra clave def y el nombre de la función.
-- Pueden retornar un valor de salida.
-- Se pueden utilizar como argumentos de otras funciones.
+Una función es un bloque de código reutilizable que realiza una tarea específica. 
+Las funciones permiten dividir el código en módulos más manejables, promoviendo la reutilización y la legibilidad.
+
+- Declaración de funciones
+- Parámetros y argumentos
+- Valores por defecto
+- Funciones anónimas (lambdas)
+- Funciones como objetos de primera clase
+- Desempaquetado de argumentos
+- Anotaciones de funciones (type hints)
 """
 
 
-# Definiendo una función
+# Declaración de funciones
+# Una función se define usando la palabra clave `def`, seguida del nombre de la función y paréntesis.
 def saludar():
-    print("Hola mundo")
+    """Esta función imprime un mensaje de saludo."""
+    print("¡Hola, mundo!")
 
 
-# Llamando a la función
+# Llamada a la función
 saludar()
 
 
-# Funciones con parámetros
-def saludar2(name):
-    """
-
-    Args:
-        name (_type_): _description_
-    """
-    print(f"Hola {name}")
+# Parámetros y argumentos
+# Las funciones pueden recibir datos a través de parámetros,
+# que se pasan como argumentos cuando se llama a la función.
+def saludar_a(nombre):
+    """Esta función imprime un saludo personalizado."""
+    print(f"¡Hola, {nombre}!")
 
 
-saludar2("Mayer")
+# Llamada a la función con un argumento
+saludar_a("Carlos")
+
+# Valores por defecto
+# Puedes definir valores por defecto para los parámetros.
+# Si no se proporciona un argumento, se usará el valor por defecto.
 
 
-# Funciones con parámetros por defecto
-def saludar3(name="Mayer"):
-    print(f"Hola {name}")
+def saludar_con_titulo(nombre, titulo="Sr./Sra."):
+    """Esta función imprime un saludo personalizado con un título."""
+    print(f"¡Hola, {titulo} {nombre}!")
 
 
-saludar3("Andres")
-saludar3()  # Imprime: Hola Mayer
+# Usando el valor por defecto
+saludar_con_titulo("Gómez")
+
+# Sobrescribiendo el valor por defecto
+saludar_con_titulo("Gómez", "Dr.")
 
 
-# Funciones que devuelven o retornan valores
-def sumar(num1, num2):
-    """Devuelve la suma de a y b."""
-    return num1 + num2
+# Funciones con múltiples parámetros
+def calcular_area_rectangulo(base, altura):
+    """Esta función calcula el área de un rectángulo."""
+    return base * altura
 
 
-# Guardamos lo retornado en una variable
-result = sumar(1, 2)
-print("Result:", result)
+# Llamada a la función con múltiples argumentos
+area = calcular_area_rectangulo(5, 10)
+print(f"El área del rectángulo es: {area}")
 
 
 """

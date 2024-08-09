@@ -1,5 +1,5 @@
 """
-None
+* None
 - Es usado para representar la ausencia de un valor
 - Es el valor predeterminado de un tipo de dato.
 - Es el valor que representa un objeto vacío.

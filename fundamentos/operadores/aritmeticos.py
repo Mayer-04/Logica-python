@@ -1,4 +1,6 @@
-# Operadores aritméticos
+"""
+* Operadores aritméticos
+"""
 
 # Suma
 print(2 + 2)

@@ -1,101 +1,104 @@
 """
-sets: Conjuntos
+* Sets en Python: Conjuntos
 
-- Es una colección desordenada de elementos.
-- Los elementos no se pueden repetir, son únicos y mutables.
-- Se definen entre llaves {} o usando la función set().
-- Pueden contener elementos de cualquier tipo de datos.
-- No es una estructura ordenada.
-- Internamente utiliza un hashmap para la búsqueda rápida.
+- Un conjunto (set) es una colección desordenada y sin elementos repetidos.
+- Los elementos de un set son únicos y mutables.
+- Se definen utilizando llaves {} o la función set().
+- Pueden contener elementos de cualquier tipo de datos (enteros, cadenas, etc.).
+- No tienen un orden particular, lo que significa que no se puede acceder a los elementos por índice.
+- Internamente, Python utiliza una estructura de datos similar a un hashmap para la búsqueda rápida de elementos.
 
 Operaciones comunes con sets:
 - Creación de sets.
 - Añadir y eliminar elementos.
-- Comprobar existencia de elementos.
-- Operaciones matemáticas como unión, intersección, diferencia y diferencia simétrica.
+- Comprobar la existencia de elementos.
+- Realizar operaciones matemáticas como unión, intersección, diferencia y diferencia simétrica.
 """
 
-# Creación de un set vacío con el constructor set()
+# Creación de un set vacío utilizando el constructor set()
 new_set = set()
+print(new_set)  # Imprime: set()
 
-# Inicialmente Python trata las llaves vacías {} como un diccionario
-opmt_set = {}
-print(opmt_set)  # Imprime {}
-print(type(opmt_set))  # Imprime <class 'dict'>
+# Inicialmente, las llaves vacías {} definen un diccionario, no un set
+empty_dict = {}
+print(empty_dict)  # Imprime: {}
+print(type(empty_dict))  # Imprime: <class 'dict'>
 
-# Conversión de un diccionario vacío a un set
-opmt_set = {1, 2, 3, 4, 5}
-print(opmt_set)  # Imprime {1, 2, 3, 4, 5}
-print(type(opmt_set))  # Imprime <class 'set'>
+# Creación de un set con elementos
+sample_set = {1, 2, 3, 4, 5}
+print(sample_set)  # Imprime: {1, 2, 3, 4, 5}
+print(type(sample_set))  # Imprime: <class 'set'>
 
-# Añadir elementos a un set
+# Añadir un único elemento a un set
 new_set.add("Andres")
-print(new_set)  # Imprime {'Andres'}
+print(new_set)  # Imprime: {'Andres'}
 
 # Intentar agregar un elemento duplicado no cambia el set
 new_set.add("Andres")
-print(new_set)  # Imprime {'Andres'}
+print(new_set)  # Imprime: {'Andres'}
 
 # Añadir múltiples elementos a un set
 new_set.update([1, 2, 3])
-print(new_set)  # Imprime {'Andres', 1, 2, 3}
+print(new_set)  # Imprime: {'Andres', 1, 2, 3}
 
-# Crear una copia de un set
+# Crear una copia superficial de un set
 copy_set = new_set.copy()
-print(copy_set)  # Imprime {'Andres', 1, 2, 3}
+print(copy_set)  # Imprime: {'Andres', 1, 2, 3}
 
-# Eliminar un elemento de un set si existe
+# Eliminar un elemento existente de un set
 new_set.remove("Andres")
-print(new_set)  # Imprime {1, 2, 3}
+print(new_set)  # Imprime: {1, 2, 3}
 
-# Eliminar un elemento sin generar un error si no existe
+# Intentar eliminar un elemento no existente sin generar un error
 new_set.discard("Andres")
-print(new_set)  # Imprime {1, 2, 3}
+print(new_set)  # Imprime: {1, 2, 3}
 
 # Comprobar si un elemento existe en un set
-print("Andres" in new_set)  # Imprime False
-print(1 in new_set)  # Imprime True
+print("Andres" in new_set)  # Imprime: False
+print(1 in new_set)  # Imprime: True
 
-# Recorrer un set
+# Recorrer todos los elementos de un set
 for element in new_set:
-    print(element)
+    print(element)  # Imprime cada elemento del set en una línea diferente
 
-# Limpiar un set
+# Limpiar todos los elementos de un set
 new_set.clear()
-print(new_set)  # Imprime set()
+print(new_set)  # Imprime: set()
 
-# Unión de sets
+# Realizar la unión de dos sets
 set1 = {1, 2, 3}
 set2 = {3, 4, 5}
-set3 = set1.union(set2)
-print(set3)  # Imprime {1, 2, 3, 4, 5}
+union_set = set1.union(set2)
+print(union_set)  # Imprime: {1, 2, 3, 4, 5}
 
-# Unión de dos sets con el operador |
-set_operator = set1 | set2
-print("set_operator:", set3)  # Imprime {1, 2, 3, 4, 5}
+# Unión de sets utilizando el operador |
+union_operator_set = set1 | set2
+print("union_operator_set:", union_operator_set)  # Imprime: {1, 2, 3, 4, 5}
 
-# Intersección de sets
-set4 = set1.intersection(set2)
-print(set4)  # Imprime {3}
+# Realizar la intersección de dos sets
+intersection_set = set1.intersection(set2)
+print(intersection_set)  # Imprime: {3}
 
-# Intersección de dos sets con el operador &
-set_intersection = set1 & set2
-print("set_intersection:", set3)  # Imprime {3}
+# Intersección de sets utilizando el operador &
+intersection_operator_set = set1 & set2
+print("intersection_operator_set:", intersection_operator_set)  # Imprime: {3}
 
-# Diferencias de sets
-set5 = set1.difference(set2)
-print(set5)  # Imprime {1, 2}
+# Diferencia entre dos sets (elementos presentes en set1 pero no en set2)
+difference_set = set1.difference(set2)
+print(difference_set)  # Imprime: {1, 2}
 
-# Diferencia simétrica de sets (elementos que están en set1 o en set2 pero no en ambos)
-set6 = set1.symmetric_difference(set2)
-print(set6)  # Imprime {1, 2, 4, 5}
+# Diferencia simétrica entre dos sets (elementos presentes en set1 o en set2 pero no en ambos)
+symmetric_difference_set = set1.symmetric_difference(set2)
+print(symmetric_difference_set)  # Imprime: {1, 2, 4, 5}
 
-# Subset y Superset
-set7 = {1, 2}
-print(set7.issubset(set1))  # Imprime True (set7 es un subconjunto de set1)
-print(set1.issuperset(set7))  # Imprime True (set1 es un superconjunto de set7)
+# Verificar si un set es subconjunto de otro
+subset_set = {1, 2}
+print(subset_set.issubset(set1))  # Imprime: True
 
-# Los frozensets son conjuntos inmutables, una vez creados, no se pueden modificar.
-# Conjunto de elementos desordenados únicos e inmutables.
-conjunto_inmutable = frozenset([1, 2, 3, 4])
-print("Frozenset:", conjunto_inmutable)
+# Verificar si un set es superconjunto de otro
+print(set1.issuperset(subset_set))  # Imprime: True
+
+# Uso de frozenset para crear conjuntos inmutables
+# Un frozenset es un set que no se puede modificar una vez creado
+immutable_set = frozenset([1, 2, 3, 4])
+print("Frozenset:", immutable_set)  # Imprime: frozenset({1, 2, 3, 4})

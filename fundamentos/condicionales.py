@@ -1,46 +1,55 @@
 """
-Condicionales
+* Estructura de control - Condicionales
 
-- if
-- elif
-- else
+Las estructuras condicionales permiten que un programa ejecute diferentes bloques de código en función de ciertas
+condiciones.
 
-La condición que se evalua se convierte en un valor booleano para ser evaluado.
-Si el valor booleano es True, el programa continuará ejecutando el código que se encuentra dentro del if.
+- `if`: Evalúa una condición y, si es verdadera, ejecuta un bloque de código.
+- `elif`: Se usa después de un `if` inicial para verificar una nueva condición si la primera es falsa.
+- `else`: Se ejecuta si todas las condiciones anteriores (`if` y `elif`) son falsas.
+- `match`: Introducido en Python 3.10, similar a `switch` en otros lenguajes, 
+permite seleccionar un bloque de código para ejecutar basado en el valor de una expresión.
+
+Las condiciones que se evalúan en estas estructuras deben resolverse en valores booleanos 
+(`True` o `False`) para determinar el flujo de ejecución.
+
+- Es mala practica poner `pass` dentro de un `else` ya que es redundante.
 """
 
-# Condicional if
 numero = 5
 
+# Condicional if básico
 # Verificamos si el número es mayor que cero
 if numero > 0:
-    print("El número es positivo.")
+    print("El número es positivo.")  # Se ejecuta si la condición es verdadera
 
 # Introducción a las condiciones con 'if' y 'else'
 # Este ejemplo verifica si un número es positivo o negativo
 
 numero = -3
 
-# Verificamos si el número es mayor que cero
+# Condición para verificar si el número es mayor que cero
 if numero > 0:
     print("El número es positivo.")
 else:
-    print("El número es negativo o cero.")
-
+    print(
+        "El número es negativo o cero."
+    )  # Se ejecuta si la condición del 'if' es falsa
 
 # Introducción a las condiciones con 'if', 'elif' y 'else'
 # Este ejemplo verifica si un número es positivo, negativo o cero
 
 numero = 0
 
-# Verificamos si el número es mayor que cero
+# Se evalúan múltiples condiciones secuencialmente
 if numero > 0:
     print("El número es positivo.")
 elif numero < 0:
     print("El número es negativo.")
 else:
-    print("El número es cero.")
-
+    print(
+        "El número es cero."
+    )  # Se ejecuta si todas las condiciones anteriores son falsas
 
 # Uso de múltiples condiciones con 'if', 'elif' y 'else'
 # Este ejemplo clasifica a una persona según su edad
@@ -56,14 +65,15 @@ elif 18 <= edad < 60:
 else:
     print("Eres un adulto mayor.")
 
-
-# Curiosidad: Condiciones en una sola línea (Ternary operator)
+# Curiosidad: Condiciones en una sola línea con el Operador Ternario
 # Sintaxis: <valor_si_true> if <condición> else <valor_si_false>
-# Uso del operador ternario
-numero = 5
-mensaje = "Positivo" if numero > 0 else "No positivo"
-print(mensaje)
+# Este operador es útil para expresiones cortas y claras
 
+numero = 5
+mensaje = (
+    "Positivo" if numero > 0 else "No positivo"
+)  # Asigna 'Positivo' si la condición es verdadera, de lo contrario 'No positivo'
+print(mensaje)  # Imprime 'Positivo'
 
 # A partir de Python 3.10: La sentencia match (similar a switch en otros lenguajes)
 # Introducción a las condiciones con 'match'
@@ -79,20 +89,26 @@ match color:
     case "rojo":
         print("Detente.")
     case _:
-        print("Color desconocido.")
+        print(
+            "Color desconocido."
+        )  # Caso por defecto si ninguno de los anteriores coincide
 
+# Uso del operador walrus (:=) - A partir de Python 3.8+
+# Este operador permite asignar y evaluar en una misma expresión.
+# Útil cuando queremos utilizar una variable tanto en la condición como en el bloque de código
 
-# Uso del operador walrus - A partir de Python 3.8+
-# Puedes usar el operador := para asignar y evaluar en una misma expresión.
 if (n := 10) > 5:
-    print(f"El número {n} es mayor que 5.")
-
+    print(
+        f"El número {n} es mayor que 5."
+    )  # Asigna 10 a 'n' y verifica si es mayor que 5 en una sola línea
 
 """
-* Profundizando el operador ternario:
-Si la calificación es 6 o más,a mensaje se le asignará 'Aprobado', de lo contrario 'Reprobado'.
+Profundizando en el operador ternario:
+Si la calificación es 6 o más, se asignará 'Aprobado', de lo contrario 'Reprobado'.
 """
 calificacion = 8
 condicion = calificacion >= 6
 mensaje = "Aprobado" if condicion else "Reprobado"
-print(mensaje)
+print(
+    mensaje
+)  # Imprime 'Aprobado' porque la condición es verdadera (calificación >= 6)

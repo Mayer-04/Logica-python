@@ -1,81 +1,91 @@
 """
 * Tuplas en Python
 
-- Es una colección ordenada de elementos.
-- Se definen entre paréntesis ().
-- Pueden contener elementos de cualquier tipo de datos.
-- Son inmutables, es decir, no se pueden modificar después de ser creadas.
-- No se pueden eliminar elementos de una tupla.
-- Se pueden utilizar para almacenar colecciones de datos que no deben cambiar.
+- Una tupla es una colección ordenada e inmutable de elementos.
+- Las tuplas se definen utilizando paréntesis ().
+- Pueden contener elementos de cualquier tipo de datos (enteros, cadenas, listas, etc.).
+- Una vez creada, no se pueden modificar (no se pueden añadir, eliminar o cambiar elementos).
+- Son útiles para almacenar datos que no deben cambiar a lo largo de la ejecución del programa.
 - Son más eficientes en términos de memoria y tiempo de ejecución en comparación con las listas.
 
-Métodos comunes de las tuplas:
-- count(x): Retorna el número de veces que el valor especificado aparece en la tupla.
-- index(): Retorna el índice de la primera aparición del valor especificado.
-
+Métodos y operaciones comunes en tuplas:
+- count(): Retorna el número de veces que un valor especificado aparece en la tupla.
+- index(): Retorna el índice de la primera aparición de un valor especificado.
+- len(): Retorna la longitud de la tupla.
+- in: Verifica si un elemento está en la tupla.
+- Concatenación (+): Une dos o más tuplas.
+- Repetición (*): Repite los elementos de una tupla un número específico de veces.
+- Slicing: Permite obtener una sub-tupla.
 """
 
 # Crear una tupla vacía utilizando la función tuple()
 my_tuple = tuple()
-print(my_tuple)  # Imprime ()
+print("Tupla vacía utilizando tuple():", my_tuple)  # Imprime ()
 
 # Crear una tupla vacía utilizando paréntesis
 empty_tuple = ()
-print(empty_tuple)  # Imprime ()
+print("Tupla vacía utilizando paréntesis:", empty_tuple)  # Imprime ()
 
 # Crear una tupla con elementos
 numbers = (1, 2, 3, 4)
-print(numbers)  # Imprime (1, 2, 3, 4)
+print("Tupla con elementos:", numbers)  # Imprime (1, 2, 3, 4)
 
-# Acceder a los elementos de una tupla usando índices
-print(numbers[0])  # Imprime el primer elemento: 1
-print(numbers[-1])  # Imprime el último elemento: 4
+# Acceder a los elementos de una tupla usando índices (positivo y negativo)
+print("Primer elemento:", numbers[0])  # Imprime 1
+print("Último elemento:", numbers[-1])  # Imprime 4
 
-# Desestructurar una tupla en variables individuales - Desempaquetado de tuplas
+# Desestructurar una tupla en variables individuales (Desempaquetado de tuplas)
 a, b, c, d = numbers
-print(a)  # Imprime 1
-print(b)  # Imprime 2
-print(c)  # Imprime 3
-print(d)  # Imprime 4
+print("Elementos desempaquetados:", a, b, c, d)  # Imprime 1 2 3 4
 
-# Desempaquetado avanzado con *
+# Desempaquetado avanzado con * para capturar el resto de los elementos
 tupla_grande = (1, 2, 3, 4, 5, 6)
 x, y, *resto = tupla_grande
-print("x:", x, "y:", y, "resto:", resto)
+print("Desempaquetado con resto:", "x:", x, "y:", y, "resto:", resto)
+# Imprime x: 1 y: 2 resto: [3, 4, 5, 6]
+
+# Desempaquetado omitiendo el resto de los elementos
+x, y, *_ = tupla_grande
+print("Desempaquetado omitiendo resto:", "x:", x, "y:", y)
+# Imprime x: 1 y: 2
 
 # Contar las apariciones de un elemento en la tupla usando count()
-print(numbers.count(3))  # Imprime 1
+print("Apariciones del 3:", numbers.count(3))  # Imprime 1
 
 # Encontrar el índice de un elemento en la tupla usando index()
-print(numbers.index(3))  # Imprime 2
+print("Índice del número 3:", numbers.index(3))  # Imprime 2
 
 # Obtener la longitud de una tupla usando len()
-print(len(numbers))  # Imprime 4
+print("Longitud de la tupla:", len(numbers))  # Imprime 4
 
 # Concatenar dos tuplas utilizando el operador +
 new_tuple = numbers + (5, 6, 7)
-print(new_tuple)  # Imprime (1, 2, 3, 4, 5, 6, 7)
+print("Tupla concatenada:", new_tuple)  # Imprime (1, 2, 3, 4, 5, 6, 7)
 
-# Repetir los elementos de una tupla utilizando el operador * - Repetición de tuplas
+# Repetir los elementos de una tupla utilizando el operador *
 new_copy = numbers * 3
-print(new_copy)  # Imprime (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
+print("Tupla repetida:", new_copy)  # Imprime (1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4)
 
 # Obtener una sub-tupla usando slicing
-print(new_copy[:4])  # Imprime (1, 2, 3, 4)
+print("Sub-tupla con slicing:", new_copy[:4])  # Imprime (1, 2, 3, 4)
 
-# Convertir una tupla a lista usando list()
+# Sub-tupla 2
+print("Sub-tupla 2:", new_copy[1:4])  # Imprime (2, 3, 4)
+
+# Convertir una tupla a lista usando list() - Útil si necesitas modificar los datos
 new_list = list(numbers)
-print(new_list)  # Imprime [1, 2, 3, 4]
+print("Tupla convertida a lista:", new_list)  # Imprime [1, 2, 3, 4]
 
-# Crear una tupla con un solo elemento (es necesario usar una coma)
+# Crear una tupla con un solo elemento (es necesario usar una coma al final)
 single_element_tuple = (42,)
-print(single_element_tuple)  # Imprime (42,)
+print("Tupla de un solo elemento:", single_element_tuple)  # Imprime (42,)
 
 # Comprobar si un elemento existe en una tupla utilizando in
-print(3 in numbers)  # Imprime True
-print(5 in numbers)  # Imprime False
+print("¿El 3 está en la tupla?", 3 in numbers)  # Imprime True
+print("¿El 5 está en la tupla?", 5 in numbers)  # Imprime False
 
 # Iterar a través de los elementos de una tupla usando un bucle for
+print("Iterando a través de la tupla:")
 for number in numbers:
     print(number)
 
@@ -85,4 +95,8 @@ locations = {
     (40.7128, -74.0060): "New York",
     (48.8566, 2.3522): "Paris",
 }
-print(locations)
+print("Diccionario con tuplas como claves:", locations)
+
+# Acceso a valores en un diccionario usando tuplas como claves
+tokyo_location = (35.6895, 139.6917)
+print("Ciudad para la clave", tokyo_location, ":", locations[tokyo_location])

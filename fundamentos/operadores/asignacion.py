@@ -1,4 +1,6 @@
-# Operadores de asignación
+"""
+* Operadores de asignación
+"""
 
 # Asignar un valor a una variable
 a = 1
