@@ -17,7 +17,3 @@ Este repositorio proporciona fundamentos y ejercicios prácticos para aprender e
 ## Contribución
 
 ¡Las contribuciones son bienvenidas! Si deseas mejorar los ejercicios existentes, agregar nuevos problemas o corregir errores, no dudes en hacer una solicitud de extracción.
-
-### Licencia
-
-Este proyecto está bajo la Licencia MIT.
