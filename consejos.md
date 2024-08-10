@@ -20,23 +20,39 @@ python
 python3
 ```
 
-1. En Python no hay que poner punto y coma al final de la setencia del código
-2. Un comentario en python se realiza con `#`, un comentario multilínea es con """ """
-3. Escribir las variables en minusculas y snakeCase
-4. En Python se puede multiplicar una cadena
+1. En Python, no es necesario colocar un punto y coma (;) al final de cada sentencia.
+2. Usa minúsculas y separa las palabras con guiones bajos para nombrar variables. snake_case
+3. Puedes multiplicar una cadena por un número para repetirla varias veces:
 
-```python
+```py
     print("Mayer" * 4) # MayerMayerMayerMayer
 ```
 
-5. En Python no se pueden hacer comparación de diferentes tipos
-6. En Python también existen los conceptos de "truthy" y "falsy".
-7. Python al igual que JavaScript el intérprete convierte implícitamente el valor de esa variable a un booleano para ser evaluada por un `if`
-8. Evita la Modificación de Listas Mientras las Iteras: Modificar una lista mientras iteras sobre ella puede llevar a comportamientos inesperados.
+4. **Evita Comparar Diferentes Tipos:** Comparar valores de diferentes tipos puede llevar a errores o resultados inesperados.
+5. **Uso de Truthy y Falsy:** Al igual que en JavaScript, Python evalúa valores como `True` o `False` en condiciones. Ejemplos de valores `Falsy` incluyen `None`, `0`, `""`, `[]`, `{}`, mientras que cualquier otro valor se considera `Truthy`.
+6. Python al igual que JavaScript el intérprete convierte implícitamente el valor de esa variable a un booleano para ser evaluada por un `if`
+7. **Evita Modificar Listas Durante la Iteración:** Modificar una lista mientras la iteras puede causar comportamientos inesperados. Considera usar una copia de la lista o una comprensión de listas para evitar problemas.
 
-- Las funciones deben evitar modificar variables globales u otras partes del programa para que sean más fáciles de entender y probar.
+```py
+    for item in my_list[:]:
+        if some_condition(item):
+            my_list.remove(item)
+```
+
+8. **Evita Efectos Colaterales en Funciones:** Las funciones deben evitar modificar variables globales u otras partes del programa para mantener la claridad y facilitar las pruebas.
 
 ## Diccionarios
 
-9. Las claves de un diccionario deben ser inmutables, es decir, pueden ser de tipos como enteros, cadenas o tuplas, pero no listas o diccionarios.
-10. Es una buena práctica usar el método get al acceder a los valores de un diccionario para evitar errores si la clave no existe.
+1. Las claves de un diccionario deben ser inmutables, como enteros, cadenas o tuplas. No uses listas o diccionarios como claves.
+2. **Uso de get para Acceder a Valores:** Usa el método `get()` para acceder a los valores de un diccionario de forma segura, evitando errores si la clave no existe:
+
+```py
+diccionario = {"cuidad": "medellin"}
+print(diccionario.get("clave2", "Valor por defecto"))  # Salida: Valor por defectos
+```
+
+3. **Comprensión de Diccionarios:** Usa la comprensión de diccionarios para crear diccionarios de manera concisa:
+
+```py
+cuadrados = {x: x**2 for x in range(10)}
+```
