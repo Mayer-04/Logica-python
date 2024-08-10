@@ -103,6 +103,20 @@ print("Lista después de pop():", numbers)  # Imprime [0, 2, 3, 4, 5, 6, 7]
 del numbers[0]
 print("Lista después de del numbers[0]:", numbers)  # Imprime [2, 3, 4, 5, 6, 7]
 
+"""
+* Slicing de listas
+- sequence[start:stop:step]
+- start: Índice de inicio, 0 por defecto
+- stop: Índice de fin del slicing, fin de la lista por defecto
+- step: Es el paso o salto entre elementos de la secuencia. Por defecto es 1
+"""
+print("Primeros 3 elementos:", numbers[:3])  # Imprime [2, 3, 4]
+
+# Slicing extendido
+slicing_extended = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+result = slicing_extended[1::4]
+print(result)  # Imprime [20, 60]
+
 # Remover todos los elementos de una lista usando clear()
 numbers.clear()
 print("Lista después de clear():", numbers)  # Imprime []
