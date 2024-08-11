@@ -1,4 +1,4 @@
-# Logica Python 🐍
+# Lógica Python 🐍
 
 Este repositorio proporciona fundamentos y ejercicios prácticos para aprender el lenguaje de programación `Python`.
 
@@ -7,7 +7,7 @@ Este repositorio proporciona fundamentos y ejercicios prácticos para aprender e
 1. **Fundamentos:** La carpeta **fundamentos** contiene archivos que cubren conceptos fundamentales del lenguaje Python. Estos archivos pueden servir como referencia para repasar temas específicos.
 2. **Ejercicios**: En la carpeta ejercicios, encontrarás una variedad de problemas y desafíos de programación para practicar y mejorar tus habilidades.
 
-## Caracteristicas
+## Características
 
 1. **Alto nivel:** Python es un lenguaje de alto nivel, lo que significa que se acerca más al lenguaje humano y se aleja de la máquina.
 2. **Débilmente tipado:** No es necesario declarar explícitamente los tipos de variables.
