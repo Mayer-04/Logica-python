@@ -4,6 +4,8 @@ Funciones en Python
 Una función es un bloque de código reutilizable que realiza una tarea específica. 
 Las funciones permiten dividir el código en módulos más manejables, promoviendo la reutilización y la legibilidad.
 
+- La sentencia return retorna un valor en una función. return sin una expresión como argumento retorna `None`. 
+
 En este archivo, se exploran los siguientes conceptos:
 - Declaración de funciones
 - Parámetros y argumentos
@@ -220,3 +222,7 @@ def mostrar_doble(numero):
 
 
 ejecutar_callback(mostrar_doble, 10)  # Imprime: 20
+
+
+# Decoradores
+# Los decoradores son funciones que se pueden utilizar para modificar el comportamiento de otras funciones.

@@ -1,11 +1,12 @@
 """
-* Estructura de control - Condicionales
+* Estructuras de control - Condicionales
 
 Las estructuras condicionales permiten que un programa ejecute diferentes bloques de código en función de ciertas
 condiciones.
 
 - `if`: Evalúa una condición y, si es verdadera, ejecuta un bloque de código.
 - `elif`: Se usa después de un `if` inicial para verificar una nueva condición si la primera es falsa.
+Es una abreviación de “else if”.
 - `else`: Se ejecuta si todas las condiciones anteriores (`if` y `elif`) son falsas.
 - `match`: Introducido en Python 3.10, similar a `switch` en otros lenguajes, 
 permite seleccionar un bloque de código para ejecutar basado en el valor de una expresión.
@@ -75,8 +76,29 @@ mensaje = (
 )  # Asigna 'Positivo' si la condición es verdadera, de lo contrario 'No positivo'
 print(mensaje)  # Imprime 'Positivo'
 
+"""
+* Profundizando en el operador ternario:
+Si la calificación es 6 o más, se asignará 'Aprobado', de lo contrario 'Reprobado'.
+"""
+calificacion = 8
+condicion = calificacion >= 6
+mensaje = "Aprobado" if condicion else "Reprobado"
+print(
+    mensaje
+)  # Imprime 'Aprobado' porque la condición es verdadera (calificación >= 6)
+
+# Uso del operador walrus (:=) - A partir de Python 3.8+
+# Este operador permite asignar y evaluar en una misma expresión.
+# Útil cuando queremos utilizar una variable tanto en la condición como en el bloque de código
+
+if (n := 10) > 5:
+    print(
+        f"El número {n} es mayor que 5."
+    )  # Asigna 10 a 'n' y verifica si es mayor que 5 en una sola línea
+
+
 # A partir de Python 3.10: La sentencia match (similar a switch en otros lenguajes)
-# Introducción a las condiciones con 'match'
+# match recibe una expresión y compara su valor con uno o más bloques `case`
 # Este ejemplo usa 'match' para verificar el estado de una luz de tráfico
 
 color = "verde"
@@ -93,22 +115,40 @@ match color:
             "Color desconocido."
         )  # Caso por defecto si ninguno de los anteriores coincide
 
-# Uso del operador walrus (:=) - A partir de Python 3.8+
-# Este operador permite asignar y evaluar en una misma expresión.
-# Útil cuando queremos utilizar una variable tanto en la condición como en el bloque de código
 
-if (n := 10) > 5:
-    print(
-        f"El número {n} es mayor que 5."
-    )  # Asigna 10 a 'n' y verifica si es mayor que 5 en una sola línea
+# Ejemplo 2 con `match` y agrupación de opciones
+def http_error(status):
+    match status:
+        case 400:
+            return "Petición incorrecta"
+        case (
+            401 | 403 | 405
+        ):  # Agrupar varias opciones en el mismo `case` con el operador `|`
+            return "No autorizado"
+        case 404:
+            return "No encontrado"
+        case 418:
+            return "Soy una tetera"
+        case _:
+            return "Algo anda mal con internet"
 
-"""
-Profundizando en el operador ternario:
-Si la calificación es 6 o más, se asignará 'Aprobado', de lo contrario 'Reprobado'.
-"""
-calificacion = 8
-condicion = calificacion >= 6
-mensaje = "Aprobado" if condicion else "Reprobado"
-print(
-    mensaje
-)  # Imprime 'Aprobado' porque la condición es verdadera (calificación >= 6)
+
+print(http_error(404))
+
+# Ejemplo 3 con `match` y tuplas
+
+x = 0
+y = 10
+point = (x, y)
+
+match point:
+    case (0, 0):
+        print("En el origen")
+    case (0, y):
+        print(f"En el eje Y: {y}")
+    case (x, 0):
+        print(f"En el eje X: {x}")
+    case (x, y):
+        print(f"En algún lugar: X={x}, Y={y}")
+    case _:
+        print("No es un punto válido")

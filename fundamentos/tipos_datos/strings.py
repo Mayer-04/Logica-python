@@ -22,6 +22,10 @@ Algunas características de las cadenas:
 print("Python")
 print("Python")
 
+# Dos o más cadenas literales una al lado de la otra se concatenan automáticamente.
+# Solo funciona con cadenas literales, no con variables o expresiones.
+print("An" "dres")  # Imprime: "Andres"
+
 # Creación de una cadena con salto de línea
 # Las cadenas de varias líneas se crean usando triples comillas dobles o simples.
 print(
@@ -81,7 +85,7 @@ name = "Mayer"
 print(name[2])  # Imprime el tercer carácter de la cadena (`y`)
 
 # Slicing de cadenas
-# Se puede obtener un subconjunto de la cadena usando slicing.
+# Se puede obtener una subcadena de una cadena utilizando las rebanadas o slicing.
 print(name[1:])  # Desde el segundo carácter hasta el final (`ayer`)
 print(name[-1])  # Último carácter de la cadena (`r`)
 

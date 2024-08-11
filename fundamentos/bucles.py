@@ -4,15 +4,17 @@
 Los bucles permiten repetir un bloque de código varias veces según una condición.
 Python tiene dos tipos principales de bucles:
 
-- `while`: Repite el bloque de código mientras una condición sea verdadera.
-- `for`: Itera sobre una secuencia (como una lista, tupla, diccionario, string o rango)
-y ejecuta un bloque de código por cada elemento.
+- `while`: Repite el bloque de código mientras una condición (expresión) sea verdadera.
+- `for`: Itera sobre una secuencia (como una lista, tupla, diccionario, string o rango), 
+en el orden que aparecen en la secuencia y ejecuta un bloque de código por cada elemento.
 
 Además, Python ofrece las siguientes herramientas adicionales para el control de bucles:
 
 - `break`: Termina el bucle antes de que se complete normalmente.
 - `continue`: Salta el resto del código dentro del bucle y pasa a la siguiente iteración.
 - `else`: Ejecuta un bloque de código al final del bucle, pero solo si el bucle no se interrumpió con `break`.
+- En un bucle `for`, la cláusula `else` se ejecuta después de que el bucle alcance su iteración final.
+- En un bucle `while`, la cláusula `else` se ejecuta después de que la condición sea falsa.
 - `pass`: Actúa como un marcador de posición donde se necesita una declaración, pero no se necesita hacer nada.
 
 Algunas consideraciones adicionales:
@@ -50,6 +52,14 @@ for i in range(5):
 # `range()` puede tomar hasta tres argumentos: inicio, fin y paso
 for i in range(1, 10, 2):
     print(f"Número impar: {i}")
+
+
+# Iterar sobre los índices de una secuencia, combinando range() y len()
+# Se recomienda usar `enumerate()`
+names = ["John", "Corey", "Adam", "Steve"]
+
+for i in range(len(names)):
+    print("Índice:", i, ", Nombre:", names[i])
 
 # Bucle for con enumerate()
 # `enumerate()` permite acceder tanto al índice como al valor de los elementos en una secuencia

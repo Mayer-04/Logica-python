@@ -13,6 +13,7 @@
 - Se pueden crear usando la función list().
 - Se pueden convertir a otros tipos de datos, como tuplas (tuple), conjuntos (set), 
 diccionarios (dict) y cadenas de texto (str).
+- Cuando asignas una lista a una variable, no copia los datos, la variable solo apunta a la lista existente.
 
 Métodos y operaciones comunes de las listas:
 - append(x): Añade un elemento al final de la lista.
@@ -151,3 +152,18 @@ print("Matriz 3x3:", matriz)
 # Acceder a elementos en una lista de listas
 elemento = matriz[1][2]
 print("Elemento en la posición [1][2] de la matriz:", elemento)  # Imprime 6
+
+# * Asignar una lista a una variable
+# No se pasa pasa por valor si no por referencia
+numbers = [1, 2, 3, 4, 5]
+print("Lista numbers:", numbers)
+
+# Asignar la lista `numbers` a la nueva variable `new_numbers`
+new_numbers = numbers
+print("new_numbers:", new_numbers)
+
+new_numbers.append(6)
+print("new_numbers:", new_numbers)
+
+# La lista `numbers` ahora contiene [1, 2, 3, 4, 5, 6]
+print("numbers:", numbers)
