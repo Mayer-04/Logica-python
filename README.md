@@ -13,7 +13,12 @@ Este repositorio proporciona fundamentos y ejercicios prácticos para aprender e
 2. **Débilmente tipado:** No es necesario declarar explícitamente los tipos de variables.
 3. **Interpretado:** El código se ejecuta línea por línea, lo que facilita la detección y corrección de errores.
 4. **Multiparadigma:** Soporta múltiples paradigmas de programación, incluyendo la programación orientada a objetos, la programación funcional y la programación imperativa.
+5. **Orientado a Objetos:**: En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
+
+- Objetos: Son instancias de clases.
+- Clases: Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
+- Instancia: Son objetos creados a partir de una clase.
 
 ## Contribución
 
-¡Las contribuciones son bienvenidas! Si deseas mejorar los ejercicios existentes, agregar nuevos problemas o corregir errores, no dudes en hacer una solicitud de extracción.
+¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar los ejercicios, agregar nuevos desafíos, o corregir errores, no dudes en abrir una solicitud de extracción (Pull Request). Cada aporte es valioso para la comunidad.
