@@ -102,3 +102,9 @@ print(element)  # Imprime None
 element = nested_dict.setdefault("f", 6)  # Añade 'f': 6 si no existe y lo devuelve
 print(element)  # Imprime 6
 print(nested_dict)  # Imprime {'a': 1, 'b': 2, 'c': {'d': 4}, 'f': 6}
+
+# Desempaquetar un diccionario usando el operador **
+my_dict = {"a": 1, "b": 2, "c": 3}
+my_dict2 = {"d": 4, "e": 5}
+my_dict3 = {**my_dict, **my_dict2}
+print("my_dict3:", my_dict3)  # Imprime {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}

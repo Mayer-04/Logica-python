@@ -167,3 +167,9 @@ print("new_numbers:", new_numbers)
 
 # La lista `numbers` ahora contiene [1, 2, 3, 4, 5, 6]
 print("numbers:", numbers)
+
+# Desempaquetar elementos dentro de una lista con el operador *
+lista1 = [1, 2, 3]
+lista2 = [4, 5, 6]
+lista_combinada = [*lista1, *lista2]
+print("lista combinada:", lista_combinada)  # Salida: [1, 2, 3, 4, 5, 6]

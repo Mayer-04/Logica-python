@@ -1,14 +1,15 @@
 """
-Funciones en Python
+* Funciones en Python
 
 Una función es un bloque de código reutilizable que realiza una tarea específica. 
 Las funciones permiten dividir el código en módulos más manejables, promoviendo la reutilización y la legibilidad.
 
-- La sentencia return retorna un valor en una función. return sin una expresión como argumento retorna `None`. 
+- La sentencia `return` retorna un valor en una función. `return` sin una expresión como argumento retorna `None`.
 
 En este archivo, se exploran los siguientes conceptos:
 - Declaración de funciones
 - Parámetros y argumentos
+- Retorno de múltiples valores
 - Valores por defecto
 - Funciones anónimas (lambdas)
 - Funciones como objetos de primera clase (closures)
@@ -17,15 +18,14 @@ En este archivo, se exploran los siguientes conceptos:
 - Recursividad
 - Argumentos por nombre y arbitrarios
 - Uso de la sentencia `pass`
-- Retorno de múltiples valores
 - Callbacks
+- Decoradores
 """
 
 
 # Declaración de funciones
 # Una función se define usando la palabra clave `def`, seguida del nombre de la función y paréntesis.
 def saludar():
-    """Imprime un mensaje de saludo."""
     print("¡Hola, mundo!")
 
 
@@ -59,24 +59,15 @@ def saludar_con_titulo(nombre, titulo="Sr./Sra."):
 
 
 # Usando el valor por defecto para `titulo`.
-saludar_con_titulo("Gómez")
+saludar_con_titulo("Mayer")
 
 # Sobrescribiendo el valor por defecto para `titulo`.
-saludar_con_titulo("Gómez", "Dr.")
+saludar_con_titulo("Mayer", "Dr.")
 
 
 # Funciones con múltiples parámetros
 # Las funciones pueden tener múltiples parámetros para manejar más datos.
 def calcular_area_rectangulo(base, altura):
-    """Calcula el área de un rectángulo dados la base y la altura.
-
-    Parámetros:
-    base (float): La longitud de la base del rectángulo.
-    altura (float): La altura del rectángulo.
-
-    Retorno:
-    float: El área del rectángulo.
-    """
     return base * altura
 
 
@@ -85,11 +76,49 @@ area = calcular_area_rectangulo(5, 10)
 print(f"El área del rectángulo es: {area}")
 
 
+# Retorno de múltiples valores
+# Python permite retornar múltiples valores desde una función, separados por comas.
+# Los valores retornados se empaquetan automáticamente en una tupla.
+def operaciones(num1, num2):
+    """Realiza operaciones matemáticas básicas entre dos números.
+
+    Retorno:
+    tuple: Contiene la suma, resta, multiplicación y división de los dos números.
+    """
+    suma = num1 + num2
+    resta = num1 - num2
+    multiplicacion = num1 * num2
+    division = num1 / num2
+    return suma, resta, multiplicacion, division
+
+
+# Llamando a la función `operaciones` y desempaquetando los valores retornados.
+suma, resta, multiplicacion, division = operaciones(10, 5)
+print(
+    f"Suma: {suma}, Resta: {resta}, Multiplicación: {multiplicacion}, División: {division}"
+)
+
+
+# Retorno de múltiples valores 2
+def prueba():
+    """Retorna una cadena, un entero y una lista.
+
+    Retorno:
+    tuple: Contiene una cadena, un entero y una lista.
+    """
+    return "Andres CMS", 20, [1, 2, 3]
+
+
+# Llamando a la función `prueba`
+resultado = prueba()
+print(resultado)  # Imprime: ('Andres CMS', 20, [1, 2, 3])
+
 """
 Funciones lambda
     - Una función lambda es una función anónima, es decir, que no tiene nombre.
     - Son útiles cuando se necesita una función simple y rápida.
     - Se suelen usar en combinaciones con funciones como `map()`, `filter()` y `reduce()`.
+    - Tiene un retorno implícito.
 """
 
 # Definiendo una función lambda para sumar dos números.
@@ -103,7 +132,14 @@ print("Resultado Lambda:", result_lambda)
 # Funciones anidadas (Closures)
 # Una función anidada es una función definida dentro de otra función.
 def funcion_externa(x):
-    """Contiene una función interna que utiliza la variable `x` de la función externa."""
+    """Contiene una función interna que utiliza la variable `x` de la función externa.
+
+    Parámetros:
+    x (int): Un número utilizado en la función interna.
+
+    Retorno:
+    function: Una función interna que suma `x` a su argumento `y`.
+    """
 
     def funcion_interna(y):
         """Suma `x` y `y`, donde `x` proviene de la función externa."""
@@ -144,7 +180,12 @@ print(factorial(5))  # Imprime: 120
 # Python permite llamar a las funciones especificando los argumentos por nombre,
 # lo cual permite ignorar el orden de los parámetros.
 def describir_persona(nombre, edad):
-    """Imprime la descripción de una persona con su nombre y edad."""
+    """Imprime la descripción de una persona con su nombre y edad.
+
+    Parámetros:
+    nombre (str): El nombre de la persona.
+    edad (int): La edad de la persona.
+    """
     print(f"Nombre: {nombre}, Edad: {edad}")
 
 
@@ -156,7 +197,11 @@ describir_persona(edad=30, nombre="Maria")
 # Python permite recibir un número indeterminado de parámetros usando `**kwargs`,
 # que crea un diccionario con los argumentos pasados por nombre.
 def indeterminados_nombre(**kwargs):
-    """Imprime los argumentos recibidos como pares clave-valor."""
+    """Imprime los argumentos recibidos como pares clave-valor.
+
+    Parámetros:
+    **kwargs: Argumentos clave-valor arbitrarios.
+    """
     print(kwargs)
 
 
@@ -167,7 +212,11 @@ indeterminados_nombre(n=5, c="Hola Andres", l=[1, 2, 3, 4, 5])
 # Funciones con parámetros arbitrarios (args)
 # De forma similar, se puede recibir un número indeterminado de argumentos posicionales con `*args`.
 def saludar_varios(*args):
-    """Saluda a todas las personas cuyos nombres se pasan como argumentos."""
+    """Saluda a todas las personas cuyos nombres se pasan como argumentos.
+
+    Parámetros:
+    *args: Nombres de las personas a saludar.
+    """
     for name in args:
         print(f"Hola {name}")
 
@@ -187,19 +236,6 @@ def pass_func():
 pass_func()
 
 
-# Retornar múltiples valores
-# Python permite retornar múltiples valores desde una función, separados por comas.
-# Los valores retornados se empaquetan automáticamente en una tupla.
-def prueba():
-    """Retorna una cadena, un entero y una lista."""
-    return "Andres CMS", 20, [1, 2, 3]
-
-
-# Llamando a la función `prueba` y desempaquetando los valores retornados.
-resultado = prueba()
-print(resultado)  # Imprime: ('Andres CMS', 20, [1, 2, 3])
-
-
 # Callbacks - Funciones que se pasan como argumentos
 # Se puede pasar una función como argumento a otra función, permitiendo la creación de callbacks.
 def ejecutar_callback(func, valor):
@@ -210,19 +246,20 @@ def ejecutar_callback(func, valor):
     valor (any): El valor a pasar como argumento a la función `func`.
 
     Retorno:
-    any: El resultado de ejecutar `func` con `valor`.
+    any: El resultado de la ejecución de `func(valor)`.
     """
     return func(valor)
 
 
-# Ejemplo de uso de callback.
-def mostrar_doble(numero):
-    """Muestra el doble de un número."""
-    print(numero * 2)
+# Definimos un callback sencillo.
+def doblar(x):
+    return x * 2
 
 
-ejecutar_callback(mostrar_doble, 10)  # Imprime: 20
+# Usamos la función `ejecutar_callback` pasando el callback `doblar`.
+resultado_callback = ejecutar_callback(doblar, 10)
+print(f"Resultado del callback: {resultado_callback}")
 
 
 # Decoradores
-# Los decoradores son funciones que se pueden utilizar para modificar el comportamiento de otras funciones.
+# Un decorador es una función que toma otra función como argumento y extiende o modifica su comportamiento.
