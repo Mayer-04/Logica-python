@@ -236,7 +236,7 @@ def pass_func():
 pass_func()
 
 
-# Callbacks - Funciones que se pasan como argumentos
+# Callbacks - Funciones que se pasan como argumentos a otras funciones
 # Se puede pasar una función como argumento a otra función, permitiendo la creación de callbacks.
 def ejecutar_callback(func, valor):
     """Ejecuta una función (callback) pasada como argumento.

@@ -14,6 +14,10 @@
 - Se pueden convertir a otros tipos de datos, como tuplas (tuple), conjuntos (set), 
 diccionarios (dict) y cadenas de texto (str).
 - Cuando asignas una lista a una variable, no copia los datos, la variable solo apunta a la lista existente.
+- En terminos de rapidez y eficiencia para agregar múltiples elementos en una lista,
+se recomienda utilizar el método `extend()` y el operador `+=`
+- Si solo necesitas agregar un elemento a la lista utiliza el método `append()`,
+es muy eficiente para este propósito, ya que realiza la operación de inserción directa.
 
 Métodos y operaciones comunes de las listas:
 - append(x): Añade un elemento al final de la lista.
@@ -86,6 +90,7 @@ numbers.insert(0, 0)
 print("Lista después de insert(0, 0):", numbers)  # Imprime [0, 10, 2, 3, 4, 5, 6, 7, 8]
 
 # Añadir varios elementos a una lista usando extend()
+# Ideal cuando ya tienes una lista de elementos que deseas agregar a otra lista.
 empty_list.extend("Mayer")
 print(
     "Lista después de extend():", empty_list
@@ -173,3 +178,9 @@ lista1 = [1, 2, 3]
 lista2 = [4, 5, 6]
 lista_combinada = [*lista1, *lista2]
 print("lista combinada:", lista_combinada)  # Salida: [1, 2, 3, 4, 5, 6]
+
+# Agregar multiples valores a una lista con el operador +=
+# Extiende la lista en una sola operación.
+lista = [1, 2, 3]
+lista += [4, 5, 6]
+print("Lista:", lista)  # Salida: [1, 2, 3, 4, 5, 6]

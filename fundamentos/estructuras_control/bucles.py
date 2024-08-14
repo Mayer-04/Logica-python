@@ -117,3 +117,19 @@ for i in range(3):
 # Ejemplo: Crear una lista con los cuadrados de los números del 1 al 5
 cuadrados = [x**2 for x in range(1, 6)]
 print(cuadrados)
+
+
+# Recorriendo una lista y un string al revez
+# El método `reversed()` permite invertir el orden de una secuencia
+
+# Ejemplo con una lista de frutas
+frutas = ["manzana", "banana", "cereza", "durazno"]
+
+for fruta in reversed(frutas):
+    print("frutas:", fruta)
+
+# Ejemplo con una cadena
+lenguaje = "JavaScript"
+
+for letra in lenguaje[::-1]:
+    print("Letras:", letra)

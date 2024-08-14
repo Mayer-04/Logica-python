@@ -7,6 +7,8 @@
 - Una vez creada, no se pueden modificar (no se pueden añadir, eliminar o cambiar elementos).
 - Son útiles para almacenar datos que no deben cambiar a lo largo de la ejecución del programa.
 - Son más eficientes en términos de memoria y tiempo de ejecución en comparación con las listas.
+- Si necesitas una estructura inmutable con un tamaño fijo y sabes los valores desde el principio, 
+una tupla es apropiada.
 
 Métodos y operaciones comunes en tuplas:
 - count(): Retorna el número de veces que un valor especificado aparece en la tupla.
