@@ -119,17 +119,31 @@ cuadrados = [x**2 for x in range(1, 6)]
 print(cuadrados)
 
 
-# Recorriendo una lista y un string al revez
-# El método `reversed()` permite invertir el orden de una secuencia
 
+#* Recorriendo una lista y un string al revez
 # Ejemplo con una lista de frutas
 frutas = ["manzana", "banana", "cereza", "durazno"]
 
+# El método `reversed()` permite invertir el orden de una secuencia
 for fruta in reversed(frutas):
     print("frutas:", fruta)
 
 # Ejemplo con una cadena
 lenguaje = "JavaScript"
 
+# Utilizando el slicing `::-1`
 for letra in lenguaje[::-1]:
     print("Letras:", letra)
+
+#* Simulando un bucle `do while` en Python
+# El bloque de código se ejecute al menos una vez, y la condición dentro del bucle decide cuándo salir de él.
+# Este ejemplo pide al usuario que ingrese un número positivo y no termina hasta que se ingrese un valor válido.
+while True:
+    # Código que se ejecuta al menos una vez
+    numero = int(input("Introduce un número positivo: "))
+    # Condición para romper el bucle
+    if numero > 0:
+        break
+    print("El número no es positivo. Inténtalo de nuevo.")
+
+print(f"Número válido introducido: {numero}")
