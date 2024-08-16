@@ -62,12 +62,19 @@ print(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6])))  # Salida: [2, 4, 
 # En este ejemplo, multiplica cada número por 2.
 print(list(map(lambda x: x * 2, [1, 2, 3, 4, 5, 6])))  # Salida: [2, 4, 6, 8, 10, 12]
 
-# Función incorporada `help`
-# Muestra la documentación de una función o módulo, proporcionando detalles sobre su uso.
-help(print)
+# Función `isinstance`
+# Verifica si un objeto es de un tipo especificado.
+print(isinstance(5, int))  # Salida: True
+print(isinstance("Hola", str))  # Salida: True
+print(isinstance(True, bool))  # Salida: True
+print(isinstance("Andres", float))  # Salida: False
 
 # Función incorporada `input`
 # Permite al usuario introducir datos a través de la consola.
 # El valor ingresado por el usuario es de tipo cadena.
 nombre = input("Introduce tu nombre: ")
 print(f"Hola, {nombre}!")  # Salida: Hola, [nombre del usuario]
+
+# Función incorporada `help`
+# Muestra la documentación de una función o módulo, proporcionando detalles sobre su uso.
+help(print)
