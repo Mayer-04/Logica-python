@@ -69,6 +69,12 @@ print(isinstance("Hola", str))  # Salida: True
 print(isinstance(True, bool))  # Salida: True
 print(isinstance("Andres", float))  # Salida: False
 
+# Función incorporada `id`
+# Devuelve la `identidad` de un objeto.
+# Se trata de un `número entero` que se garantiza que será `único` para este objeto durante su vida.
+print(id("Hola"))  # Salida: 2313322522224
+print(id(3))  # Salida: 140734135859704
+
 # Función incorporada `input`
 # Permite al usuario introducir datos a través de la consola.
 # El valor ingresado por el usuario es de tipo cadena.
