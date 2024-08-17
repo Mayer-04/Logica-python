@@ -40,6 +40,7 @@ python3
 ```
 
 8. **Evita Efectos Colaterales en Funciones:** Las funciones deben evitar modificar variables globales u otras partes del programa para mantener la claridad y facilitar las pruebas.
+9. **Secuencias:** Es un tipo de dato que puede almacenar una colección de elementos o contener varios elementos. Algunas secuencias en Python son las listas, diccionarios, tuplas, cadenas de caracteres, conjuntos y la función `range()`.
 
 ## Diccionarios
 
