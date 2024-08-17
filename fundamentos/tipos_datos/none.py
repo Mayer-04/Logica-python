@@ -1,10 +1,10 @@
 """
 * None
-- Es usado para representar la ausencia de un valor
-- Es el valor predeterminado de un tipo de dato.
-- Es el valor que representa un objeto vacío.
-- Con None evitamos reservar espacio en memoria.
-- None se considera como False en el contexto booleano.
+- Es usado para indicar la `ausencia de un valor` o un `valor nulo`.
+- Las variables pueden ser inicializadas con None para indicar que no se le ha asignado un valor aún.
+- Si una función en Python no tiene una sentencia return por defecto devuelve None.
+- el objeto None ocupa espacio en memoria, y la variable que apunta a None también ocupa espacio.
+- None se considera como `False` en el contexto booleano
 """
 
 # Definiendo una variable que no contiene un valor - None
