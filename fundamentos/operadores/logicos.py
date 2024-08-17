@@ -1,18 +1,20 @@
 """
 * Operadores Lógicos
+- Se utilizan para tomar una decisión basada en múltiples condiciones.
+- Actuan sobre valores booleanos (`True` o `False`).
+- Son aplicables a todos los objetos de Python.
 """
 
-numero = 5
+number = 5
 
-# and
+# and - y
 # Devuelve el primer valor falso que encuentra, o el último valor si todos son verdaderos.
-print(numero > 0 and numero < 10)
+print(number > 0 and number < 10)
 
-# or
+# or - o
 # Devuelve el primer valor verdadero que encuentra, o el último valor si todos son falsos.
+print(number > 0 or number < 10)
 
-print(numero > 0 or numero < 10)
-
-# not
-# Devuelve el valor opuesto
-print(not numero > 0)
+# not - no
+# Devuelve el valor opuesto, si es verdadero devuelve falso y viceversa.
+print(not number > 0)
