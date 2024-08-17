@@ -68,6 +68,7 @@ else:
 
 # Curiosidad: Condiciones en una sola línea con el Operador Ternario
 # Sintaxis: <valor_si_true> if <condición> else <valor_si_false>
+# [código si se cumple] if [condición] else [código si no se cumple]
 # Este operador es útil para expresiones cortas y claras
 
 numero = 5
