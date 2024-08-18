@@ -1,6 +1,6 @@
 # Lógica Python 🐍
 
-Este repositorio proporciona fundamentos y ejercicios prácticos para aprender el lenguaje de programación `Python`.
+¡Bienvenido a mi repositorio de Lógica Python! Aquí encontrarás **fundamentos** y **ejercicios** prácticos para aprender el lenguaje de programación `Python`.
 
 ## Contenido
 
@@ -9,11 +9,12 @@ Este repositorio proporciona fundamentos y ejercicios prácticos para aprender e
 
 ## Características
 
-1. **Alto nivel:** Python es un lenguaje de alto nivel, lo que significa que se acerca más al lenguaje humano y se aleja de la máquina.
-2. **Débilmente tipado:** No es necesario declarar explícitamente los tipos de variables.
-3. **Interpretado:** El código se ejecuta línea por línea, lo que facilita la detección y corrección de errores.
-4. **Multiparadigma:** Soporta múltiples paradigmas de programación, incluyendo la programación orientada a objetos, la programación funcional y la programación imperativa.
-5. **Orientado a Objetos:**: En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
+1. **Lenguaje de alto nivel:** Python es un lenguaje de alto nivel, lo que significa que se acerca más al lenguaje humano y se aleja de la máquina. Está diseñado para ser fácil de leer y escribir.
+2. **Tipado fuerte:** En Python, las operaciones entre diferentes tipos de datos requieren una `conversión explícita`. Esto significa que el lenguaje no realiza `conversiones automáticas` (implícitas) entre tipos de datos, evitando errores inesperados.
+3. **Dinámicamente tipado:** No es necesario declarar el tipo de datos de una variable de manera explícita. Python determina el tipo de datos en tiempo de ejecución (Cuando el programa ya esta funcionando).
+4. **Lenguaje Interpretado:** Python ejecuta el código línea por línea, en lugar de compilarlo a código máquina previamente para su ejecución.
+5. **Multiparadigma:** Python soporta diversos `paradigmas de programación`, incluyendo la programación orientada a objetos, funcional e imperativa.
+6. **Orientado a Objetos:**: En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
 
 - Objetos: Son instancias de clases.
 - Clases: Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
