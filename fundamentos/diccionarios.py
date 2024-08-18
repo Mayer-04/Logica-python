@@ -8,6 +8,8 @@
 eliminar o modificar pares clave-valor después de su creación.
 - Se pueden anidar, es decir, un diccionario puede contener otros diccionarios como valores.
 - Los diccionarios son iterables, permitiendo recorrer sus claves, valores o ambos utilizando bucles como `for`.
+- Desde Python 3.7 en adelante, los diccionarios preservan el orden de inserción, 
+esto significa que los elementos aparecen en el mismo orden que fueron agregados.
 
 Operaciones comunes con diccionarios:
 - Creación de diccionarios.

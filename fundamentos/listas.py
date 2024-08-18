@@ -110,20 +110,42 @@ del numbers[0]
 print("Lista después de del numbers[0]:", numbers)  # Imprime [2, 3, 4, 5, 6, 7]
 
 """
-* Slicing de listas
-- sequence[start:stop:step]
-- start: Índice de inicio, 0 por defecto
-- stop: Índice de fin del slicing, fin de la lista por defecto
-- step: Es el paso o salto entre elementos de la secuencia. Por defecto es 1
+* Slicing (subdivisión de secuencias) en listas
+El slicing permite extraer una subsecuencia de elementos de una secuencia
+(como listas, cadenas, tuplas, etc.) utilizando la sintaxis:
+sequence[start:stop:step]
+- start: Índice de inicio (opcional), por defecto es 0.
+- stop: Índice donde se detiene el slicing (opcional), por defecto es el final de la secuencia.
+- step: Paso o intervalo entre los elementos seleccionados (opcional), por defecto es 1.
 """
-print("Primeros 3 elementos:", numbers[:3])  # Imprime [2, 3, 4]
 
-# Slicing extendido
+slicing = [2, 3, 4, 5, 6, 7]
+
+# Obtiene los primeros 3 elementos de la lista.
+print("Primeros 3 elementos:", slicing[:3])  # Imprime [2, 3, 4]
+
+# Obtiene los últimos 3 elementos de la lista.
+print("Últimos 3 elementos:", slicing[-3:])  # Imprime [5, 6, 7]
+
+# Slicing con saltos: selecciona elementos desde el índice 1 hasta el 4, con un salto de 3.
+print(
+    "Elementos desde el segundo al quinto con salto de 3:", slicing[1:5:3]
+)  # Imprime [3, 6]
+
+# Ejemplo de slicing extendido
 slicing_extended = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-result = slicing_extended[1::4]
-print(result)  # Imprime [20, 60]
 
-# Remover todos los elementos de una lista usando clear()
+# Selecciona elementos a partir del índice 1 hasta el final, con un salto de 4.
+result = slicing_extended[1::4]
+print("Slicing extendido:", result)  # Imprime [20, 60]
+
+# Esta vez vamos a seleccionar elementos de la lista en orden inverso con un salto de 3.
+# Inicia en el último elemento, se omite el inicio (por lo tanto va hasta el inicio de la lista),
+# y utiliza un paso de -3.
+reversed_slicing = slicing_extended[::-3]
+print("Slicing extendido en orden inverso:", reversed_slicing)  # Imprime [90, 60, 30]
+
+# `clear()` elimina todos los elementos de una lista
 numbers.clear()
 print("Lista después de clear():", numbers)  # Imprime []
 
@@ -134,9 +156,15 @@ print("Índice de 'cherry' en fruits:", fruits.index("cherry"))  # Imprime 2
 # Contar las apariciones de un elemento en la lista usando count()
 print("Número de apariciones de 'apple':", fruits.count("apple"))  # Imprime 1
 
-# Ordenar los elementos de una lista usando sort()
+# `sort()` ordena los elementos de una lista de menor a mayor
 fruits.sort()
 print("Lista fruits ordenada:", fruits)  # Imprime ['apple', 'banana', 'cherry']
+
+# Para ordenar de mayor a menor con `sort()` usamos reverse=True
+fruits.sort(reverse=True)
+print(
+    "Lista fruits ordenada de mayor a menor:", fruits
+)  # Imprime ['cherry', 'banana', 'apple']
 
 # Invertir el orden de los elementos de una lista usando reverse()
 fruits.reverse()
@@ -168,7 +196,7 @@ new_numbers = numbers
 print("new_numbers:", new_numbers)
 
 new_numbers.append(6)
-print("new_numbers:", new_numbers)
+print("agregando 6 a new_numbers:", new_numbers)
 
 # La lista `numbers` ahora contiene [1, 2, 3, 4, 5, 6]
 print("numbers:", numbers)
@@ -184,3 +212,7 @@ print("lista combinada:", lista_combinada)  # Salida: [1, 2, 3, 4, 5, 6]
 lista = [1, 2, 3]
 lista += [4, 5, 6]
 print("Lista:", lista)  # Salida: [1, 2, 3, 4, 5, 6]
+
+# Iterar dos listas a la vez
+for l1, l2 in zip(lista1, lista2):
+    print(l1, l2)
