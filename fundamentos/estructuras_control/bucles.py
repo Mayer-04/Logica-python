@@ -1,5 +1,5 @@
 """
-* Estructuras de control - Bucles en Python
+* Estructuras de control repetitivas - Bucles en Python
 
 Los bucles permiten repetir un bloque de código varias veces según una condición.
 Python tiene dos tipos principales de bucles:
@@ -26,32 +26,35 @@ Si necesitas modificar la lista, considera crear una copia.
 
 # Bucle while básico
 # Este bucle sigue ejecutándose mientras la condición sea verdadera
-
+# Importante: Asegúrate de que la condición eventualmente se vuelva falsa para evitar bucles infinitos.
 contador = 0
 while contador < 5:
     print(f"El contador es: {contador}")
     contador += 1  # Incrementa el contador en cada iteración
 
-# Importante: Asegúrate de que la condición eventualmente se vuelva falsa para evitar bucles infinitos.
 
 # Bucle for básico
 # Este bucle itera sobre una secuencia (en este caso, una lista)
-
+# La variable 'fruta' toma el valor de cada elemento de la lista en cada iteración.
 frutas = ["manzana", "banana", "cereza"]
 for fruta in frutas:
     print(f"Me gusta comer {fruta}")
 
-# La variable 'fruta' toma el valor de cada elemento de la lista en cada iteración.
 
 # Usando range() con for
 # `range()` genera una secuencia de números enteros, útil para iterar un número específico de veces
-
+# Por defecto se empieza en 0
 for i in range(5):
-    print(f"Iteración {i}")
+    print(f"Iteración {i}")  # Imprime 0, 1, 2, 3, 4
 
-# `range()` puede tomar hasta tres argumentos: inicio, fin y paso
+# `range()` puede tomar hasta tres argumentos: inicio, fin y salto entre elementos
+# Por defecto el salto es 1
 for i in range(1, 10, 2):
-    print(f"Número impar: {i}")
+    print(f"Número impar: {i}")  # Imprime 1, 3, 5, 7, 9
+
+# Usando `range()` con una cadena de texto
+for letra in "Python":
+    print(f"Letra: {letra}")  # Imprime `P`, `y`, `t`, `h`, `o`, `n`
 
 
 # Iterar sobre los índices de una secuencia, combinando range() y len()
@@ -63,31 +66,29 @@ for i in range(len(names)):
 
 # Bucle for con enumerate()
 # `enumerate()` permite acceder tanto al índice como al valor de los elementos en una secuencia
-
+# Esto es especialmente útil cuando necesitas el índice de los elementos en la iteración.
 for indice, fruta in enumerate(frutas):
     print(f"{indice}: {fruta}")
 
-# Esto es especialmente útil cuando necesitas el índice de los elementos en la iteración.
 
 # Usando break para salir de un bucle
 # `break` se usa para terminar un bucle prematuramente
-
 for fruta in frutas:
     if fruta == "banana":
         break  # El bucle termina si se encuentra con "banana"
     print(f"Me gusta comer {fruta}")
 
+
 # Usando continue para saltar una iteración
 # `continue` salta el resto del código en la iteración actual y pasa a la siguiente
-
 for fruta in frutas:
     if fruta == "banana":
         continue  # Salta la iteración actual si la fruta es "banana"
     print(f"Me gusta comer {fruta}")
 
+
 # Bucle else
 # El bloque `else` en un bucle se ejecuta solo si el bucle no se interrumpió con `break`
-
 for fruta in frutas:
     print(f"Me gusta comer {fruta}")
 else:
@@ -95,7 +96,9 @@ else:
         "He terminado de comer todas las frutas."
     )  # El `else` aquí se ejecuta porque no hubo un `break`.
 
+
 # Bucle while con else
+# El bucle `else` en un bucle `while` se ejecuta solo si el bucle no se interrumpió con `break`
 contador = 0
 while contador < 3:
     print(f"El contador es: {contador}")
@@ -106,21 +109,19 @@ else:
 
 # Uso de bucles anidados
 # Puedes anidar bucles (un bucle dentro de otro)
-
 for i in range(3):
     for j in range(2):
         print(f"i = {i}, j = {j}")
 
+
 # Comprensión de listas (List Comprehensions)
 # Una forma concisa y eficiente de crear listas
-
 # Ejemplo: Crear una lista con los cuadrados de los números del 1 al 5
 cuadrados = [x**2 for x in range(1, 6)]
-print(cuadrados)
+print("Cuadrados:", cuadrados)  # Imprime [1, 4, 9, 16, 25]
 
 
-
-#* Recorriendo una lista y un string al revez
+# * Recorriendo una lista y un string al revés
 # Ejemplo con una lista de frutas
 frutas = ["manzana", "banana", "cereza", "durazno"]
 
@@ -135,7 +136,13 @@ lenguaje = "JavaScript"
 for letra in lenguaje[::-1]:
     print("Letras:", letra)
 
-#* Simulando un bucle `do while` en Python
+# Iterando una cadena saltándose elementos.
+# Un elemento si y otro no
+for letra in lenguaje[::2]:
+    print("Letras 2 en 2:", letra)  # Imprime `JvSrp`
+
+
+# * Simulando un bucle `do while` en Python
 # El bloque de código se ejecute al menos una vez, y la condición dentro del bucle decide cuándo salir de él.
 # Este ejemplo pide al usuario que ingrese un número positivo y no termina hasta que se ingrese un valor válido.
 while True:

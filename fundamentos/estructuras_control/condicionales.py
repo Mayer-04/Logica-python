@@ -1,12 +1,12 @@
 """
-* Estructuras de control - Condicionales
+* Estructuras de control condicionales
 
 Las estructuras condicionales permiten que un programa ejecute diferentes bloques de código en función de ciertas
 condiciones.
 
 - `if`: Evalúa una condición y, si es verdadera, ejecuta un bloque de código.
 - `elif`: Se usa después de un `if` inicial para verificar una nueva condición si la primera es falsa.
-Es una abreviación de “else if”.
+Es una abreviación de “else if” (si no - de lo contrario si).
 - `else`: Se ejecuta si todas las condiciones anteriores (`if` y `elif`) son falsas.
 - `match`: Introducido en Python 3.10, similar a `switch` en otros lenguajes, 
 permite seleccionar un bloque de código para ejecutar basado en el valor de una expresión.
@@ -70,7 +70,6 @@ else:
 # Sintaxis: <valor_si_true> if <condición> else <valor_si_false>
 # [código si se cumple] if [condición] else [código si no se cumple]
 # Este operador es útil para expresiones cortas y claras
-
 numero = 5
 mensaje = (
     "Positivo" if numero > 0 else "No positivo"
@@ -88,10 +87,9 @@ print(
     mensaje
 )  # Imprime 'Aprobado' porque la condición es verdadera (calificación >= 6)
 
-# Uso del operador walrus (:=) - A partir de Python 3.8+
+# * Uso del operador walrus (:=) - A partir de Python 3.8+
 # Este operador permite asignar y evaluar en una misma expresión.
 # Útil cuando queremos utilizar una variable tanto en la condición como en el bloque de código
-
 if (n := 10) > 5:
     print(
         f"El número {n} es mayor que 5."

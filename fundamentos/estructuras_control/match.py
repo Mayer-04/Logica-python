@@ -1,5 +1,5 @@
 """
-* Estructuras de Control - Match
+* Estructura de Control Match
 
 La sentencia `match` es una estructura de control introducida en Python 3.10, 
 similar a `switch` en otros lenguajes de programación.
@@ -17,7 +17,6 @@ lo que lo convierte en una herramienta poderosa para el control de flujo.
 """
 
 # Ejemplo 1: Uso básico de 'match' para verificar el estado de un semáforo.
-
 color = "verde"
 
 match color:
@@ -32,9 +31,8 @@ match color:
     ):  # El caso '_' se usa como un caso por defecto si ninguno de los anteriores coincide
         print("Color desconocido.")
 
+
 # Ejemplo 2: Uso de `match` para manejar errores HTTP con agrupación de opciones
-
-
 def http_error(status):
     match status:
         case 400:
@@ -51,8 +49,8 @@ def http_error(status):
 
 print(http_error(404))  # Imprime: No encontrado
 
-# Ejemplo 3: Uso de `match` con tuplas para identificar puntos en un plano cartesiano
 
+# Ejemplo 3: Uso de `match` con tuplas para identificar puntos en un plano cartesiano
 x = 0
 y = 10
 point = (x, y)
@@ -69,10 +67,10 @@ match point:
     case _:  # Caso por defecto si el punto no corresponde a ningún caso anterior
         print("No es un punto válido")
 
+
 # Ejemplo 4: Uso avanzado de `match` con patrones complejos
 # Este ejemplo demuestra cómo `match`:
 # puede trabajar con estructuras de datos más complejas como listas y diccionarios
-
 data = {"name": "Andres", "age": 24, "location": "Colombia"}
 
 match data:
@@ -83,8 +81,8 @@ match data:
     case _:
         print("Datos no reconocidos")
 
-# Ejemplo 5: Combinación de tipos de patrones en un mismo `match`
 
+# Ejemplo 5: Combinación de tipos de patrones en un mismo `match`
 status_code = 403
 error_info = {"method": "GET"}
 
