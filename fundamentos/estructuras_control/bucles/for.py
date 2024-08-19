@@ -1,20 +1,15 @@
 """
-* Estructuras de control repetitivas - Bucles en Python
+* Estructura de control repetitiva `for`
 
-Los bucles permiten repetir un bloque de código varias veces según una condición.
-Python tiene dos tipos principales de bucles:
-
-- `while`: Repite el bloque de código mientras una condición (expresión) sea verdadera.
-- `for`: Itera sobre una secuencia (como una lista, tupla, diccionario, string o rango), 
+El bucle for en Python itera sobre una secuencia (como una lista, tupla, diccionario, string o rango), 
 en el orden que aparecen en la secuencia y ejecuta un bloque de código por cada elemento.
 
-Además, Python ofrece las siguientes herramientas adicionales para el control de bucles:
+Python ofrece las siguientes herramientas adicionales para el control de bucles:
 
 - `break`: Termina el bucle antes de que se complete normalmente.
 - `continue`: Salta el resto del código dentro del bucle y pasa a la siguiente iteración.
 - `else`: Ejecuta un bloque de código al final del bucle, pero solo si el bucle no se interrumpió con `break`.
 - En un bucle `for`, la cláusula `else` se ejecuta después de que el bucle alcance su iteración final.
-- En un bucle `while`, la cláusula `else` se ejecuta después de que la condición sea falsa.
 - `pass`: Actúa como un marcador de posición donde se necesita una declaración, pero no se necesita hacer nada.
 
 Algunas consideraciones adicionales:
@@ -23,15 +18,6 @@ Algunas consideraciones adicionales:
 Si necesitas modificar la lista, considera crear una copia.
 - Utiliza list comprehensions cuando sea posible: Son más rápidas y más fáciles de leer para tareas simples.
 """
-
-# Bucle while básico
-# Este bucle sigue ejecutándose mientras la condición sea verdadera
-# Importante: Asegúrate de que la condición eventualmente se vuelva falsa para evitar bucles infinitos.
-contador = 0
-while contador < 5:
-    print(f"El contador es: {contador}")
-    contador += 1  # Incrementa el contador en cada iteración
-
 
 # Bucle for básico
 # Este bucle itera sobre una secuencia (en este caso, una lista)
@@ -97,16 +83,6 @@ else:
     )  # El `else` aquí se ejecuta porque no hubo un `break`.
 
 
-# Bucle while con else
-# El bucle `else` en un bucle `while` se ejecuta solo si el bucle no se interrumpió con `break`
-contador = 0
-while contador < 3:
-    print(f"El contador es: {contador}")
-    contador += 1
-else:
-    print("El bucle while ha terminado.")
-
-
 # Uso de bucles anidados
 # Puedes anidar bucles (un bucle dentro de otro)
 for i in range(3):
@@ -140,17 +116,3 @@ for letra in lenguaje[::-1]:
 # Un elemento si y otro no
 for letra in lenguaje[::2]:
     print("Letras 2 en 2:", letra)  # Imprime `JvSrp`
-
-
-# * Simulando un bucle `do while` en Python
-# El bloque de código se ejecute al menos una vez, y la condición dentro del bucle decide cuándo salir de él.
-# Este ejemplo pide al usuario que ingrese un número positivo y no termina hasta que se ingrese un valor válido.
-while True:
-    # Código que se ejecuta al menos una vez
-    numero = int(input("Introduce un número positivo: "))
-    # Condición para romper el bucle
-    if numero > 0:
-        break
-    print("El número no es positivo. Inténtalo de nuevo.")
-
-print(f"Número válido introducido: {numero}")
