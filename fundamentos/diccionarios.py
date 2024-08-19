@@ -6,6 +6,7 @@
 (strings, enteros, listas, otros diccionarios, etc.).
 - Los diccionarios son mutables, lo que significa que puedes agregar, 
 eliminar o modificar pares clave-valor después de su creación.
+- Las claves de los diccionarios deben ser inmutables. Pueden ser de tipos numéricos, strings, tuplas, etc.
 - Se pueden anidar, es decir, un diccionario puede contener otros diccionarios como valores.
 - Los diccionarios son iterables, permitiendo recorrer sus claves, valores o ambos utilizando bucles como `for`.
 - Desde Python 3.7 en adelante, los diccionarios preservan el orden de inserción, 
