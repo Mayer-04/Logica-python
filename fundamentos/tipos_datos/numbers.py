@@ -11,3 +11,6 @@ print(float(2))
 print(int(2.5))
 # Convertir un entero a un complex con la función complex()
 print(complex(1))
+
+# Se recomienda utilizar el guión bajo `_` para separar los miles en números grandes
+print(1_000_000)

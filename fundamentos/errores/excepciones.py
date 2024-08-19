@@ -72,6 +72,7 @@ finally:
     print("Este bloque de código siempre se ejecuta, sin importar si ocurrió un error.")
 
 # Ejemplo de captura de excepción y acceso a la información de error con `as`
+# Estos errores pueden ser mejor capturarlos en un `logger` en vez de mostrarlos al usuario
 try:
     print(10 / 0)
 except ZeroDivisionError as e:
