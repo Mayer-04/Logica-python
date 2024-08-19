@@ -145,3 +145,7 @@ print("Python".isnumeric())  # `False`, porque "Python" no es numérico
 words = ["Python", "es", "genial"]
 sentence = " ".join(words)  # Une las palabras con un espacio entre ellas
 print(sentence)  # Imprime: "Python es genial"
+
+# Usar un separador en el método `join()`
+separator = "-".join(["Python", "es", "genial"])
+print(separator)  # Imprime: Python-es-genial
