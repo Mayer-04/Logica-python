@@ -114,19 +114,44 @@ resultado = prueba()
 print(resultado)  # Imprime: ('Andres CMS', 20, [1, 2, 3])
 
 """
-Funciones lambda
+* Funciones lambda
     - Una función lambda es una función anónima, es decir, que no tiene nombre.
+    - Se crean con la palabra reservada `lambda`.
     - Son útiles cuando se necesita una función simple y rápida.
+    - Se pueden almacenar en variables o pasar como argumentos a otras funciones.
     - Se suelen usar en combinaciones con funciones como `map()`, `filter()` y `reduce()`.
     - Tiene un retorno implícito.
+    
+    Sintaxis:
+    lambda parámetros: expresión
 """
 
-# Definiendo una función lambda para sumar dos números.
+# Definiendo una función `lambda` para sumar dos números.
+# Los parámetros de la función lambda son `num1` y `num2`.
+# El valor de retorno de la función lambda es la suma de `num1` y `num2`.
 sumar_lambda = lambda num1, num2: num1 + num2
 
 # Usando la función lambda.
 result_lambda = sumar_lambda(1, 2)
 print("Resultado Lambda:", result_lambda)
+
+# Usando una función lambda en una función `map()`.
+numeros = [1, 2, 3, 4, 5]
+result_map = list(map(lambda num: num * 2, numeros))
+print("Resultado Map:", result_map)  # [2, 4, 6, 8, 10]
+
+# Usando una función lambda en una función `filter()`.
+result_filter = list(filter(lambda num: num % 2 == 0, numeros))
+print("Resultado Filter:", result_filter)  # [2, 4]
+
+
+# Retornando una función `lambda` desde una función tradicional
+def suma(value):
+    return lambda num1, num2: num1 + num2 + value
+
+
+# Imprimiendo el resultado de la función tradicional con la función lambda.
+print("Función tradicional con lambda:", suma(5)(1, 2))  # 8
 
 
 # Funciones anidadas (Closures)
