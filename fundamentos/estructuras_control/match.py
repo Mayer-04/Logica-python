@@ -1,8 +1,11 @@
 """
 * Estructura de Control Match
 
+Match permite comparar una expresión con varios `patrones` y ejecutar el código correspondiente a cada coincidencia.
+
 La sentencia `match` es una estructura de control introducida en Python 3.10, 
 similar a `switch` en otros lenguajes de programación.
+
 
 - Patrones: Son las condiciones o criterios que Python utiliza para comparar
 y hacer coincidir un valor o estructura de datos con uno o varios casos específicos.

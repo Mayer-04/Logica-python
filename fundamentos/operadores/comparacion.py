@@ -1,5 +1,6 @@
 """
 * Operadores de comparación
+
 - Se utilizan para comparar dos valores.
 - Puedes encadenar múltiples comparaciones en una sola expresión
 - Cuando `encadenas comparaciones`, Python evalúa cada comparación en orden y verifica si todas son verdaderas.

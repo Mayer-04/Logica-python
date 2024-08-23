@@ -1,8 +1,9 @@
 """
-* Tuplas en Python
+* Tuplas en Python: Secuencia
 
 - Una tupla es una colección ordenada e inmutable de elementos.
 - Las tuplas se definen utilizando paréntesis ().
+- No es posible borrar (ni añadir) un elemento en una tupla, lo que provocará una excepción.
 - Pueden contener elementos de cualquier tipo de datos (enteros, cadenas, listas, etc.).
 - Una vez creada, no se pueden modificar (no se pueden añadir, eliminar o cambiar elementos).
 - Son útiles para almacenar datos que no deben cambiar a lo largo de la ejecución del programa.
@@ -78,10 +79,6 @@ print("Sub-tupla 2:", new_copy[1:4])  # Imprime (2, 3, 4)
 new_list = list(numbers)
 print("Tupla convertida a lista:", new_list)  # Imprime [1, 2, 3, 4]
 
-# Crear una tupla con un solo elemento (es necesario usar una coma al final)
-single_element_tuple = (42,)
-print("Tupla de un solo elemento:", single_element_tuple)  # Imprime (42,)
-
 # Comprobar si un elemento existe en una tupla utilizando in
 print("¿El 3 está en la tupla?", 3 in numbers)  # Imprime True
 print("¿El 5 está en la tupla?", 5 in numbers)  # Imprime False
@@ -102,3 +99,7 @@ print("Diccionario con tuplas como claves:", locations)
 # Acceso a valores en un diccionario usando tuplas como claves
 tokyo_location = (35.6895, 139.6917)
 print("Ciudad para la clave", tokyo_location, ":", locations[tokyo_location])
+
+# Anidar tuplas
+nested_tuple = ((1, 2, 3), (4, 5, 6), (7, 8, 9))
+print("Anidamiento de tuplas:", nested_tuple)

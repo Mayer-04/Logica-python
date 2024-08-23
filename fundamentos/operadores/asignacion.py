@@ -1,5 +1,6 @@
 """
 * Operadores de asignación
+
 - Asignar: Establecer un valor a una variable.
 - Se utilizan para asignar valores a una variable.
 - Cuando estamos utilizando un `operador de asignación` como `+=`, estás diciendo que quieres tomar el valor actual

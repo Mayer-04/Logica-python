@@ -34,7 +34,8 @@ print(my_dict)  # Imprime {'a': 1, 'b': 2, 'c': 3}
 # Obtener la longitud de un diccionario (cantidad de pares clave-valor)
 print(len(my_dict))  # Imprime 3
 
-# Acceder a los elementos de un diccionario usando claves
+# Acceder a los elementos de un diccionario usando sus claves
+# Usamos corchetes [] para acceder a los valores de las claves
 print(my_dict["a"])  # Imprime 1 (valor asociado a la clave 'a')
 print(my_dict["b"])  # Imprime 2 (valor asociado a la clave 'b')
 print(my_dict["c"])  # Imprime 3 (valor asociado a la clave 'c')
@@ -55,15 +56,22 @@ print(my_dict)  # Imprime {'a': 10, 'b': 2, 'c': 3}
 print("a" in my_dict)  # Imprime True (la clave 'a' está presente)
 print("z" in my_dict)  # Imprime False (la clave 'z' no está presente)
 
-# Iterar sobre las claves del diccionario
+# Iterar sobre un diccionario
+# Obteniendo las claves y sus valores
 for key in my_dict:
     print(
         f"Clave: {key}, Valor: {my_dict[key]}"
     )  # Imprime cada clave y su valor asociado
 
-# Iterar solo sobre los valores del diccionario
+# Iterar sobre las claves del diccionario
+# Utilizamos el método `keys()`
+for key in my_dict.keys():
+    print(f"Clave: {key}")  # a, b, c
+
+# Iterar sobre los valores del diccionario
+# Utilizamos el método `values()`
 for value in my_dict.values():
-    print(f"Valor: {value}")  # Imprime cada valor del diccionario
+    print(f"Valor: {value}")  # 10, 2, 3
 
 # Iterar sobre los pares clave-valor del diccionario
 for key, value in my_dict.items():
@@ -83,15 +91,15 @@ del nested_dict["c"]["e"]
 print(nested_dict)  # Imprime {'a': 1, 'b': 2, 'c': {'d': 4}}
 
 # Métodos comunes de los diccionarios
-print(
-    nested_dict.keys()
-)  # Imprime las claves del diccionario: dict_keys(['a', 'b', 'c'])
-print(
-    nested_dict.values()
-)  # Imprime los valores del diccionario: dict_values([1, 2, {'d': 4}])
-print(
-    nested_dict.items()
-)  # Imprime los pares clave-valor del diccionario: dict_items([('a', 1), ('b', 2), ('c', {'d': 4})])
+
+# Imprime las claves del diccionario: dict_keys(['a', 'b', 'c'])
+print(nested_dict.keys())
+
+# Imprime los valores del diccionario: dict_values([1, 2, {'d': 4}])
+print(nested_dict.values())
+
+# Imprime los pares clave-valor del diccionario: dict_items([('a', 1), ('b', 2), ('c', {'d': 4})])
+print(nested_dict.items())
 
 # Obtener un valor de manera segura usando el método get()
 element = nested_dict.get("a")  # Devuelve 1 si la clave "a" existe, sino devuelve None

@@ -1,5 +1,6 @@
 """
 * Operadores aritméticos
+
 - Realizan operaciones matemáticas en variables y valores.
 - El operador `+` (suma) también nos ayuda a concatenar cadenas o variables.
 - El operador `*` (multiplicación) también nos ayuda a repetir una cadena o variable.

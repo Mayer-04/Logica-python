@@ -1,6 +1,10 @@
+"""
+* Booleanos
+
+Valor booleano (verdadero o falso)
+"""
+
+# Verdadero
 True
+# Falso
 False
-
-
-# type() - Inferir el tipo de dato que estamos utilizando
-type(True)

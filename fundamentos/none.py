@@ -1,5 +1,9 @@
 """
 * None
+
+Es un valor especial que representa la ausencia de un valor o un valor nulo, 
+pero no es considerado un tipo de dato básico como cadenas, booleanos o enteros.
+
 - Es usado para indicar la `ausencia de un valor` o un `valor nulo`.
 - Las variables pueden ser inicializadas con None para indicar que no se le ha asignado un valor aún.
 - Si una función en Python no tiene una sentencia return por defecto devuelve None.

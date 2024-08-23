@@ -1,5 +1,5 @@
 """
-* Listas en Python
+* Listas en Python: Secuencia
 
 - Una lista es una colección ordenada y mutable de elementos.
 - Se definen utilizando corchetes [].
@@ -213,6 +213,6 @@ lista = [1, 2, 3]
 lista += [4, 5, 6]
 print("Lista:", lista)  # Salida: [1, 2, 3, 4, 5, 6]
 
-# Iterar dos listas a la vez
+# Iterar dos listas a la vez con la función `zip()`
 for l1, l2 in zip(lista1, lista2):
     print(l1, l2)

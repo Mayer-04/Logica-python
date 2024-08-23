@@ -1,8 +1,12 @@
 """
 Manejo Avanzado de Errores y Excepciones en Python
 
-Este módulo demuestra cómo manejar errores y excepciones en Python utilizando 
-construcciones clave como `try`, `except`, `else`, `finally`, `raise`, y otras técnicas avanzadas.
+Una excepción es un error que ocurre durante la ejecución de un programa.
+- la palabra `excepción` se refiere a que este problema ocurre con poca frecuencia.
+- El manejo de excepciones permite al usuario crear aplicaciones tolerantes a fallas .
+
+Errores y excepciones en Python utilizando las palabras reservadas:
+`try`, `except`, `else`, `finally`, `raise`, y otras técnicas avanzadas.
 
 Instrucciones clave:
 

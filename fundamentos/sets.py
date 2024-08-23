@@ -7,6 +7,7 @@
 - Pueden contener elementos de cualquier tipo de datos (enteros, cadenas, etc.).
 - No tienen un orden particular, lo que significa que no se puede acceder a los elementos por índice.
 - Internamente, Python utiliza una estructura de datos similar a un hashmap para la búsqueda rápida de elementos.
+- Los sets se contruyen con set(items), donde items puede ser una lista o tupla.
 
 Operaciones comunes con sets:
 - Creación de sets.

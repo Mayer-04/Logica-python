@@ -1,5 +1,8 @@
 """
 * Operadores de Identidad
+
+El nombre de este operador se da a partir de querer comprobar la identidad (si son el mismo objeto).
+
 - Se utiliza la palabra clave `is` y `is not` para chequear la `identidad` de un objeto.
 - Se utilizan para comparar si dos objetos son idénticos o no. (Si apuntan al mismo objeto en memoria).
 - Si son iguales devuelve `True`, de lo contrario `False`.
@@ -25,11 +28,12 @@ print("id de var2:", id(var2))  # 2759573135520
 
 print("var es igual a var2:", var is var2)  # True
 
-# Listas
+# Comprobando el `id` de las listas
 new_list = [1, 2, 3]
 new_list2 = [1, 2, 3]
 
-print("nueva tupla:", id(new_list))
-print("otra tupla:", id(new_list2))
+# Las listas presentan un `id` diferente aún siendo iguales en su valor
+print("nueva tupla:", id(new_list))  # 3107485702400
+print("otra tupla:", id(new_list2))  # 3107485700480
 
 print("nueva tupla es igual a otra tupla:", new_list is new_list2)  # False

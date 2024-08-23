@@ -118,6 +118,7 @@ print(resultado)  # Imprime: ('Andres CMS', 20, [1, 2, 3])
     - Una función lambda es una función anónima, es decir, que no tiene nombre.
     - Se crean con la palabra reservada `lambda`.
     - Son útiles cuando se necesita una función simple y rápida.
+    - Es una característica tomada de la `programación funcional`.
     - Se pueden almacenar en variables o pasar como argumentos a otras funciones.
     - Se suelen usar en combinaciones con funciones como `map()`, `filter()` y `reduce()`.
     - Tiene un retorno implícito.
@@ -220,7 +221,7 @@ describir_persona(edad=30, nombre="Maria")
 
 # Función con parámetros arbitrarios (kwargs)
 # Python permite recibir un número indeterminado de parámetros usando `**kwargs`,
-# que crea un diccionario con los argumentos pasados por nombre.
+# que crea un `diccionario` con los argumentos pasados por nombre.
 def indeterminados_nombre(**kwargs):
     """Imprime los argumentos recibidos como pares clave-valor.
 
@@ -236,6 +237,7 @@ indeterminados_nombre(n=5, c="Hola Andres", l=[1, 2, 3, 4, 5])
 
 # Funciones con parámetros arbitrarios (args)
 # De forma similar, se puede recibir un número indeterminado de argumentos posicionales con `*args`.
+# Los datos recibidos se pasan como una `tupla`.
 def saludar_varios(*args):
     """Saluda a todas las personas cuyos nombres se pasan como argumentos.
 

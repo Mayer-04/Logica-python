@@ -1,10 +1,12 @@
 """
 * List Comprehension (Comprensión de Listas)
+
 - Permite crear listas de forma rápida y eficiente.
 - Se basa en una sintaxis compacta para generar listas a partir de iterables.
 - Facilita la creación de listas a partir de listas ya existentes, o incluso de rangos de números, cadenas, etc.
 - Se pueden incluir condiciones para filtrar elementos.
 - Pueden ser usado también para tuplas, conjuntos, diccionarios y cadenas de texto.
+- Es una característica tomada de la `programación funcional` específicamente del lenguaje Haskell.
 
 Características principales:
 - Sintaxis compacta y legible.
@@ -29,8 +31,12 @@ print(
     "Cuadrados de números del 0 al 9:", cuadrados
 )  # Imprime [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 
-# Usar condiciones para filtrar elementos
+
+# * Condición de comprensión
+# Usar condiciones para filtrar elementos y ponerlos en una nueva lista
 # Aquí se genera una lista con números pares del 0 al 9.
+# La forma de leer este código es: Tomamos la varaible `x` para cada uno de los elementos del rango entre 0 y 9,
+# si el resto de la división entre `x` y `2` es `0` entonces `x` es par, almacenarlo en la variable `pares`.
 pares = [x for x in range(10) if x % 2 == 0]
 
 
