@@ -75,6 +75,16 @@ print(isinstance("Andres", float))  # Salida: False
 print(id("Hola"))  # Salida: 2313322522224
 print(id(3))  # Salida: 140734135859704
 
+# Función incorporada `any`
+# Verifica si al menos uno de los elementos de una secuencia (iterables) es `verdadero`.
+print(any([False, False, False]))  # Salida: False
+print(any([False, True, False]))  # Salida: True
+
+# Función incorporada `all`
+# Verifica si todos los elementos de una secuencia (iterables) son `verdadero`.
+print(all([True, True, True]))  # Salida: True
+print(all([True, False, True]))  # Salida: False
+
 # Función incorporada `input`
 # Permite al usuario introducir datos a través de la consola.
 # El valor ingresado por el usuario es de tipo cadena.
