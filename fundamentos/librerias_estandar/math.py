@@ -43,43 +43,43 @@ print(math.nan)  # Salida: nan
 print(math.inf)  # Salida: inf
 
 # Función `trunc`
-# Elimina la parte decimal de un número.
+# Elimina los decimales de un número.
 # Devuelve la parte entera.
-print(math.trunc(2.5))  # Salida: 2
+print("trunc:", math.trunc(2.567))  # Salida: 2
 
 # Función `ceil`
 # Redondea un número hacia arriba.
-print(math.ceil(2.5))  # Salida: 3
+print("ceil:", math.ceil(2.5))  # Salida: 3
 
 # Función `floor`
 # Redondea un número hacia abajo.
-print(math.floor(2.5))  # Salida: 2
+print("floor:", math.floor(2.6))  # Salida: 2
 
 # Función `abs`
 # Retorna el valor absoluto de un número.
 # Es una función nativa de Python y no pertenece a la librería math.
-print(abs(-5))  # Salida: 5
+print("abs:", abs(-5))  # Salida: 5
 
 # Función `factorial`
 # Retorna el factorial de un número.
-print(math.factorial(5))  # Salida: 120
+print("factorial:", math.factorial(5))  # Salida: 120
 
 # Función `fabs`
 # Retorna el valor absoluto de un número como un número flotante.
-print(math.fabs(-5))  # Salida: 5.0
+print("fabs:", math.fabs(-5))  # Salida: 5.0
 
 # Función `sqrt`
 # Retorna la raiz cuadrada de un número.
-print(math.sqrt(4))  # Salida: 2.0
+print("sqrt:", math.sqrt(4))  # Salida: 2.0
 
 # Función `pow`
 # Retorna el valor de `x` elevado a la potencia `y`.
 # El valor retornado es un número flotante.
-print(math.pow(2, 3))  # Salida: 8.0
+print("pow:", math.pow(2, 3))  # Salida: 8.0
 
 # Función `log`
 # Retorna el logaritmo natural de un número.
-print(math.log(10))  # Salida: 2.302585092994046
+print("log:", math.log(10))  # Salida: 2.302585092994046
 
 # Función `log10`
 # Retorna el logaritmo base 10 de un número.
