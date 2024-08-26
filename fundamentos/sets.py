@@ -5,9 +5,11 @@
 - Los elementos de un set son únicos y mutables.
 - Se definen utilizando llaves {} o la función set().
 - Pueden contener elementos de cualquier tipo de datos (enteros, cadenas, etc.).
-- No tienen un orden particular, lo que significa que no se puede acceder a los elementos por índice.
+- No tienen un orden particular, lo que significa que no se puede acceder a los elementos por `índice`.
 - Internamente, Python utiliza una estructura de datos similar a un hashmap para la búsqueda rápida de elementos.
-- Los sets se contruyen con set(items), donde items puede ser una lista o tupla.
+- Al igual que en otras colecciones, los conjuntos soportan `x in set`, `len(set)` y `for x in set`.
+- los conjuntos no soportan indexado, ni operaciones de segmentado, ni otras capacidades propias de las secuencias.
+- No pueden ser usados como claves de diccionarios ni como elementos de otros conjuntos.
 
 Operaciones comunes con sets:
 - Creación de sets.
@@ -16,7 +18,7 @@ Operaciones comunes con sets:
 - Realizar operaciones matemáticas como unión, intersección, diferencia y diferencia simétrica.
 """
 
-# Creación de un set vacío utilizando el constructor set()
+# Creando un conjunto utilizando el constructor `set()`
 new_set = set()
 print(new_set)  # Imprime: set()
 

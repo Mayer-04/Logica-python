@@ -3,6 +3,7 @@
 
 Una cadena (o string) es una secuencia de caracteres, utilizada generalmente para representar texto. 
 En Python, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar.
+- Otra definición: Las cadenas de caracteres son secuencias inmutables de puntos de código Unicode.
 
 Algunas características de las cadenas:
 - Creación de cadenas
@@ -16,6 +17,10 @@ Algunas características de las cadenas:
 - Iteración sobre cadenas
 - Métodos comunes de cadenas
 """
+
+# Creando una cadena de caracteres usando el contructor `str()`
+mi_nombre = str("Mayer")
+print(f"Hola soy {mi_nombre}")
 
 # Creación de cadenas
 # Se pueden crear usando comillas dobles o simples.
@@ -54,7 +59,8 @@ print("Python\tes un lenguaje de programación")
 print(len("Python"))
 
 """
-Formateo de cadenas
+Formateo de cadenas:
+
 En Python, hay varias maneras de formatear cadenas para incluir variables y valores:
 1. Formateo con el operador `%`:
    - %s para cadenas (strings)
@@ -67,9 +73,13 @@ En Python, hay varias maneras de formatear cadenas para incluir variables y valo
 name = "Mayer"
 age = 24
 active = True
+salary = 24.5
 
 # Formateo con `%`
-print("Mi nombre es %s, tengo %d años y estoy %s" % (name, age, active))
+print(
+    "Mi nombre es %s, tengo %d años y estoy %s y mi salario es %f"
+    % (name, age, active, salary)
+)
 
 # Formateo con `.format()`
 print("Mi nombre es {}, tengo {} años y estoy {}".format(name, age, active))
@@ -99,17 +109,23 @@ for character in name:
     print(character)
 
 """
-Métodos comunes de cadenas
+Métodos comunes de cadenas:
 
 Python proporciona muchos métodos incorporados para manipular cadenas. 
-Algunos de los más útiles se describen a continuación.
+Algunos de los más útiles se describen a continuación:
 """
 
 # Convertir a mayúsculas
 print(name.upper())  # `MAYER`
 
+# Devuelve True si la cadena esta en mayusculas en caso contrario False
+print(name.isupper())
+
 # Convertir a minúsculas
 print(name.lower())  # `mayer`
+
+# Devuelve True si la cadena esta en minúsculas en caso contrario False
+print(name.islower())
 
 # Convertir a título (primera letra de cada palabra en mayúscula)
 print(name.title())  # `Mayer`

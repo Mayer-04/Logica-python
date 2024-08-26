@@ -21,7 +21,7 @@ Métodos y operaciones comunes en tuplas:
 - Slicing: Permite obtener una sub-tupla.
 """
 
-# Crear una tupla vacía utilizando la función tuple()
+# Creando una tupla utilizando el contructor `tuple()`
 my_tuple = tuple()
 print("Tupla vacía utilizando tuple():", my_tuple)  # Imprime ()
 

@@ -4,7 +4,13 @@
 Una función es un bloque de código reutilizable que realiza una tarea específica. 
 Las funciones permiten dividir el código en módulos más manejables, promoviendo la reutilización y la legibilidad.
 
-- La sentencia `return` retorna un valor en una función. `return` sin una expresión como argumento retorna `None`.
+- La sentencia `return` retorna un valor en una función.
+- `return` sin una expresión como argumento retorna `None`.
+- La sentencia `pass` no hace nada en una función.
+- Las variables dentro de una función tienen un `scope` limitado. Conocido como variable local.
+
+RECOMENDACIÓN: Utilizar las `anotaciones de tipo` en Python aunque sea algo opcional.
+
 
 En este archivo, se exploran los siguientes conceptos:
 - Declaración de funciones
@@ -72,6 +78,7 @@ def calcular_area_rectangulo(base, altura):
 
 
 # Llamada a la función `calcular_area_rectangulo` con múltiples argumentos.
+# El orden de los argumentos si importa.
 area = calcular_area_rectangulo(5, 10)
 print(f"El área del rectángulo es: {area}")
 
@@ -183,26 +190,28 @@ print(f"El resultado de la función anidada es: {resultado}")
 
 # Función recursiva
 # Una función recursiva es aquella que se llama a sí misma.
-def factorial(num):
-    """Calcula el factorial de un número de manera recursiva.
+# Necesita una condición de parada o salida porque se volvera a llamar a si misma.
+def calcular_factorial(number: int) -> int:
+    """
+    Calcula el factorial de un entero positivo dado.
 
-    Parámetro:
-    num (int): Un entero positivo cuyo factorial se quiere calcular.
+    Argumentos:
+        número (int): El número para calcular el factorial.
 
     Retorno:
-    int: El factorial de `num`.
+        int: El factorial del número dado.
     """
-    if num == 1:
+    if number == 1:
         return 1
     else:
-        return num * factorial(num - 1)
+        return number * calcular_factorial(number - 1)
 
 
 # Calculando el factorial de 5.
-print(factorial(5))  # Imprime: 120
+print(calcular_factorial(5))  # Imprime: 120
 
 
-# Argumentos por nombre (keyword arguments)
+# Keyword arguments - Argumentos por nombre
 # Python permite llamar a las funciones especificando los argumentos por nombre,
 # lo cual permite ignorar el orden de los parámetros.
 def describir_persona(nombre, edad):
@@ -249,13 +258,12 @@ def saludar_varios(*args):
 
 
 # Llamando a la función `saludar_varios` con múltiples nombres.
-saludar_varios("Mayer", "Andrés", "Carlos")
+saludar_varios("Mayer", "Andrés", "Luis")
 
 
 # Sentencia pass
 # La sentencia `pass` en Python no hace nada. Se usa como un marcador de posición en el código.
 def pass_func():
-    """Función que no realiza ninguna acción, útil como marcador de posición."""
     pass  # No hace nada
 
 
@@ -263,22 +271,22 @@ def pass_func():
 pass_func()
 
 
-# Callbacks - Funciones que se pasan como argumentos a otras funciones
+# Callbacks - Funciones que se pasan como argumentos a otras funciones.
 # Se puede pasar una función como argumento a otra función, permitiendo la creación de callbacks.
-def ejecutar_callback(func, valor):
+def ejecutar_callback(func: callable, valor: int) -> int:
     """Ejecuta una función (callback) pasada como argumento.
 
     Parámetros:
-    func (function): La función a ejecutar.
-    valor (any): El valor a pasar como argumento a la función `func`.
+    func (callable): La función a ejecutar. Debe ser una función que tome un solo argumento de tipo int.
+    valor (int): El valor a pasar como argumento a la función `func`.
 
     Retorno:
-    any: El resultado de la ejecución de `func(valor)`.
+    int:
     """
     return func(valor)
 
 
-# Definimos un callback sencillo.
+# Definimos una función sencilla para utilizar callback
 def doblar(x):
     return x * 2
 

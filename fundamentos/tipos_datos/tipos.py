@@ -2,7 +2,10 @@
 Anotaciones de tipo en Python (Type Annotations)
 -------------------------------------------------
 Las anotaciones de tipo permiten especificar los tipos de datos que se espera que tengan 
-las variables, los parámetros de las funciones y los valores de retorno. 
+las variables, los parámetros de las funciones y los valores de retorno.
+
+- Declaración de tipos: Implementado desde la versión 3.12 de Python. Esta declaración permite crear alias de tipos,
+que son atajos para referirse a tipos complejos mediante nombres más sencillos. Usando `type`.
 
 Beneficios:
 - Mejoran la legibilidad del código y sirven como documentación explícita.
@@ -37,6 +40,10 @@ print(f"my_tuple: {my_tuple}")  # Output: my_tuple: (1, 2, 3)
 
 # Ejemplo con un diccionario
 my_dict: dict[str, int] = {"uno": 1, "dos": 2, "tres": 3}
+print(f"my_dict: {my_dict}")  # Output: my_dict: {'uno': 1, 'dos': 2, 'tres': 3}
+
+# Ejemplo con un diccionario en donde el valor puede ser de tipo `str o int`
+my_dict2: dict[str, str | int] = {"uno": 1, "dos": "2", "tres": 3}
 print(f"my_dict: {my_dict}")  # Output: my_dict: {'uno': 1, 'dos': 2, 'tres': 3}
 
 
@@ -84,3 +91,13 @@ class Persona:
 
 persona = Persona("Mayer", 24)
 print(persona.saludar())  # Output: Hola, mi nombre es Mayer y tengo 24 años.
+
+
+# Alias de tipos
+# Son útiles para simplificar las anotaciones de tipos
+Color = tuple[str, str, str]
+colores: tuple[Color] = ("Rojo", "Verde", "Azul")
+
+# Declaración de tipos
+type Number = tuple[int, int]
+numeros: Number = (4, 11, 29)

@@ -14,8 +14,9 @@
 - Se pueden convertir a otros tipos de datos, como tuplas (tuple), conjuntos (set), 
 diccionarios (dict) y cadenas de texto (str).
 - Cuando asignas una lista a una variable, no copia los datos, la variable solo apunta a la lista existente.
-- En terminos de rapidez y eficiencia para agregar múltiples elementos en una lista,
-se recomienda utilizar el método `extend()` y el operador `+=`
+IMPORTANTE: En terminos de rapidez y eficiencia para agregar múltiples elementos en una lista,
+se recomienda utilizar el método `extend()` y el operador `+=`.
+- `+=` es eficiente cuando se necesita concatenar listas o strings.
 - Si solo necesitas agregar un elemento a la lista utiliza el método `append()`,
 es muy eficiente para este propósito, ya que realiza la operación de inserción directa.
 

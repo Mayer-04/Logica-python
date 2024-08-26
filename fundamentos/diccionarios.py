@@ -19,7 +19,7 @@ Operaciones comunes con diccionarios:
 - Métodos comunes como `keys()`, `values()`, `items()`, y `get()`.
 """
 
-# Crear un diccionario vacío usando el constructor dict()
+# Crear un diccionario utilizando el contructor `dict()`
 my_dict = dict()
 print(my_dict)  # Imprime {} (diccionario vacío)
 

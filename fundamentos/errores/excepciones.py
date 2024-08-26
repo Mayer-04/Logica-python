@@ -8,13 +8,15 @@ Una excepción es un error que ocurre durante la ejecución de un programa.
 Errores y excepciones en Python utilizando las palabras reservadas:
 `try`, `except`, `else`, `finally`, `raise`, y otras técnicas avanzadas.
 
+IMPORTANTE: El error "padre" o que los maneja a todos se llama `Exception`. Todos los errores derivan de esta clase.
+
 Instrucciones clave:
 
 - `try`: Intenta ejecutar el código dentro del bloque `try`.
 - `except`: Captura y maneja excepciones que ocurren dentro del bloque `try`.
 - `else`: Se ejecuta si no ocurre ninguna excepción en el bloque `try`.
 - `finally`: Se ejecuta sin importar si se produjo o no una excepción en el bloque `try`.
-- `raise`: Lanza una excepción personalizada.
+- `raise`: Lanza una excepción personalizada. Crea un error definido por el usuario.
 
 - `raise from`: Lanza una nueva excepción mientras mantiene la original para facilitar el rastreo.
 * Te permite decir: "Hubo este error, y debido a ese error, estoy lanzando este nuevo error".
@@ -77,6 +79,7 @@ finally:
 
 # Ejemplo de captura de excepción y acceso a la información de error con `as`
 # Estos errores pueden ser mejor capturarlos en un `logger` en vez de mostrarlos al usuario
+# !NOTE: Para saber el nombre del error que estamos teniendo, podemos usar el `type(e).__name__`
 try:
     print(10 / 0)
 except ZeroDivisionError as e:
