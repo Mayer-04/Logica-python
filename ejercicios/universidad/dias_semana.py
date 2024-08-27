@@ -47,12 +47,12 @@ match dia:
 
 
 """
-* Utilizando un diccionario
+* Utilizando un diccionario:
 - Se puede hacer con la función `get()`
 - Se puede utilizar el operador `ternario`
 - Se puede hacer con la palabra clave `in`
 - Se puede negar la condición con la palabra clave `not`
-- Se puede hacer accediendo a los índices del diccionario
+- Se puede accediendo a los índices del diccionario
 """
 dia = int(input("Ingrese un dígito entre 1 y 7: "))
 
@@ -99,7 +99,7 @@ else:
     print("Días inválidos")
 
 
-# * Utilizando una función
+# Utilizando una función
 def obtener_dia(dia: int) -> str:
     dias = {
         1: "Lunes",
@@ -120,6 +120,6 @@ try:
     dia = int(input("Ingrese un dígito entre 1 y 7: "))
     mensaje = obtener_dia(dia)
 except ValueError:
-    mensaje = "Entrada inválida: Debe ser un número entero."
+    mensaje = "Entrada inválida. Debe ser un número entero."
 
-print("Día de la semana:", mensaje)
+print(f"Día de la semana: {mensaje}")
