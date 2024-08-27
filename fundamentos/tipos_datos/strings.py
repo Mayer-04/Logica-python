@@ -6,6 +6,7 @@ En Python, las cadenas son inmutables, lo que significa que una vez creada una c
 - Otra definición: Las cadenas de caracteres son secuencias inmutables de puntos de código Unicode.
 
 Algunas características de las cadenas:
+
 - Creación de cadenas
 - Concatenación y multiplicación de cadenas
 - Secuencias de escape (salto de línea, tabulación)

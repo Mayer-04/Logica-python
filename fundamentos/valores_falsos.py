@@ -1,5 +1,5 @@
 """
-Valores que son considerados falsos en Python
+* Valores que son considerados falsos en Python
 """
 
 # False
@@ -16,6 +16,7 @@ print(0.0)
 
 # Cadenas vacías con doble comilla o comilla simple
 print("")
+print('')
 
 # Diccionarios vacíos
 print({})

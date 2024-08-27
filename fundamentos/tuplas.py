@@ -16,8 +16,8 @@ Métodos y operaciones comunes en tuplas:
 - index(): Retorna el índice de la primera aparición de un valor especificado.
 - len(): Retorna la longitud de la tupla.
 - in: Verifica si un elemento está en la tupla.
-- Concatenación (+): Une dos o más tuplas.
-- Repetición (*): Repite los elementos de una tupla un número específico de veces.
+- Concatenación +: Une dos o más tuplas.
+- Repetición *: Repite los elementos de una tupla un número específico de veces.
 - Slicing: Permite obtener una sub-tupla.
 """
 
