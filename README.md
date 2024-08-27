@@ -14,7 +14,7 @@
 3. **Dinámicamente tipado:** No es necesario declarar el tipo de datos de una variable de manera explícita. Python determina el tipo de datos en tiempo de ejecución (Cuando el programa ya esta funcionando).
 4. **Lenguaje Interpretado:** Python ejecuta el código línea por línea, en lugar de compilarlo a código máquina previamente para su ejecución.
 5. **Multiparadigma:** Python soporta diversos `paradigmas de programación`, incluyendo la programación orientada a objetos, funcional e imperativa.
-6. **Orientado a Objetos:**: En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
+6. **Orientado a Objetos:** En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
 
 - _Objetos:_ Son instancias de clases.
 - _Clases:_ Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
