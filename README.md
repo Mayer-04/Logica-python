@@ -5,7 +5,7 @@
 ## Contenido
 
 1. **Fundamentos:** La carpeta **fundamentos** contiene archivos que cubren conceptos fundamentales del lenguaje Python. Estos archivos pueden servir como referencia para repasar temas específicos.
-2. **Ejercicios**: En la carpeta ejercicios, encontrarás una variedad de problemas y desafíos de programación para practicar y mejorar tus habilidades.
+2. **Ejercicios:** En la carpeta ejercicios, encontrarás una variedad de problemas y desafíos de programación para practicar y mejorar tus habilidades.
 
 ## Características
 
@@ -16,10 +16,10 @@
 5. **Multiparadigma:** Python soporta diversos `paradigmas de programación`, incluyendo la programación orientada a objetos, funcional e imperativa.
 6. **Orientado a Objetos:**: En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
 
-- Objetos: Son instancias de clases.
-- Clases: Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
-- Instancia: Son objetos creados a partir de una clase.
+- _Objetos:_ Son instancias de clases.
+- _Clases:_ Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
+- _Instancia:_ Son objetos creados a partir de una clase.
 
 ## Contribución
 
-¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar los ejercicios, agregar nuevos desafíos, o corregir errores, no dudes en abrir una solicitud de extracción (Pull Request). Cada aporte es valioso para la comunidad.
+¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar los ejercicios, agregar nuevos desafíos, o corregir errores, no dudes en abrir una solicitud de extracción _(Pull Request)_. Cada aporte es valioso para la comunidad.

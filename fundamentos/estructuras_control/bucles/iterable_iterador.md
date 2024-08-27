@@ -1,6 +1,6 @@
 ## Iterable
 
-Un iterable es cualquier conjunto de elementos que puedes recorrer uno por uno.
+Un iterable es cualquier conjunto de elementos que puedes **recorrer** uno por uno.
 
 - Los elementos pueden ser `indexados` (Podemos acceder a ellos mediante un índice). Sin embargo, no todos los iterables son indexados; esta característica es exclusiva de ciertos tipos de datos.
 - **Acceso en diccionarios:** En Python, los diccionarios permiten acceder a sus elementos a través de claves asociadas. Estas claves deben ser de un tipo de dato inmutable, como números, cadenas de texto, tuplas, booleanos, entre otros.

@@ -1,8 +1,6 @@
 # Consejos en Python
 
-## Modo Interactivo
-
-### Iniciar el Modo Interactivo
+## Iniciar el Modo Interactivo
 
 **En Windows:**
 
@@ -22,13 +20,15 @@ Para salir del modo interactivo de Python, utiliza el siguiente comando:
 exit()
 ```
 
+## Características y Consejos
+
 1. En Python, no es necesario terminar cada sentencia con un punto y coma (;).
 2. **Indentación Obligatoria:** En lugar de usar llaves `{}` para agrupar bloques de código (como en otros lenguajes), Python utiliza la `indentación`. Por convención, se emplean 4 espacios por nivel de indentación. Una indentación incorrecta resultará en un error de sintaxis.
-3. **Nombres de Variables Descriptivos**: Es recomendable utilizar nombres de variables en minúsculas, separando las palabras con guiones bajos `(snake_case).`
+3. **Nombres de Variables Descriptivos:** Es recomendable utilizar nombres de variables en minúsculas, separando las palabras con guiones bajos `(snake_case).`
 4. Puedes multiplicar una cadena por un número para repetirla varias veces con el operador aritmetico `*`:
 
 ```py
-    print("Mayer" * 4) # MayerMayerMayerMayer
+print("Mayer" * 4) # MayerMayerMayerMayer
 ```
 
 5. **Evita Comparar Tipos Diferentes:** Comparar valores de diferentes tipos puede generar errores o comportamientos inesperados. Asegúrate de que los valores sean del mismo tipo antes de compararlos.
@@ -37,17 +37,17 @@ exit()
 8. **Modificación de Listas Durante la Iteración:** Modificar una lista mientras la recorres puede causar comportamientos inesperados. Para evitarlo, trabaja con una copia de la lista:
 
 ```py
-    for item in my_list[:]:
-        if some_condition(item):
-            my_list.remove(item)
+for item in my_list[:]:
+    if some_condition(item):
+        my_list.remove(item)
 ```
 
 9. **Evita Efectos Colaterales en Funciones:** Las funciones deben evitar modificar variables globales u otras partes del programa para mantener la claridad y facilitar las pruebas.
-10. **Secuencias:** Es un tipo de dato que puede almacenar una colección de elementos o contener varios elementos. Algunas secuencias en Python son las listas, diccionarios, tuplas, cadenas de caracteres, conjuntos y rangos (la función `range()`).
+10. **Secuencias:** Es un tipo de dato que puede almacenar una colección de elementos o contener varios elementos. Algunas secuencias en Python son las listas, tuplas, cadenas de caracteres y rangos (la función `range()`).
 
 ## Buenas practicas
 
-1. **Uso de Funciones Incorporadas (Built-ins):** Python ofrece muchas funciones incorporadas que pueden simplificar tu código, como len(), sum(), max(), min(), entre otras. Siempre que sea posible, utiliza estas funciones en lugar de reinventar la rueda.
+1. **Uso de Funciones Incorporadas (Built-ins):** Python ofrece muchas funciones incorporadas que pueden simplificar tu código, como **len()**, **sum()**, **max()**, **min()**, entre otras. Siempre que sea posible, utiliza estas funciones en lugar de reinventar la rueda.
 2. **Comprensión de Listas y Generadores:** Utiliza comprensión de listas y generadores para crear listas, diccionarios, o conjuntos de manera concisa y eficiente:
 
 ```py
@@ -103,9 +103,9 @@ generar_diccionario(**diccionario)  # Salida: 1 2 3
 
 ## Objetos
 
-Recordemos que en objeto en Python es una instancias de una clase. Cada objeto en Python tiene tres características fundamentales: `identidad`, `tipo` y `valor`.
+Recordemos que en **objeto** en Python es una _instancia_ de una clase. Cada objeto en Python tiene tres características fundamentales: `identidad`, `tipo` y `valor`.
 
-- **Identidad:** La identidad de un objeto es un identificador único que lo distingue de otros objetos. Esta identidad es inmutable durante la vida del objeto y se puede verificar usando el operador `is`, que determina si dos referencias apuntan al mismo objeto en memoria.
+- **Identidad:** La identidad de un objeto es un identificador único (número entero) que lo distingue de otros objetos. Esta identidad es inmutable durante la vida del objeto y se puede verificar usando el operador `is`, que determina si dos referencias apuntan al mismo objeto en memoria.
 - **Tipo:** El tipo de un objeto define la naturaleza de los datos que contiene y las operaciones que se pueden realizar sobre él. Una vez que se crea un objeto, su tipo no cambia. El tipo de un objeto se puede consultar con la función `type()`.
 - **Valor:** El valor de un objeto es el contenido que almacena. Dependiendo de si el objeto es `mutable` o `inmutable`, su valor puede o no cambiar durante la ejecución del programa.
 
