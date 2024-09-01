@@ -3,6 +3,7 @@
 
 - Una lista es una colección ordenada y mutable de elementos.
 - Se definen utilizando corchetes [].
+- Sería equivalente a lo que en otros lenguajes se conoce por arrays, o vectores.
 - Pueden contener elementos de cualquier tipo de datos (números, cadenas, listas, etc.).
 - Son mutables, lo que significa que sus elementos pueden modificarse después de la creación.
 - Se pueden anidar listas dentro de listas (listas de listas).
@@ -20,7 +21,7 @@ se recomienda utilizar el método `extend()` y el operador `+=`.
 - Si solo necesitas agregar un elemento a la lista utiliza el método `append()`,
 es muy eficiente para este propósito, ya que realiza la operación de inserción directa.
 
-Métodos y operaciones comunes de las listas:
+* Métodos y operaciones comunes de las listas:
 - append(x): Añade un elemento al final de la lista.
 - extend(iterable): Añade todos los elementos de un iterable al final de la lista.
 - insert(i, x): Inserta un elemento en la posición especificada.
