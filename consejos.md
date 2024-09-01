@@ -162,3 +162,12 @@ Algunos objetos inmutables son:
 - str (cadena)
 - tuple
 - frozenset
+
+## Lenguaje Interpretado o de Script
+
+El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete` lee y ejecuta el código línea por línea.
+
+En el caso de Python, cuando ejecutas un programa, el código se traduce primero a un formato intermedio llamado `bytecode`, que es una especie de lenguaje máquina simplificado.
+
+- El intérprete de Python ejecuta este bytecode. Es decir, el intérprete lee el bytecode y lo traduce a instrucciones que la computadora puede entender y ejecutar.
+- Los archivos _.pyc_ o _.pyo_ se generan automáticamente y se guardan en un directorio especial llamado **pycache**, que se encuentra en la misma carpeta donde está tu archivo _.py_ original.
