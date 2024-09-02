@@ -16,7 +16,7 @@ Operaciones comunes con diccionarios:
 - Creación de diccionarios.
 - Acceso, adición y eliminación de elementos.
 - Iteración sobre diccionarios.
-- Métodos comunes como `keys()`, `values()`, `items()`, y `get()`.
+- Métodos comunes como `keys()`, `values()`, `items()`, `get()`, `copy()`, `fromkeys()`, `pop()`, `update()`, etc.
 """
 
 # Crear un diccionario utilizando el contructor `dict()`
@@ -113,6 +113,34 @@ print(element)  # Imprime None
 element = nested_dict.setdefault("f", 6)  # Añade 'f': 6 si no existe y lo devuelve
 print(element)  # Imprime 6
 print(nested_dict)  # Imprime {'a': 1, 'b': 2, 'c': {'d': 4}, 'f': 6}
+
+# copy(): Crea una copia superficial (shallow copy) del diccionario.
+# Útil cuando no quieres modificar el diccionario original.
+original = {"a": 1, "b": 2}
+copy = original.copy()
+print("copy:", copy)  # Imprime {'a': 1, 'b': 2}
+
+# fromkeys(): Crea un nuevo diccionario con las claves proporcionadas (keys)
+# y asigna a todas esas claves el mismo valor (value).
+# Como primer argumento recibe un iterable que contiene las claves.
+keys = ["a", "b", "c"]
+new_dictionary = dict.fromkeys(keys, 0)
+print("fromkeys:", new_dictionary)  # Imprime {'a': 0, 'b': 0, 'c': 0}
+
+# pop(): Elimina el ítem con la clave especificada y devuelve su valor.
+# Útil cuando necesitas eliminar un ítem del diccionario y obtener el valor asociado.
+dictionary = {"a": 1, "b": 2}
+valor = dictionary.pop("b")
+print("pop:", dictionary)  # Imprime {'a': 1}
+
+# update(): Actualiza el diccionario con los pares clave-valor de otro diccionario.
+# Si hay claves comunes, sus valores se actualizan.
+# Útil para combinar diccionarios o agregar ítems de otro diccionario al actual.
+update_dict = {"a": 1}
+other_dict = {"b": 2, "c": 3}
+update_dict.update(other_dict)
+print("update:", update_dict)  # Imprime {'a': 1, 'b': 2, 'c': 3}
+
 
 # Desempaquetar un diccionario usando el operador **
 my_dict = {"a": 1, "b": 2, "c": 3}

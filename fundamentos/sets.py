@@ -18,7 +18,7 @@ Operaciones comunes con sets:
 - Realizar operaciones matemáticas como unión, intersección, diferencia y diferencia simétrica.
 """
 
-# Creando un conjunto utilizando el constructor `set()`
+# Creando un conjunto utilizando el constructor `set()` - Conjunto vacío.
 new_set = set()
 print(new_set)  # Imprime: set()
 
