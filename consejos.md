@@ -20,6 +20,39 @@ Para salir del modo interactivo de Python, utiliza el siguiente comando:
 exit()
 ```
 
+## Mutabilidad e Inmutabilidad
+
+Los objetos en Python se pueden clasificar en dos categorías basadas en su capacidad para cambiar:
+
+1. **Mutables:** Estos objetos pueden cambiar su valor después de haber sido creados. Cuando un objeto mutable se pasa como argumento a una función, se pasa por referencia, lo que significa que las modificaciones realizadas en la función afectarán al objeto original.
+
+Algunos objetos mutables son:
+
+- list (listas)
+- dict (diccionario)
+- set (conjuntos)
+- bytearray
+
+2. **Inmutables:** Estos objetos no pueden cambiar su valor una vez creados. Si se intenta modificar un objeto inmutable, se creará un nuevo objeto en su lugar. Cuando un objeto inmutable se pasa como argumento a una función, se pasa por valor, es decir, la función trabaja con una copia del valor original y no puede modificar el objeto original.
+
+Algunos objetos inmutables son:
+
+- int (entero)
+- float (flotante)
+- bool (booleano)
+- str (cadena)
+- tuple
+- frozenset
+
+## Lenguaje Interpretado o de Script
+
+El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete` lee y ejecuta el código línea por línea.
+
+En el caso de Python, cuando ejecutas un programa, el código se traduce primero a un formato intermedio llamado `bytecode`, que es una especie de lenguaje máquina simplificado.
+
+- El intérprete de Python ejecuta este bytecode. Es decir, el intérprete lee el bytecode y lo traduce a instrucciones que la computadora puede entender y ejecutar.
+- Los archivos _.pyc_ o _.pyo_ se generan automáticamente y se guardan en un directorio especial llamado **pycache**, que se encuentra en la misma carpeta donde está tu archivo _.py_ original.
+
 ## Características y Consejos
 
 1. En Python, no es necesario terminar cada sentencia con un punto y coma (;).
@@ -138,36 +171,3 @@ print(f"¿mi_lista es la misma que otra_lista? {mi_lista is otra_lista}") # Fals
 mi_lista.append(4)
 print(f"Valor modificado: {mi_lista}") # Valor modificado: [1, 2, 3, 4]
 ```
-
-## Mutabilidad e Inmutabilidad
-
-Los objetos en Python se pueden clasificar en dos categorías basadas en su capacidad para cambiar:
-
-1. **Mutables:** Estos objetos pueden cambiar su valor después de haber sido creados. Cuando un objeto mutable se pasa como argumento a una función, se pasa por referencia, lo que significa que las modificaciones realizadas en la función afectarán al objeto original.
-
-Algunos objetos mutables son:
-
-- list (listas)
-- dict (diccionario)
-- set (conjuntos)
-- bytearray
-
-2. **Inmutables:** Estos objetos no pueden cambiar su valor una vez creados. Si se intenta modificar un objeto inmutable, se creará un nuevo objeto en su lugar. Cuando un objeto inmutable se pasa como argumento a una función, se pasa por valor, es decir, la función trabaja con una copia del valor original y no puede modificar el objeto original.
-
-Algunos objetos inmutables son:
-
-- int (entero)
-- float (flotante)
-- bool (booleano)
-- str (cadena)
-- tuple
-- frozenset
-
-## Lenguaje Interpretado o de Script
-
-El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete` lee y ejecuta el código línea por línea.
-
-En el caso de Python, cuando ejecutas un programa, el código se traduce primero a un formato intermedio llamado `bytecode`, que es una especie de lenguaje máquina simplificado.
-
-- El intérprete de Python ejecuta este bytecode. Es decir, el intérprete lee el bytecode y lo traduce a instrucciones que la computadora puede entender y ejecutar.
-- Los archivos _.pyc_ o _.pyo_ se generan automáticamente y se guardan en un directorio especial llamado **pycache**, que se encuentra en la misma carpeta donde está tu archivo _.py_ original.
