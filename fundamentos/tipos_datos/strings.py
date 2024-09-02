@@ -110,7 +110,7 @@ for character in name:
     print(character)
 
 """
-Métodos comunes de cadenas:
+* Métodos comunes de cadenas:
 
 Python proporciona muchos métodos incorporados para manipular cadenas. 
 Algunos de los más útiles se describen a continuación:
@@ -143,8 +143,13 @@ print(name.startswith("M"))  # `True`
 # Comprobar si una cadena termina con un carácter o secuencia
 print(name.endswith("r"))  # `True`
 
-# Buscar la posición de un carácter
+# Buscar dentro de una cadena la subcadena que se pasa como argumento. Devuelve el índice de la subcadena.
+# Si la subcadena no se encuentra, devuelve -1.
 print(name.find("y"))  # Devuelve el índice de `y` (`2`)
+
+# Buscar dentro de una cadena la subcadena que se pasa como argumento. Devuelve el índice de la subcadena.
+# Si la subcadena no se encuentra, lanza una excepción `ValueError`.
+print(name.index("y"))  # Devuelve el índice de `y` (`2`)
 
 # Dividir una cadena en una lista de palabras
 print(
@@ -157,12 +162,15 @@ print(name.replace("y", "a"))  # Reemplaza `y` con `a` (`Maaer`)
 # Comprobar si la cadena es numérica
 print("Python".isnumeric())  # `False`, porque "Python" no es numérico
 
-# Unir una lista de cadenas en una sola cadena
+# Devuelve una copia de la cadena y remueve los espacios en blanco iniciales y finales.
+print("   Python  ".strip())
+
+# Unir una lista de cadenas en una sola cadena.
 # El método `join()` une los elementos de una lista (u otro iterable) en una sola cadena, usando un delimitador.
 words = ["Python", "es", "genial"]
 sentence = " ".join(words)  # Une las palabras con un espacio entre ellas
 print(sentence)  # Imprime: "Python es genial"
 
-# Usar un separador en el método `join()`
+# Usar un separador "-" en el método `join()`
 separator = "-".join(["Python", "es", "genial"])
 print(separator)  # Imprime: Python-es-genial
