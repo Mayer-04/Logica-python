@@ -16,8 +16,8 @@ Métodos y operaciones comunes en tuplas:
 - index(): Retorna el índice de la primera aparición de un valor especificado.
 - len(): Retorna la longitud de la tupla.
 - in: Verifica si un elemento está en la tupla.
-- Concatenación +: Une dos o más tuplas.
-- Repetición *: Repite los elementos de una tupla un número específico de veces.
+- Concatenación `+`: Une dos o más tuplas.
+- Repetición `*`: Repite los elementos de una tupla un número específico de veces.
 - Slicing: Permite obtener una sub-tupla.
 """
 
@@ -44,13 +44,13 @@ print("Elementos desempaquetados:", a, b, c, d)  # Imprime 1 2 3 4
 # Desempaquetado avanzado con * para capturar el resto de los elementos
 tupla_grande = (1, 2, 3, 4, 5, 6)
 x, y, *resto = tupla_grande
-print("Desempaquetado con resto:", "x:", x, "y:", y, "resto:", resto)
-# Imprime x: 1 y: 2 resto: [3, 4, 5, 6]
+print(
+    "Desempaquetado con resto:", "x:", x, "y:", y, "resto:", resto
+)  # Imprime x: 1 y: 2 resto: [3, 4, 5, 6]
 
 # Desempaquetado omitiendo el resto de los elementos
 x, y, *_ = tupla_grande
-print("Desempaquetado omitiendo resto:", "x:", x, "y:", y)
-# Imprime x: 1 y: 2
+print("Desempaquetado omitiendo resto:", "x:", x, "y:", y)  # Imprime x: 1 y: 2
 
 # Contar las apariciones de un elemento en la tupla usando count()
 print("Apariciones del 3:", numbers.count(3))  # Imprime 1

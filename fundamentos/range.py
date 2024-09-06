@@ -1,7 +1,7 @@
 """
 * Range - Rango
 
-- Función `range` son objetos que generan una secuencia inmutable de números enteros.
+- Función `range` es un objeto que genera una secuencia inmutable de números enteros.
 - Se suelen utilizar para ser ejecutados en un bucle `for`.
 - Los parámtros usados en range deben ser números enteros.
 - `range` toma tres argumentos: start, stop y step (salto) entre elementos

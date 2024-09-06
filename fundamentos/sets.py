@@ -78,13 +78,20 @@ print(union_set)  # Imprime: {1, 2, 3, 4, 5}
 union_operator_set = set1 | set2
 print("union_operator_set:", union_operator_set)  # Imprime: {1, 2, 3, 4, 5}
 
+# Intersección de sets utilizando el operador &
+intersection_operator_set = set1 & set2
+print("intersection_operator_set:", intersection_operator_set)  # Imprime: {3}
+
 # Realizar la intersección de dos sets
 intersection_set = set1.intersection(set2)
 print(intersection_set)  # Imprime: {3}
 
-# Intersección de sets utilizando el operador &
-intersection_operator_set = set1 & set2
-print("intersection_operator_set:", intersection_operator_set)  # Imprime: {3}
+# Verificar si un set es subconjunto de otro
+subset_set = {1, 2}
+print(subset_set.issubset(set1))  # Imprime: True
+
+# Verificar si un set es superconjunto de otro
+print(set1.issuperset(subset_set))  # Imprime: True
 
 # Diferencia entre dos sets (elementos presentes en set1 pero no en set2)
 difference_set = set1.difference(set2)
@@ -93,13 +100,6 @@ print(difference_set)  # Imprime: {1, 2}
 # Diferencia simétrica entre dos sets (elementos presentes en set1 o en set2 pero no en ambos)
 symmetric_difference_set = set1.symmetric_difference(set2)
 print(symmetric_difference_set)  # Imprime: {1, 2, 4, 5}
-
-# Verificar si un set es subconjunto de otro
-subset_set = {1, 2}
-print(subset_set.issubset(set1))  # Imprime: True
-
-# Verificar si un set es superconjunto de otro
-print(set1.issuperset(subset_set))  # Imprime: True
 
 # Uso de frozenset para crear conjuntos inmutables
 # Un frozenset es un set que no se puede modificar una vez creado

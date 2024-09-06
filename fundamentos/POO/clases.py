@@ -6,15 +6,15 @@
 - Las instancias son los objetos creados a partir de una clase.
 - Los objetos son instancias de una clase.
 - Las nombres de las clases por convención se escriben en `UpperCamelCase`.
-- El parámetro `self` se refiere a la instancia de la clase, es decir, el objeto que se esta creando. (el objeto mismo)
+- El parámetro `self` se refiere a la instancia de la clase, es decir, el objeto que se esta creando (el objeto mismo).
 """
 
 
-# Definiendo una clase en Python
+# Definiendo una clase en Python.
 class Persona:
 
-    # Contructor: Método que se ejecuta cuando se crea una instancia de la clase
-    # _init_ Define los valores iniciales de nuestra clase u objeto
+    # Contructor: Método que se ejecuta cuando se crea una instancia de la clase.
+    # _init_ Define los valores iniciales de nuestra clase.
     def __init__(self, nombre, edad):
         self.nombre = nombre
         self.edad = edad
@@ -38,3 +38,17 @@ print(
 
 # Llamando al método `presentar()` de la instancia
 mayer.presentar()
+
+
+# Definiendo una clase Car que acepta argumentos con nombre.
+class Car:
+    # Los argumentos que siguen al asterisco deben ser pasados como `argumentos con nombre` (keyword arguments).
+    def __init__(self, *, model: str, color: str) -> None:
+        self.model = model
+        self.color = color
+
+
+# Si intentas pasar los argumentos sin nombrarlos obtendrás un error de tipo TypeError.
+toyota = Car(model="Corolla Cross", color="Azul")
+print("modelo:", toyota.model) # modelo: Corolla Cross
+print("color:", toyota.color) # color: Azul
