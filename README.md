@@ -15,7 +15,7 @@
 4. **Lenguaje Interpretado:** Python ejecuta el código línea por línea, en lugar de compilarlo a código máquina previamente para su ejecución.
 5. **Multiparadigma:** Python soporta diversos `paradigmas de programación`, incluyendo la programación orientada a objetos, funcional e imperativa.
 6. **Multiplataforma:** El `intérprete` de Python está disponible en multitud de plataformas **(UNIX, Solaris, Linux, DOS, Windows, OS/2, Mac OS, etc.)** por lo que si no utilizamos librerías específicas de cada plataforma nuestro programa podrá correr en todos estos sistemas sin grandes cambios.
-7. **Orientado a Objetos:** En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números y cadenas hasta funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
+7. **Orientado a Objetos:** En Python, casi todo es un objeto, incluyendo tipos de datos básicos como números, cadenas, funciones y clases. Sin embargo, su sintaxis, operadores y palabras clave no son objetos.
 
 - _Objetos:_ Son instancias de clases.
 - _Clases:_ Son moldes o plantillas que definen las propiedades (atributos) y comportamientos (métodos) de un objeto.
