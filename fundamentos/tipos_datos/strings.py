@@ -6,7 +6,6 @@ En Python, las cadenas son inmutables, lo que significa que una vez creada una c
 - Otra definición: Las cadenas de caracteres son secuencias inmutables de puntos de código Unicode.
 
 Algunas características de las cadenas:
-
 - Creación de cadenas
 - Concatenación y multiplicación de cadenas
 - Secuencias de escape (salto de línea, tabulación)
@@ -26,7 +25,7 @@ print(f"Hola soy {mi_nombre}")
 # Creación de cadenas
 # Se pueden crear usando comillas dobles o simples.
 print("Python")
-print("Python")
+print('Python')
 
 # Dos o más cadenas literales una al lado de la otra se concatenan automáticamente.
 # Solo funciona con cadenas literales, no con variables o expresiones.
@@ -91,6 +90,14 @@ print(f"Mi nombre es {name}, tengo {age} años y estoy {active}")
 # Inmutabilidad y acceso a caracteres
 # Las cadenas son secuencias inmutables: no se pueden cambiar los caracteres individuales.
 name = "Mayer"
+
+# Desempaquetamiento de caracteres de una cadena
+m, a, y, e, r = name
+print(m, a, y, e, r)
+
+# Usando un guion bajo _ para ignorar caracteres
+m, a, y, e, _ = name  # El guion bajo se usa para ignorar la "r"
+print(m, a, y, e)
 
 # Acceso a un carácter por índice
 print(name[2])  # Imprime el tercer carácter de la cadena (`y`)
