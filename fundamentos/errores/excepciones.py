@@ -95,7 +95,7 @@ except (ValueError, TypeError) as e:
 
 # Ejemplo de manejo de excepciones encadenadas con `raise from`
 try:
-    result = 10 / 0
+    result = 10 / 2
 except ZeroDivisionError as e:
     raise ValueError("Nuevo error basado en un ZeroDivisionError") from e
 
@@ -120,52 +120,19 @@ except FileNotFoundError as e:
     print(f"Error: {e}")
 
 
-# Ejemplo de reintentos automáticos en caso de error
-def reintentar(func, max_reintentos=3):
-    for _ in range(max_reintentos):
-        try:
-            return func()
-        except Exception as e:
-            print(f"Error: {e}. Reintentando...")
-            time.sleep(1)
-    raise Exception("Maximo de reintentos alcanzado.")
-
-
-def funcion_fallida():
-    return 10 / 0
-
-
-try:
-    reintentar(funcion_fallida)
-except Exception as e:
-    print(e)
-
-
-# Ejemplo de cómo lanzar una excepción personalizada
-class MiExcepcionPersonalizada(Exception):
-    pass
-
-
-try:
-    raise MiExcepcionPersonalizada("Esto es un error personalizado.")
-except MiExcepcionPersonalizada as e:
-    print(f"Error capturado: {e}")
-
-# Ejemplo 2 de como crear nuestras propias excepciones personalizadas
-
-
-# Definir la excepción personalizada
+# Definir una excepción personalizada
 class EdadFueraDeRangoError(Exception):
     """Excepción lanzada cuando la edad no está en el rango permitido."""
 
     def __init__(self, edad, mensaje="La edad debe estar entre 18 y 100 años."):
+        super().__init__(f"{mensaje} Edad ingresada: {edad}")
         self.edad = edad
         self.mensaje = mensaje
-        super().__init__(f"{mensaje} Edad ingresada: {edad}")
 
 
 # Función que utiliza la excepción personalizada
 def verificar_edad(edad):
+    # return "Edad válida" if 18 < edad <= 100 else EdadFueraDeRangoError(edad)
     if edad < 18 or edad > 100:
         raise EdadFueraDeRangoError(edad)
     return "Edad válida"
@@ -176,4 +143,40 @@ try:
     resultado = verificar_edad(120)
     print(resultado)
 except EdadFueraDeRangoError as e:
+    print(e)
+
+
+# Ejemplo de reintentos automáticos en caso de error
+def retry_function(function, max_retries=3):
+    """
+    Ejecuta una función dada un número determinado de veces (max_retries)
+    en caso de que esta lance una excepción. Si la función falla todas
+    las veces, se lanza una excepción RuntimeError con un mensaje descriptivo.
+
+    Raises
+    ------
+    RuntimeError
+        Si la función falla todas las veces.
+    """
+
+    for _ in range(max_retries):
+        try:
+            return function()
+        except Exception:
+            time.sleep(1)
+    raise RuntimeError(
+        f"No se pudo ejecutar {function.__name__} después de {max_retries} reintentos"
+    )
+
+
+def funcion_fallida():
+    """
+    Función que falla al intentar dividir entre cero.
+    """
+    return 10 / 0
+
+
+try:
+    retry_function(funcion_fallida)
+except Exception as e:
     print(e)
