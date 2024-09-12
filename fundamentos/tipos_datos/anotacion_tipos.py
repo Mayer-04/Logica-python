@@ -1,6 +1,8 @@
 """
-Anotaciones de tipo en Python (Type Annotations)
--------------------------------------------------
+Anotaciones de tipo en Python (Type Hints - Type Annotations)
+-------------------------------------------------------------
+Agregado en la versión 3.5+ de Python.
+
 Las anotaciones de tipo permiten especificar los tipos de datos que se espera que tengan 
 las variables, los parámetros de las funciones y los valores de retorno.
 
@@ -92,12 +94,11 @@ class Persona:
 persona = Persona("Mayer", 24)
 print(persona.saludar())  # Output: Hola, mi nombre es Mayer y tengo 24 años.
 
-
 # Alias de tipos
 # Son útiles para simplificar las anotaciones de tipos
 Color = tuple[str, str, str]
 colores: tuple[Color] = ("Rojo", "Verde", "Azul")
 
-# Declaración de tipos
+# Declaración de tipos, Python 3.12+
 type Number = tuple[int, int]
 numeros: Number = (4, 11, 29)
