@@ -1,9 +1,13 @@
 """
-* Cadenas de Texto o Strings en Python
+* Cadenas de caracteres: Strings (str)
+--------------------------------------
 
 Una cadena (o string) es una secuencia de caracteres, utilizada generalmente para representar texto. 
 En Python, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar.
 - Otra definición: Las cadenas de caracteres son secuencias inmutables de puntos de código Unicode.
+- Las cadenas son accesibles por índices y pueden ser `iteradas`.
+- Puedes acceder a un carácter específico utilizando corchetes `[]` y un índice.
+- Si intentas acceder a un índice fuera del rango de la cadena, Python arrojará un `IndexError`.
 
 Algunas características de las cadenas:
 - Creación de cadenas
@@ -31,8 +35,10 @@ print('Python')
 # Solo funciona con cadenas literales, no con variables o expresiones.
 print("An" "dres")  # Imprime: "Andres"
 
-# Creación de una cadena con salto de línea
-# Las cadenas de varias líneas se crean usando triples comillas dobles o simples.
+# Creación de una cadena con salto de línea.
+# Las cadenas de varias líneas se crean usando comillas triples.
+apellido = """chaves"""
+print(apellido)
 print(
     """
     Python
