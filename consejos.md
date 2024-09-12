@@ -79,17 +79,45 @@ for item in my_list[:]:
 ## Buenas practicas
 
 1. **Uso de Funciones Incorporadas (Built-ins):** Python ofrece muchas funciones incorporadas que pueden simplificar tu código, como **len()**, **sum()**, **max()**, **min()**, entre otras. Siempre que sea posible, utiliza estas funciones en lugar de reinventar la rueda.
-2. **Comprensión de Listas y Generadores:** Utiliza comprensión de listas y generadores para crear listas, diccionarios, o conjuntos de manera concisa y eficiente:
+2. **Comprensión de Listas y Comprensión de Generadores:** Utiliza comprensión de listas y generadores para crear listas, diccionarios, o conjuntos de manera concisa y eficiente:
+
+**List Comprehension**
+
+La `comprensión de listas` es una forma concisa y elegante de crear listas. En lugar de usar un bucle for largo para añadir elementos a una lista, puedes escribir todo en una línea de código.
+
+- Crea y almacena todos los elementos en una lista en memoria de una vez.
 
 ```py
 cuadrados = [x**2 for x in range(10)]
 ```
+
+**Generator Comprehension**
+
+Los `generadores` son como las listas, pero en lugar de calcular y almacenar todos los elementos en memoria de una vez, los generan sobre la marcha. Esto hace que sean mucho más eficientes en términos de memoria cuando trabajas con secuencias grandes.
+
+- Genera cada elemento sobre la marcha cuando es necesario, lo que puede ser más eficiente si tienes una secuencia muy grande.
 
 ```py
 cuadrados_tup = (x**2 for x in range(10))
 ```
 
 3. **Utiliza Entornos Virtuales:** Para evitar conflictos de dependencias entre proyectos, utiliza entornos virtuales. Esto te permite gestionar paquetes y versiones de manera aislada para cada proyecto.
+
+- Los entornos virtuales permiten tener diferentes versiones de las bibliotecas instaladas en diferentes proyectos, todo de manera aislada.
+- Python crea una carpeta dedicada a ese proyecto donde se almacenan todas las dependencias **(paquetes, bibliotecas, etc.)**. Luego, cuando trabajas dentro de ese entorno, Python utilizará solo las dependencias instaladas allí, y no las globales de tu sistema.
+- Para crear un entorno virtual, navega hasta el directorio de tu proyecto y ejecuta:
+
+**En Linux y Mac OS:**
+
+```bash
+python3 -m venv <nombre_entorno>
+```
+
+**Windows:**
+
+```bash
+python -m venv <nombre_entorno>
+```
 
 ## Diccionarios
 
