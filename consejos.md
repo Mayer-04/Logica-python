@@ -197,3 +197,60 @@ print(f"¿mi_lista es la misma que otra_lista? {mi_lista is otra_lista}") # Fals
 mi_lista.append(4)
 print(f"Valor modificado: {mi_lista}") # Valor modificado: [1, 2, 3, 4]
 ```
+
+## Entorno de código de nivel superior `__main__`
+
+### ¿Qué es `__name__`?
+
+En Python, cada archivo de código se trata como un **módulo**. Cuando Python ejecuta o importa un archivo, le asigna una variable especial llamada `__name__` que identifica el **módulo**. Dependiendo de cómo se utilice el archivo (si es ejecutado directamente o importado), el valor de `__name__` será diferente.
+
+- Si importas un módulo en otro archivo usando `import`, el valor de `__name__` será el nombre del archivo (sin la extensión .py).
+
+```py
+import math
+print(math.__name__)  # Imprime 'math'
+```
+
+- Si ejecutas un archivo directamente (por ejemplo, desde la línea de comandos), el valor de `__name__` será `'__main__'`, lo que indica que ese archivo es el que se está ejecutando.
+
+Esto permite que Python sepa si un archivo está siendo ejecutado como el programa principal o si solo está siendo utilizado como un módulo en otro archivo.
+
+### ¿Por qué es útil if `__name__ == '__main__'`?
+
+Cuando escribes código que debería ejecutarse solo cuando el archivo se ejecuta directamente y no cuando se importa en otro archivo, puedes usar este bloque:
+
+```py
+if __name__ == '__main__':
+    # Este código se ejecutará solo si el archivo se ejecuta directamente
+```
+
+Este bloque es útil cuando quieres que algunas partes del código solo se ejecuten si el archivo está siendo ejecutado como el `programa principal` y no cuando se importa como un módulo en otro programa.
+
+- `if __name__ == '__main__'` es una estructura que permite ejecutar código solo cuando el archivo es ejecutado directamente, no cuando es importado.
+
+```py
+def saludar():
+    print("¡Hola Mayer!")
+
+if __name__ == '__main__':
+    saludar()  # Solo se ejecutará esta función si corres este archivo directamente
+```
+
+### ¿Qué es el "entorno de código de máximo nivel"?
+
+El "entorno de código de máximo nivel" se refiere al archivo que inicia todo el programa, importando otros módulos si es necesario; Este archivo es el que se ejecuta directamente y cuyo `__name__` es `'__main__'`.
+
+Es importante porque este archivo puede importar otros módulos y coordinar la ejecución del programa, pero solo debería ejecutar ciertas acciones **(como correr pruebas o iniciar la aplicación)** si es el archivo que se está ejecutando directamente, no si es importado por otro módulo.
+
+- Definir un punto de entrada en aplicaciones más grandes, donde el archivo principal coordina la ejecución de diferentes partes del programa.
+
+- Permite escribir módulos reutilizables que no ejecutan código innecesario cuando son importados por otros scripts.
+
+```py
+def main():
+    # Lógica principal de la aplicación
+    print("La aplicación principal")
+
+if __name__ == '__main__':
+    main()  # Este código solo se ejecuta si el archivo es ejecutado directamente
+```
