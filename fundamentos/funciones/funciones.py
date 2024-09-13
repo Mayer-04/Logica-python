@@ -54,7 +54,7 @@ saludar_a("Mayer")
 # Valores por defecto
 # Puedes definir valores por defecto para los parámetros.
 # Si no se proporciona un argumento, se usará el valor por defecto.
-def saludar_con_titulo(nombre, titulo="Sr./Sra."):
+def saludar_con_titulo(nombre: str, titulo: str = "Sr./Sra."):
     """Imprime un saludo personalizado utilizando un título y nombre.
 
     Parámetros:
