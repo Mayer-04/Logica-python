@@ -9,6 +9,7 @@ pero no es considerado un tipo de dato básico como cadenas, booleanos o enteros
 - Si una función en Python no tiene una sentencia return por defecto devuelve None.
 - el objeto None ocupa espacio en memoria, y la variable que apunta a None también ocupa espacio.
 - None se considera como `False` en el contexto booleano
+- Solo hay una instancia de None en toda la ejecución del programa, por lo que se puede comparar usando `is`.
 """
 
 # Definiendo una variable que no contiene un valor - None
@@ -19,3 +20,11 @@ print(my_var)  # Imprime None
 
 # Tipo de dato de la variable
 print(type(my_var))  # Imprime <class 'NoneType'>
+
+equipo = None
+
+# Comparando con el operador de 'identidad'.
+if equipo is None:
+    print("No hay equipo")  # Imprime: 'No hay equipo'
+else:
+    print("Tienes un equipo")

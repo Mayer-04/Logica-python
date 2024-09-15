@@ -41,7 +41,6 @@ pares = [x for x in range(10) if x % 2 == 0]
 
 
 # * Comprensión de Tuplas
-
 # Crear una tupla con los números del 0 al 4, cada uno elevado al cuadrado
 cuadrados_tupla = (x**2 for x in range(5))
 print(
@@ -53,7 +52,6 @@ cuadrados_tupla = tuple(x**2 for x in range(5))
 print("Tupla de cuadrados:", cuadrados_tupla)  # Imprime (0, 1, 4, 9, 16)
 
 # * Comprensión de Diccionarios
-
 # Crear un diccionario donde las claves son números del 0 al 4 y los valores son sus cuadrados
 cuadrados_dict = {x: x**2 for x in range(5)}
 print(
@@ -68,7 +66,6 @@ print(
 
 
 # * Compresión de Conjuntos (Sets)
-
 # Crear un set con los números del 0 al 4, cada uno elevado al cuadrado
 cuadrados_set = {x**2 for x in range(5)}
 print("Set de cuadrados:", cuadrados_set)  # Imprime {0, 1, 4, 9, 16}
@@ -80,7 +77,6 @@ print("Set de números pares:", pares_set)  # Imprime {0, 2, 4, 6, 8}
 
 # * Compresión de Cadenas (Strings)
 # Se utiliza la función `join` para unir los elementos de una lista en una cadena
-
 # Crear una cadena con los números del 0 al 4, cada uno elevado al cuadrado
 cuadrados_str = "".join([str(x**2) for x in range(5)])
 print("Cadena de cuadrados:", cuadrados_str)  # Imprime "01234"
