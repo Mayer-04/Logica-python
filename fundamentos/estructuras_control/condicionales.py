@@ -39,7 +39,6 @@ else:
 
 # Introducción a las condiciones con 'if', 'elif' y 'else'
 # Este ejemplo verifica si un número es positivo, negativo o cero
-
 numero = 0
 
 # Se evalúan múltiples condiciones secuencialmente
@@ -54,7 +53,6 @@ else:
 
 # Uso de múltiples condiciones con 'if', 'elif' y 'else'
 # Este ejemplo clasifica a una persona según su edad
-
 edad = 25
 
 if edad < 12:
