@@ -6,7 +6,6 @@ Match permite comparar una expresión con varios `patrones` y ejecutar el códig
 La sentencia `match` es una estructura de control introducida en Python 3.10, 
 similar a `switch` en otros lenguajes de programación.
 
-
 - Patrones: Son las condiciones o criterios que Python utiliza para comparar
 y hacer coincidir un valor o estructura de datos con uno o varios casos específicos.
 
@@ -88,10 +87,11 @@ match data:
 # Ejemplo 5: Combinación de tipos de patrones en un mismo `match`
 status_code = 403
 error_info = {"method": "GET"}
-
+# Compara el valor de status_code y error_info con diferentes patrones.
 match status_code, error_info:
     case 403, {"method": method}:
         print(f"Acceso denegado al intentar {method}")
+        # si status_code es 404 y error_info puede ser cualquier valor (`_` es un comodín)
     case 404, _:
         print("Recurso no encontrado")
     case _:
