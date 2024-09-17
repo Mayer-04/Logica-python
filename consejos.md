@@ -28,7 +28,7 @@ exit()
 El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete de Python` traduce primero el código fuente a un formato intermedio llamado `bytecode`, que es una representación más eficiente que el código fuente original.
 
 - El intérprete de Python **(La máquina virtual de Python _PVM_)** ejecuta este `bytecode`. Es decir, el intérprete lee el `bytecode` y lo traduce a instrucciones que la computadora puede entender y ejecutar.
-- Los archivos `.pyc` se generan automáticamente y se guardan en un directorio especial llamado **_pycache_**, en la misma carpeta donde está tu archivo `.py` original. Esto acelera la ejecución del código, ya que evita recompilar el bytecode cada vez que se ejecuta el programa.
+- Los archivos `.pyc` se generan automáticamente y se guardan en un directorio especial llamado `_pycache_`, en la misma carpeta donde está tu archivo `.py` original. Esto acelera la ejecución del código, ya que evita recompilar el bytecode cada vez que se ejecuta el programa.
 
 ## Mutabilidad e Inmutabilidad
 
