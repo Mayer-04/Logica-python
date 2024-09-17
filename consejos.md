@@ -36,7 +36,7 @@ Los objetos en Python se pueden clasificar en dos categorías basadas en su capa
 
 1. **Mutables:** Estos objetos pueden cambiar su valor después de haber sido creados. Cuando un objeto mutable se pasa como argumento a una función, se pasa por referencia, lo que significa que las modificaciones realizadas en la función afectarán al objeto original.
 
-Algunos objetos mutables son:
+**Algunos objetos mutables son:**
 
 - list (listas)
 - dict (diccionarios)
@@ -45,7 +45,7 @@ Algunos objetos mutables son:
 
 2. **Inmutables:** Estos objetos no pueden cambiar su valor una vez creados. Si se intenta modificar un objeto inmutable, se creará un nuevo objeto en su lugar. Cuando un objeto inmutable se pasa como argumento a una función, se pasa por valor, es decir, la función trabaja con una copia del valor original y no puede modificar el objeto original.
 
-Algunos objetos inmutables son:
+**Algunos objetos inmutables son:**
 
 - int (enteros)
 - float (flotantes)
