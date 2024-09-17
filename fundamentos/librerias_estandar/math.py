@@ -2,7 +2,7 @@ import math
 
 """
 * Librería Math
-
+---------------
 Funciones incorporadas de la librería estandar `math`
 
 - math.sqrt: Retorna la raiz cuadrada de un número.
@@ -23,8 +23,6 @@ Funciones incorporadas de la librería estandar `math`
 
 Utilice `help(math)` para obtener detalles sobre la librería `math`.
 """
-
-# Constantes
 
 # Constante `pi`
 # Retorna el valor de `pi`.

@@ -1,22 +1,21 @@
 """
 * Variables y Constantes en Python
-
-- En Python, no es necesario utilizar palabras reservadas para declarar variables.
+-----------------------------------
+- En Python, no es necesario utilizar `palabras reservadas` para declarar variables.
 - La convención de nombres para las variables en Python es usar snake_case (minúsculas con guiones bajos).
 - Las variables pueden ser vistas como etiquetas que referencian valores.
 - Cuando defines una variable en Python, estás creando una referencia a un `objeto` en la memoria.
-- Los nombres de las variables deben ser descriptivos para mejorar la legibilidad del código.
-- Palabras reservadas: Son términos que utiliza Python los cuales no se pueden usar como nombres de variables.
+- Los nombres de las variables deben ser descriptivos y cortos para mejorar la legibilidad del código.
+
+Palabras reservadas: Son términos que utiliza Python los cuales no se pueden usar como nombres de variables.
 """
 
 # Declaración de variables
 numero = 2  # Variable de tipo entero (int)
-numero2 = 5  # Variable de tipo entero (int)
 mi_nombre = "Mayer"  # Variable de tipo cadena de texto (str)
 
-
-# Declaración múltiple de variables en una sola línea
-# Es una buena práctica declarar variables en líneas separadas para mayor claridad, pero en casos simples
+# Declarando múltiples variables en una sola línea
+# Es una buena práctica declarar variables en líneas separadas para mayor claridad
 a, b, c = 1, 2, 3  # Variables de tipo entero (int)
 
 # Intercambiar valores entre variables
@@ -32,23 +31,27 @@ print(
 new_variable = "Andres"  # Variable global
 
 # Uso de f-strings para formatear cadenas de texto con variables
+numero2 = 5
 resultado = f"El resultado de sumar {numero} y {numero2} es: {numero + numero2}"
 print(resultado)  # Imprime el resultado de la suma de 'numero' y 'numero2'
 
 
+# Esta función modifica la variable global 'new_variable' y la imprime.
+# Es importante declarar la variable como 'global' para modificar su valor dentro de la función.
 def my_function():
-    """
-    Esta función modifica la variable global 'new_variable' y la imprime.
-    Es importante declarar la variable como 'global' para modificar su valor dentro de la función.
-    """
-    global new_variable  # Indica que se usará la variable global
-    new_variable = "Mayer"  # Modifica el valor de la variable global
+    # Declarar la variable como 'global'.
+    global new_variable
+
+    # Modificar el valor de la variable global.
+    new_variable = "Mayer"
+
+    # Imprimir el valor de la variable global.
     print(
         f"Valor de 'new_variable' dentro de la función: {new_variable}"
     )  # Valor de 'new_variable' dentro de la función: Mayer
 
 
-# Llama a la función que modifica y muestra 'new_variable'
+# Llamando a la función que modifica e imprime la variable 'new_variable'
 my_function()
 
 # Imprime el valor final de la variable global
@@ -58,9 +61,9 @@ print(
 
 """
 * Constantes
-
+------------
 - En Python no existen las constantes. Sin embargo, se pueden definir utilizando convenciones.
-- Por convención, las constantes se escriben en mayúsculas y se deben usar solo para lectura, no para escritura.
+- Por convención, las constantes se escriben en `mayúsculas` y se deben ser solo para lectura, no para escritura.
 - Las constantes ayudan a indicar que ciertos valores no deben ser modificados durante la ejecución del programa.
 """
 # Constante (por convención, se usa en mayúsculas)

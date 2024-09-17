@@ -1,6 +1,6 @@
 """
 * Operadores de Pertenencia
-
+---------------------------
 El nombre de este operador se da a partir de querer comprobar si un elemento está presente en una secuencia.
 
 - Se utiliza la palabra clave `in` y `not in`.

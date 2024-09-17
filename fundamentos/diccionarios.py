@@ -1,6 +1,6 @@
 """
 * Diccionarios en Python:
-
+-------------------------
 - Un diccionario es una estructura de datos que almacena pares clave-valor, donde cada clave es única.
 - Se define entre llaves {} y puede contener elementos de cualquier tipo de dato 
 (strings, enteros, listas, otros diccionarios, etc.).
@@ -9,10 +9,11 @@ eliminar o modificar pares clave-valor después de su creación.
 - Las claves de los diccionarios deben ser inmutables. Pueden ser de tipos numéricos, strings, tuplas, etc.
 - Se pueden anidar, es decir, un diccionario puede contener otros diccionarios como valores.
 - Los diccionarios son iterables, permitiendo recorrer sus claves, valores o ambos utilizando bucles como `for`.
-- Desde Python 3.7 en adelante, los diccionarios preservan el orden de inserción, 
-esto significa que los elementos aparecen en el mismo orden que fueron agregados.
+- Desde Python 3.7 en adelante, los diccionarios preservan el orden de inserción, esto significa que los 
+elementos aparecen en el mismo orden que fueron agregados.
 
 Operaciones comunes con diccionarios:
+-------------------------------------
 - Creación de diccionarios.
 - Acceso, adición y eliminación de elementos.
 - Iteración sobre diccionarios.
@@ -140,7 +141,6 @@ update_dict = {"a": 1}
 other_dict = {"b": 2, "c": 3}
 update_dict.update(other_dict)
 print("update:", update_dict)  # Imprime {'a': 1, 'b': 2, 'c': 3}
-
 
 # Desempaquetar un diccionario usando el operador **
 my_dict = {"a": 1, "b": 2, "c": 3}

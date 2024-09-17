@@ -1,6 +1,6 @@
 """
 * Listas en Python: Secuencia
-
+-----------------------------
 - Una lista es una colección ordenada y mutable de elementos.
 - Se definen utilizando corchetes [].
 - Sería equivalente a lo que en otros lenguajes se conoce por arrays, o vectores.

@@ -1,7 +1,7 @@
 """
 * Estructura de control repetitiva `for`
-
-El bucle for en Python itera sobre una secuencia (como una lista, tupla, diccionario, string o rango), 
+----------------------------------------
+El bucle for en Python `itera` sobre una secuencia (como una lista, tupla, diccionario, string o rango), 
 en el orden que aparecen en la secuencia y ejecuta un bloque de código por cada elemento.
 
 Python ofrece las siguientes herramientas adicionales para el control de bucles:

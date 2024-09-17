@@ -11,8 +11,8 @@ el flujo del programa, como la entrada/salida (I/O). Esto se logra utilizando la
 - Antes de la introducción de la asincronía nativa con `async`/`await`, se solían usar `threads` o librerías como `Gevent`, 
 pero estas soluciones pueden ser más complicadas de implementar y depurar.
 
-* ¿Qué es una coroutine?
-------------------------
+¿Qué es una coroutine?
+----------------------
 Una coroutine es una función especial en Python que puede ser pausada en un punto determinado 
 (por ejemplo, mientras espera una operación de I/O) y luego reanudada más tarde. 
 Esto permite que otras tareas continúen ejecutándose sin bloquear el programa.

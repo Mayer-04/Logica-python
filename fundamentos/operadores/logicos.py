@@ -1,6 +1,6 @@
 """
 * Operadores Lógicos
-
+--------------------
 - Se utilizan para tomar una decisión basada en múltiples condiciones.
 - Actúan sobre valores booleanos (`True` o `False`), pero también pueden aplicarse a cualquier objeto en Python, 
 devolviendo el primer valor que satisfaga la condición lógica.

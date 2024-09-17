@@ -14,9 +14,10 @@ print(0)
 # Cero flotante
 print(0.0)
 
-# Cadenas vacías con doble comilla o comilla simple
+# Cadenas vacías con dobles comillas, comillas simples y comillas triples
 print("")
 print('')
+print("""""")
 
 # Diccionarios vacíos
 print({})

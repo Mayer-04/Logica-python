@@ -1,6 +1,6 @@
 """
 Manejo Avanzado de Errores y Excepciones en Python
-
+--------------------------------------------------
 Una excepción es un error que ocurre durante la ejecución de un programa.
 - la palabra `excepción` se refiere a que este problema ocurre con poca frecuencia.
 - El manejo de excepciones permite al usuario crear aplicaciones tolerantes a fallas .

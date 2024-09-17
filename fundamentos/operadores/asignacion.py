@@ -1,18 +1,18 @@
 """
 * Operadores de asignación
-
+--------------------------
 - Asignar: Establecer un valor a una variable.
-- Se utilizan para asignar valores a una variable.
+- Los operadores de asignación se utilizan para asignar valores a una variable.
 - Cuando estamos utilizando un `operador de asignación` como `+=`, estás diciendo que quieres tomar el valor actual
 de la variable, realizar una operación con otro valor, y luego almacenar el resultado de nuevo en la misma variable.
 
 Ejemplo:
-
-- El valor actual de `a` es `7`
+--------
+1. El valor actual de `a` es `7`
 a = 7
-- Le sumamos 3 al valor actual de `a` y asignamos este nuevo valor `10` de vuelta a la variable `a`.
+2. Le sumamos 3 al valor actual de `a` y asignamos este nuevo valor `10` de vuelta a la variable `a`.
 a += 3
-
+3. Ahora `a` tiene el valor `10`.
 """
 
 # Asignar un valor a una variable

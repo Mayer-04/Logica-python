@@ -10,6 +10,7 @@ las variables, los parámetros de las funciones y los valores de retorno.
 que son atajos para referirse a tipos complejos mediante nombres más sencillos. Usando `type`.
 
 Beneficios:
+-----------
 - Mejoran la legibilidad del código y sirven como documentación explícita.
 - Facilitan la detección de errores en editores de código que soportan análisis estático 
 (por ejemplo, PyCharm) nos dara una advertencia en tiempo de ejecución.

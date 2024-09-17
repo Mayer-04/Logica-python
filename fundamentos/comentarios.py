@@ -1,5 +1,5 @@
 # El intérprete no tiene en cuenta los comentarios.
-# Si su código es lo suficientemente legible, no necesita comentarios.
+# Si el código es lo suficientemente legible, no necesita comentarios.
 
 # Comentario de una sola línea
 

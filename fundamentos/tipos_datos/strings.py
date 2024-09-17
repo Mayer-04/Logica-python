@@ -5,11 +5,12 @@
 Una cadena (o string) es una secuencia de caracteres, utilizada generalmente para representar texto. 
 En Python, las cadenas son inmutables, lo que significa que una vez creada una cadena, no se puede modificar.
 - Otra definición: Las cadenas de caracteres son secuencias inmutables de puntos de código Unicode.
-- Las cadenas son accesibles por índices y pueden ser `iteradas`.
+- Las cadenas son accesibles por `índices` y pueden ser `iteradas`.
 - Puedes acceder a un carácter específico utilizando corchetes `[]` y un índice.
-- Si intentas acceder a un índice fuera del rango de la cadena, Python arrojará un `IndexError`.
+- Si intentas acceder a un índice fuera del rango de la cadena, Python nos dara un error `IndexError`.
 
 Algunas características de las cadenas:
+---------------------------------------
 - Creación de cadenas
 - Concatenación y multiplicación de cadenas
 - Secuencias de escape (salto de línea, tabulación)
@@ -66,14 +67,14 @@ print(len("Python"))
 
 """
 Formateo de cadenas:
-
+--------------------
 En Python, hay varias maneras de formatear cadenas para incluir variables y valores:
 1. Formateo con el operador `%`:
    - %s para cadenas (strings)
    - %d para enteros (integers)
    - %f para números flotantes (floats)
 2. Método `.format()`
-3. F-strings (disponible a partir de Python 3.6)
+3. f-strings (disponible a partir de Python 3.6)
 """
 
 name = "Mayer"
@@ -124,7 +125,7 @@ for character in name:
 
 """
 * Métodos comunes de cadenas:
-
+-----------------------------
 Python proporciona muchos métodos incorporados para manipular cadenas. 
 Algunos de los más útiles se describen a continuación:
 """

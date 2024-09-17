@@ -1,6 +1,6 @@
 """
 * Estructuras de control condicionales
-
+--------------------------------------
 Las estructuras condicionales permiten que un programa ejecute diferentes bloques de código en función de ciertas
 condiciones.
 

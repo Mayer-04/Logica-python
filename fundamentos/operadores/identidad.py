@@ -1,6 +1,6 @@
 """
 * Operadores de Identidad
-
+--------------------------
 El nombre de este operador se da a partir de querer comprobar la identidad (si son el mismo objeto).
 
 - Se utiliza la palabra clave `is` y `is not` para chequear la `identidad` de un objeto.

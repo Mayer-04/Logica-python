@@ -1,6 +1,6 @@
 """
 * Booleanos
-
+-----------
 Valor booleano (verdadero o falso)
 - Una expresión booleana produce un valor que puede ser verdadero o falso.
 - En Python, una expresión verdadera (True) tiene el valor 1.

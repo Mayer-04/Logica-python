@@ -1,6 +1,6 @@
 """
 * Módulos en Python
-
+-------------------
 Un módulo es un `archivo` Python que contiene código y definiciones de funciones, clases, variables, etc.
 - Ayuda a reutilizar código de otros archivos.
 - Este código puede ser importado en otro archivo Python para utilizar sus definiciones.
@@ -21,7 +21,7 @@ import math as m
 
 print(m.pi)
 
-# Importar algo específico de un módulo, en lugar de importar el módulo completo.
+# Importar algo específico de un módulo, en lugar de importar el módulo completamente.
 # Su traducción sería: "del módulo funciones importa saludar_con_titulo"
 from funciones.funciones import saludar_con_titulo
 

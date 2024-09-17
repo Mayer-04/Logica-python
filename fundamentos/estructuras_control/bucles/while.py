@@ -1,6 +1,6 @@
 """
 * Estructura de control repetitiva `while`
-
+------------------------------------------
 El bucle while en Python permite ejecutar un bloque de código de manera repetitiva,
 mientras se cumpla una condición específica.
 
