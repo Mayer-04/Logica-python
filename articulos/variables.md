@@ -2,7 +2,7 @@
 
 En Python, una variable no es más que un `nombre` que hace referencia a un `objeto` en memoria. Cuando creas una variable, en realidad estás creando una **referencia** a un valor almacenado en una ubicación específica de la memoria, no almacenando el valor directamente.
 
-Veamos un ejemplo:
+**Veamos un ejemplo:**
 
 ```py
 # Creamos una variable llamada "cantidad"
@@ -19,7 +19,7 @@ Esto significa que las variables en Python no contienen los datos directamente, 
 
 ## Interning o Internado
 
-El `interning` es una técnica en Python que optimiza el uso de la memoria al reutilizar objetos inmutables que tienen el mismo valor, en lugar de crear nuevos objetos cada vez que se usa un valor idéntico. Esta técnica es comúnmente utilizada con números enteros pequeños, cadenas de caracteres cortas y algunas tuplas.
+El `interning` es una técnica en Python que optimiza el uso de la memoria al reutilizar objetos `inmutables` que tienen el mismo valor, en lugar de crear nuevos objetos cada vez que se usa un valor idéntico. Esta técnica es comúnmente utilizada con números enteros, cadenas de caracteres y algunas tuplas.
 
 **Beneficios:**
 
@@ -55,13 +55,13 @@ print(id(cuidades2))  # 2090137619408
 
 ## Contador de referencias
 
-Cada vez que creas un objeto (como un número, una cadena, una lista, etc.), Python necesita saber cuántas variables o referencias están apuntando a ese objeto. Este conteo ayuda a determinar cuándo un objeto ya no es necesario y puede ser eliminado para liberar memoria.
+Cada vez que creas un objeto **(como un número, una cadena, una lista, etc.)**, Python necesita saber cuántas variables o `referencias` están apuntando a ese objeto. Este conteo ayuda a determinar cuándo un objeto ya no es necesario y puede ser eliminado para liberar memoria.
 
 **Funcionamiento del Contador de Refencias:**
 
 1. **Inicialización:** Al crear un nuevo objeto, Python establece su contador de referencias en 1.
 2. **Aumento:** Cada vez que se crea una nueva referencia a este objeto (por ejemplo, al asignar el objeto a una nueva variable), el contador aumenta.
-3. **Disminución:** Si una referencia al objeto se elimina (por ejemplo, al reasignar la variable o al usar del), el contador disminuye.
+3. **Disminución:** Si una referencia al objeto se elimina (por ejemplo, al reasignar la variable o al usar `del`), el contador disminuye.
 4. **Recolección de Basura:** Cuando el contador de referencias llega a 0, significa que ninguna variable o referencia está apuntando a ese objeto. Python lo considera "innecesario" y libera la memoria que estaba ocupando 1.
 
 **Ejemplo:**
@@ -77,17 +77,15 @@ print(f"ID de numero: {id(numero)}")  # 140705818737400
 otro_numero = numero
 print(f"ID de otro_numero: {id(otro_numero)}")  # 140705818737400
 
-
 # Reasignamos la variable 'otro_numero' a un nuevo número
 # El contador de referencias para el `objeto 11` disminuye a 1
 # `El objeto 4` ahora tiene un contador de referencias de 1
 otro_numero = 4
 print(f"ID de otro_numero: {id(otro_numero)}")  # 140705818737176
 
-
 # Finalmente, eliminamos la variable 'numero'
 del numero
 
-# El contador de referencias para el `objeto 11` llega a 0
-# Python libera la memoria ocupada por el número 11
+# El contador de referencias para el `objeto 11` llega a 0.
+# Python libera la memoria ocupada por el número 11.
 ```
