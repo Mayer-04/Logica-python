@@ -1,6 +1,6 @@
-# Consejos en Python
+# Consejos y Buenas Prácticas en Python
 
-## Iniciar el Modo Interactivo
+## Iniciar Python en el Modo Interactivo
 
 **En Windows:**
 
@@ -20,6 +20,16 @@ Para salir del modo interactivo de Python, utiliza el siguiente comando:
 exit()
 ```
 
+> [!NOTE]
+> Para salir del modo interactivo, simplemente usa `exit()` o `Ctrl+D`.
+
+## Lenguaje Interpretado o de Script
+
+El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete de Python` traduce primero el código fuente a un formato intermedio llamado `bytecode`, que es una representación más eficiente que el código fuente original.
+
+- El intérprete de Python **(La máquina virtual de Python _PVM_)** ejecuta este `bytecode`. Es decir, el intérprete lee el `bytecode` y lo traduce a instrucciones que la computadora puede entender y ejecutar.
+- Los archivos `.pyc` se generan automáticamente y se guardan en un directorio especial llamado **_pycache_**, en la misma carpeta donde está tu archivo `.py` original. Esto acelera la ejecución del código, ya que evita recompilar el bytecode cada vez que se ejecuta el programa.
+
 ## Mutabilidad e Inmutabilidad
 
 Los objetos en Python se pueden clasificar en dos categorías basadas en su capacidad para cambiar:
@@ -29,7 +39,7 @@ Los objetos en Python se pueden clasificar en dos categorías basadas en su capa
 Algunos objetos mutables son:
 
 - list (listas)
-- dict (diccionario)
+- dict (diccionarios)
 - set (conjuntos)
 - bytearray
 
@@ -37,24 +47,17 @@ Algunos objetos mutables son:
 
 Algunos objetos inmutables son:
 
-- int (entero)
-- float (flotante)
-- bool (booleano)
-- str (cadena)
+- int (enteros)
+- float (flotantes)
+- bool (booleanos)
+- str (cadenas)
 - tuple
 - frozenset
 
-## Lenguaje Interpretado o de Script
-
-El código Python que escribimos no se convierte directamente en instrucciones que la computadora pueda entender **(lenguaje máquina)**. En lugar de eso, un programa especial llamado `intérprete de Python` traduce primero el código fuente a un formato intermedio llamado `bytecode`, que es una representación más eficiente que el código fuente original.
-
-- El intérprete de Python **(La máquina virtual de Python _PVM_)** ejecuta este `bytecode`. Es decir, el intérprete lee el `bytecode` y lo traduce a instrucciones que la computadora puede entender y ejecutar.
-- Los archivos `.pyc` se generan automáticamente y se guardan en un directorio especial llamado **_pycache_**, en la misma carpeta donde está tu archivo `.py` original. Esto acelera la ejecución del código, ya que evita recompilar el bytecode cada vez que se ejecuta el programa.
-
-## Características y Consejos
+## Consejos para Escribir Código en Python
 
 1. En Python, no es necesario terminar cada sentencia con un punto y coma (;).
-2. **Indentación Obligatoria:** En lugar de usar llaves `{}` para agrupar bloques de código (como en otros lenguajes), Python utiliza la `indentación`. Por convención, se emplean 4 espacios por nivel de indentación. Una indentación incorrecta resultará en un error de sintaxis.
+2. **Indentación Obligatoria:** En lugar de usar llaves `{}` para agrupar bloques de código (como en otros lenguajes), Python utiliza la `indentación`. Por convención, se emplean `4 espacios` por nivel de indentación. Una indentación incorrecta resultará en un error de sintaxis.
 3. **Nombres de Variables Descriptivos:** Es recomendable utilizar nombres de variables en minúsculas, separando las palabras con guiones bajos `(snake_case).`
 4. Puedes multiplicar una cadena por un número para repetirla varias veces con el operador aritmetico `*`:
 
@@ -76,12 +79,12 @@ for item in my_list[:]:
 9. **Evita Efectos Colaterales en Funciones:** Las funciones deben evitar modificar variables globales u otras partes del programa para mantener la claridad y facilitar las pruebas.
 10. **Secuencias:** Es un tipo de dato que puede almacenar una colección de elementos o contener varios elementos. Algunas secuencias en Python son las listas, tuplas, cadenas de caracteres y rangos (la función `range()`).
 
-## Buenas practicas
+## Buenas Prácticas de Programación en Python
 
 1. **Uso de Funciones Incorporadas (Built-ins):** Python ofrece muchas funciones incorporadas que pueden simplificar tu código, como **len()**, **sum()**, **max()**, **min()**, entre otras. Siempre que sea posible, utiliza estas funciones en lugar de reinventar la rueda.
 2. **Comprensión de Listas y Comprensión de Generadores:** Utiliza comprensión de listas y generadores para crear listas, diccionarios, o conjuntos de manera concisa y eficiente:
 
-**List Comprehension**
+### List Comprehension
 
 La `comprensión de listas` es una forma concisa y elegante de crear listas. En lugar de usar un bucle for largo para añadir elementos a una lista, puedes escribir todo en una línea de código.
 
@@ -91,7 +94,7 @@ La `comprensión de listas` es una forma concisa y elegante de crear listas. En 
 cuadrados = [x**2 for x in range(10)]
 ```
 
-**Generator Comprehension**
+### Generator Comprehension
 
 Los `generadores` son como las listas, pero en lugar de calcular y almacenar todos los elementos en memoria de una vez, los generan sobre la marcha. Esto hace que sean mucho más eficientes en términos de memoria cuando trabajas con secuencias grandes.
 
@@ -101,7 +104,9 @@ Los `generadores` son como las listas, pero en lugar de calcular y almacenar tod
 cuadrados_tup = (x**2 for x in range(10))
 ```
 
-3. **Utiliza Entornos Virtuales:** Para evitar conflictos de dependencias entre proyectos, utiliza entornos virtuales. Esto te permite gestionar paquetes y versiones de manera aislada para cada proyecto.
+### Entornos Virtuales
+
+Para evitar conflictos de dependencias entre proyectos, utiliza entornos virtuales. Esto te permite gestionar paquetes y versiones de manera aislada para cada proyecto.
 
 - Los entornos virtuales permiten tener diferentes versiones de las bibliotecas instaladas en diferentes proyectos, todo de manera aislada.
 - Python crea una carpeta dedicada a ese proyecto donde se almacenan todas las dependencias **(paquetes, bibliotecas, etc.)**. Luego, cuando trabajas dentro de ese entorno, Python utilizará solo las dependencias instaladas allí, y no las globales de tu sistema.
@@ -119,10 +124,10 @@ python3 -m venv <nombre_entorno>
 python -m venv <nombre_entorno>
 ```
 
-## Diccionarios
+## Diccionarios en Python
 
-1. Las claves de un diccionario deben ser inmutables, como enteros, cadenas o tuplas. No uses listas o diccionarios como claves.
-2. **Acceso Seguro a Valores con get():** Utiliza el método get() para acceder a los valores de un diccionario sin riesgo de lanzar un error si la clave no existe:
+1. Las claves de un diccionario deben ser `inmutables`, como enteros, cadenas o tuplas. No uses listas o diccionarios como claves.
+2. **Acceso Seguro a Valores con get():** Utiliza el método `get()` para acceder a los valores de un diccionario sin riesgo de lanzar un error si la clave no existe:
 
 ```py
 diccionario = {"cuidad": "medellin"}
@@ -137,7 +142,7 @@ cuadrados_dict = {x: x**2 for x in range(10)}
 
 4. **Evita Modificar un Diccionario Durante la Iteración:** Similar a las listas, modificar un diccionario mientras lo iteras puede causar errores. Usa métodos como `copy()` si necesitas modificarlo dentro de un bucle.
 
-## Características adicionales
+## Características Avanzadas
 
 1. **Desempaquetado:** Utiliza `*` y `**` para desempaquetar listas y diccionarios al pasar argumentos a funciones o al realizar asignaciones:
 
@@ -145,6 +150,8 @@ cuadrados_dict = {x: x**2 for x in range(10)}
 my_list = [1, 2, 3]
 print(*my_list)  # Salida: 1 2 3
 ```
+
+**Desempaquetado de diccionarios:**
 
 ```py
 my_dict = {"a": 1, "b": 2, "c": 3}
@@ -160,7 +167,7 @@ diccionario = {'a': 1, 'b': 2, 'c': 3}
 generar_diccionario(**diccionario)  # Salida: 1 2 3
 ```
 
-## Objetos
+## Objetos: Identidad, Tipo y Valor
 
 Recordemos que en **objeto** en Python es una _instancia_ de una clase. Cada objeto en Python tiene tres características fundamentales: `identidad`, `tipo` y `valor`.
 
