@@ -1,6 +1,6 @@
 """
 * Sets en Python: Conjuntos
-
+----------------------------
 - Un conjunto (set) es una colección desordenada y sin elementos repetidos.
 - Los elementos de un set son únicos y mutables.
 - Se definen utilizando llaves {} o la función set().

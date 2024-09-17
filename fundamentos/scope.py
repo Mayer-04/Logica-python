@@ -1,24 +1,24 @@
 """
 * Scope - (Ámbito o Alcance)
-
-El **scope** en Python se refiere a `dónde` puedes usar una variable o una función en tu código.
+-----------------------------
+El scope en Python se refiere a `dónde` puedes usar una variable o una función en tu código.
 
 - El scope define en qué partes de tu código una variable está disponible para ser usada.
 Si intentas usar una variable fuera de su scope, Python te dará un error, porque no la reconoce.
 
-### Tipos de scope y cómo Python los busca (Regla LEGB):
+Tipos de scope y cómo Python los busca (Regla LEGB):
 --------------------------------------------------------
 
-1. **Local (L)**: Es el scope más interno. Se refiere a las variables definidas dentro de una función.
+1. Local (L): Es el scope más interno. Se refiere a las variables definidas dentro de una función.
 Estas variables solo existen y se pueden usar dentro de esa función.
 
-2. **Enclosing (E)**: Se refiere al scope de una función externa que contiene otra función interna.
+2. Enclosing (E): Se refiere al scope de una función externa que contiene otra función interna.
 Si la función interna no encuentra una variable en su propio scope, Python buscará en la función externa.
 
-3. **Global (G)**: Es el scope más externo. Las variables definidas fuera de cualquier función, es decir,
+3. Global (G): Es el scope más externo. Las variables definidas fuera de cualquier función, es decir,
 en el nivel más alto de un script, tienen un scope global y se pueden usar desde cualquier parte del código.
 
-4. **Built-in (B)**: Se refiere a los nombres que Python tiene incorporados por defecto, como `print()`, `len()`, etc.
+4. Built-in (B): Se refiere a los nombres que Python tiene incorporados por defecto, como `print()`, `len()`, etc.
 Python buscará aquí solo si no encuentra la variable en ninguno de los scopes anteriores.
 
 IMPORTANTE:

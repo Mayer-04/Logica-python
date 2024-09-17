@@ -1,6 +1,6 @@
 """
 * Tuplas en Python: Secuencia
-
+------------------------------
 - Una tupla es una colección ordenada e inmutable de elementos.
 - Las tuplas se definen utilizando paréntesis ().
 - No es posible borrar (ni añadir) un elemento en una tupla, lo que provocará una excepción.
@@ -12,6 +12,7 @@
 una tupla es apropiada.
 
 Métodos y operaciones comunes en tuplas:
+----------------------------------------
 - count(): Retorna el número de veces que un valor especificado aparece en la tupla.
 - index(): Retorna el índice de la primera aparición de un valor especificado.
 - len(): Retorna la longitud de la tupla.

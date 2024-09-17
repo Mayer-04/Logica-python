@@ -1,6 +1,6 @@
 """
 * Range - Rango
----------------
+----------------
 - La función `range` es un objeto que genera una secuencia inmutable de números enteros.
 - Se suele utilizar para ser ejecutado en un bucle `for`.
 - Los parámetros usados en range deben ser números enteros.
