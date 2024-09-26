@@ -1,12 +1,17 @@
 """
-* POO (Programación Orientada a Objetos)
-
+* Clases en Python
+-------------------
 - La programación orientada a objetos es una teoria que describe el comportamiento de los objetos.
 - Las clases son los moldes o plantillas que definen los atributos y métodos de un objeto.
 - Las instancias son los objetos creados a partir de una clase.
 - Los objetos son instancias de una clase.
 - Las nombres de las clases por convención se escriben en `UpperCamelCase`.
 - El parámetro `self` se refiere a la instancia de la clase, es decir, el objeto que se esta creando (el objeto mismo).
+- Cada instancia de la clase tiene un diccionario de atributos.
+- Las clases en sí tienen un diccionario que almacena sus atributos y métodos. Con el atributo `__dict__`
+podemos acceder a este diccionario.
+- En Python, todas las clases por defecto (es decir, las que no heredan de ninguna otra clase explícitamente) heredan 
+de la clase base `object`.
 """
 
 
@@ -50,5 +55,10 @@ class Car:
 
 # Si intentas pasar los argumentos sin nombrarlos obtendrás un error de tipo TypeError.
 toyota = Car(model="Corolla Cross", color="Azul")
-print("modelo:", toyota.model) # modelo: Corolla Cross
-print("color:", toyota.color) # color: Azul
+print("modelo:", toyota.model)  # modelo: Corolla Cross
+print("color:", toyota.color)  # color: Azul
+
+# Atributo __dict__
+# __dict__ almacena los atributos de clase. Esto incluye métodos y variables de clase.
+chevrolet = Car(model="Celta", color="Rojo")
+print(chevrolet.__dict__)  # {'model': 'Celta', 'color': 'Rojo'}
