@@ -8,6 +8,8 @@ En Python, las cadenas son inmutables, lo que significa que una vez creada una c
 - Las cadenas son accesibles por `índices` y pueden ser `iteradas`.
 - Puedes acceder a un carácter específico utilizando corchetes `[]` y un índice.
 - Si intentas acceder a un índice fuera del rango de la cadena, Python nos dara un error `IndexError`.
+- El slicing en strings está diseñado para ser seguro y no provocar errores al intentar acceder a índices fuera del rango
+de la cadena.
 
 Algunas características de las cadenas:
 ---------------------------------------

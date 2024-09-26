@@ -20,6 +20,8 @@ se recomienda utilizar el método `extend()` y el operador `+=`.
 - `+=` es eficiente cuando se necesita concatenar listas o strings.
 - Si solo necesitas agregar un elemento a la lista utiliza el método `append()`,
 es muy eficiente para este propósito, ya que realiza la operación de inserción directa.
+- El slicing en listas se comporta de manera segura, lo que significa que no lanzará un error si intentas acceder
+a un índice que está fuera del rango de la lista.
 
 Métodos y operaciones comunes de las listas:
 ---------------------------------------------

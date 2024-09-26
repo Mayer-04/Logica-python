@@ -19,6 +19,9 @@ a += 3
 a = 1
 print("a:", a)
 
+# Asignación múltiple
+a, b = 1, 2
+
 # Suma y asignación a una variable +=
 # Esto es equivalente a `a = a + 1`
 a += 1
