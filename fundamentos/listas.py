@@ -17,7 +17,7 @@ diccionarios (dict) y cadenas de texto (str).
 - Cuando asignas una lista a una variable, no copia los datos, la variable solo apunta a la lista existente.
 IMPORTANTE: En terminos de rapidez y eficiencia para agregar múltiples elementos en una lista,
 se recomienda utilizar el método `extend()` y el operador `+=`.
-- `+=` es eficiente cuando se necesita concatenar listas o strings.
+- `+=` es eficiente cuando se necesita concatenar listas o strings. Espera un `iterable`.
 - Si solo necesitas agregar un elemento a la lista utiliza el método `append()`,
 es muy eficiente para este propósito, ya que realiza la operación de inserción directa.
 - El slicing en listas se comporta de manera segura, lo que significa que no lanzará un error si intentas acceder
@@ -115,15 +115,26 @@ del numbers[0]
 print("Lista después de del numbers[0]:", numbers)  # Imprime [2, 3, 4, 5, 6, 7]
 
 """
-* Slicing (subdivisión de secuencias) en listas
-El slicing permite extraer una subsecuencia de elementos de una secuencia
-(como listas, cadenas, tuplas, etc.) utilizando la sintaxis:
-sequence[start:stop:step]
-- start: Índice de inicio (opcional), por defecto es 0.
-- stop: Índice donde se detiene el slicing (opcional), por defecto es el final de la secuencia.
-- step: Paso o intervalo entre los elementos seleccionados (opcional), por defecto es 1.
-"""
+* Slicing (subdivisión de secuencias) en Python
+------------------------------------------------
+El slicing permite extraer una subsecuencia (subconjunto) de elementos a partir de una secuencia 
+como listas, cadenas de texto, tuplas, etc. Es útil para obtener porciones de una secuencia, 
+ya sea de forma normal o inversa, y permite controlar el intervalo entre los elementos seleccionados.
 
+- Sintaxis: sequence[start:stop:step]
+
+Parámetros:
+- start: Índice donde comienza el slicing (opcional). Por defecto es 0.
+- stop: Índice donde se detiene el slicing (exclusivo, no incluido en el resultado). 
+Por defecto es el final de la secuencia.
+- step: Paso o intervalo entre los elementos seleccionados (opcional). Por defecto es 1. 
+Si es negativo, la secuencia se recorre en orden inverso.
+
+Notas:
+- Si no se especifica `start`, se toma por defecto el inicio de la secuencia (o el final si `step` es negativo).
+- Si no se especifica `stop`, se toma por defecto el final de la secuencia (o el inicio si `step` es negativo).
+- Si no se especifica `step`, el valor predeterminado es 1, lo que selecciona elementos consecutivos.
+"""
 slicing = [2, 3, 4, 5, 6, 7]
 
 # Obtiene los primeros 3 elementos de la lista.
@@ -192,19 +203,15 @@ elemento = matriz[1][2]
 print("Elemento en la posición [1][2] de la matriz:", elemento)  # Imprime 6
 
 # * Asignar una lista a una variable
-# No se pasa pasa por valor si no por referencia
+# No se pasa por valor si no por `referencia`
 numbers = [1, 2, 3, 4, 5]
 print("Lista numbers:", numbers)
-
-# Asignar la lista `numbers` a la nueva variable `new_numbers`
-new_numbers = numbers
-print("new_numbers:", new_numbers)
+new_numbers = numbers  # Asignar la lista `numbers` a la nueva variable `new_numbers`
+print("new_numbers:", new_numbers)  # [1, 2, 3, 4, 5]
 
 new_numbers.append(6)
 print("agregando 6 a new_numbers:", new_numbers)
-
-# La lista `numbers` ahora contiene [1, 2, 3, 4, 5, 6]
-print("numbers:", numbers)
+print("numbers:", numbers)  # La lista `numbers` ahora contiene [1, 2, 3, 4, 5, 6]
 
 # Desempaquetar elementos dentro de una lista con el operador *
 lista1 = [1, 2, 3]
