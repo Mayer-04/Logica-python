@@ -98,3 +98,10 @@ print(math.tan(math.radians(45)))  # Salida: 1.0
 # Función `degrees`
 # Convierte un angulo en grados a radianes.
 print(math.degrees(math.pi))  # Salida: 180.0
+
+# Función `fma`: multiplicación-suma fusionada (fused multiply-add (FMA))
+# Multiplica y suma en un solo paso.
+# Reduce los errores de redondeo al hacer la multiplicación y la suma fusionadas.
+# Ventaja: Ofrece una precisión más alta en cálculos numéricos complejos.
+# Disponible solo desde Python 3.13+
+print("fma:", math.fma(5, 2, 4))  # Salida: 14.0
