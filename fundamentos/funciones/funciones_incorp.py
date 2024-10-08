@@ -58,7 +58,8 @@ print(list(reversed([1, 2, 3, 4, 5])))  # Salida: [5, 4, 3, 2, 1]
 print(list(filter(lambda x: x % 2 == 0, [1, 2, 3, 4, 5, 6])))  # Salida: [2, 4, 6]
 
 # Función incorporada `map`
-# Aplica una función a cada elemento de una lista o iterable.
+# Aplica una función a cada elemento de una lista o iterable. Devuelve un objeto de tipo `map` que es un iterable
+# El objeto `map` no contiene los resultados directamente, sino que está diseñado para generarlos cuando se itera sobre el.
 # En este ejemplo, multiplica cada número por 2.
 print(list(map(lambda x: x * 2, [1, 2, 3, 4, 5, 6])))  # Salida: [2, 4, 6, 8, 10, 12]
 
