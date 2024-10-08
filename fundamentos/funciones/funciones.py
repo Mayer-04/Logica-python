@@ -1,16 +1,18 @@
 """
 * Funciones en Python
-
+----------------------
 Una función es un bloque de código reutilizable que realiza una tarea específica. 
 Las funciones permiten dividir el código en módulos más manejables, promoviendo la reutilización y la legibilidad.
 
-- La sentencia `return` retorna un valor en una función.
+- La sentencia `return` retorna un valor (resultado) en una función.
 - `return` sin una expresión como argumento retorna `None`.
 - La sentencia `pass` no hace nada en una función.
-- Las variables dentro de una función tienen un `scope` limitado. Conocido como variable local.
+- Las variables dentro de una función tienen un `scope` limitado conocido como variable local.
+- Cuantas más dependencias haya en su función sera más difícil de mantener en el futuro.
 
-RECOMENDACIÓN: Utilizar las `anotaciones de tipo` en Python aunque sea algo opcional.
-
+RECOMENDACIÓN: 
+- Utilizar las `anotaciones de tipo` en Python aunque sea algo opcional. Principalmente especificando el tipo de retorno. 
+- Documentar las funciones si espera que otras personas usen su funcionabilidad en cualquier momento en el futuro.
 
 En este archivo, se exploran los siguientes conceptos:
 - Declaración de funciones
