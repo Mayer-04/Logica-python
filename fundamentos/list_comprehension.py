@@ -1,12 +1,22 @@
 """
 * List Comprehension (Comprensión de Listas)
---------------------------------------------
+---------------------------------------------
 - Permite crear listas de forma rápida y eficiente.
 - Se basa en una sintaxis compacta para generar listas a partir de iterables.
 - Facilita la creación de listas a partir de listas ya existentes, o incluso de rangos de números, cadenas, etc.
 - Se pueden incluir condiciones para filtrar elementos.
 - Pueden ser usado también para tuplas, conjuntos, diccionarios y cadenas de texto.
 - Es una característica tomada de la `programación funcional` específicamente del lenguaje 'Haskell'.
+
+Sintaxis:
+----------
+[expresión for variable in iterable if condición]
+
+- Expresión: Es lo que se va a almacenar o devolver en cada iteración. 
+Puede ser la misma variable o algún valor modificado de ella.
+- Variable: Es la variable que se usará en cada iteración para referirse a cada elemento del `iterable`.
+- Iterable: Es el objeto que se va a iterar. Puede ser una lista, un conjunto, un diccionario, una cadena de texto, etc.
+- Condición: Es una expresión que se evaluará para decidir si incluir o no el valor de esa iteración. Es opcional.
 
 Características principales:
 ----------------------------
