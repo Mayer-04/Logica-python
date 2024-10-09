@@ -78,6 +78,15 @@ for item in my_list[:]:
 
 9. **Evita Efectos Colaterales en Funciones:** Las funciones deben evitar modificar variables globales u otras partes del programa para mantener la claridad y facilitar las pruebas.
 10. **Secuencias:** Es un tipo de dato que puede almacenar una colección de elementos o contener varios elementos. Algunas secuencias en Python son las listas, tuplas, cadenas de caracteres y rangos (la función `range()`).
+11. **Evitar el Uso de Importaciones Generales:** No uses `from módulo import *`, ya que puede causar conflictos de nombres. Importa solo lo que necesitas o usa **alias** si es necesario.
+
+```py
+# Correcto
+from math import sqrt
+
+# Incorrecto
+from math import *
+```
 
 ## Buenas Prácticas de Programación en Python
 
